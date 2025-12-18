@@ -147,7 +147,7 @@
             <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO/posts" role="menuitem">Content</a>
           </li>
           <li class="nav-item nav-item-has-children" role="none">
-            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO/contact" role="menuitem">Contact</a>
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO/contact-us" role="menuitem">Contact</a>
           </li>
           <li class="nav-item" id="customer-area-link" role="none">
             <a class="ud-menu-scroll link-button" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO/client-area" role="menuitem" aria-label="Client Area">
@@ -223,41 +223,51 @@
   </div>
 </header>
     <main id="main-content">
-        <section class="ud-hero" id="home">
+        <!-- ====== Contact/Sales Start ====== -->
+  <section id="contact-sales" class="ud-contact-sales">
     <div class="container">
-      <div class="row">
-        <div class="col-lg-12">
-          <div class="ud-hero-content wow fadeInUp" data-aos-delay=".2s">
-            <h1 class="ud-hero-title">Contact</h1>
-            <p class="ud-hero-desc">
-              Fill in the fields below with your data
+      <div class="row align-items-center">
+        <div class="col-lg-6">
+          <div class="contact-info-wrapper">
+            <h1 class="contact-title">Boost Your Business with Digital Signature.</h1>
+            <p class="contact-subtitle">
+              Fill out the form and schedule a conversation with one of our specialists to discover the ideal solution for your challenges.
             </p>
+            
+            <h3 class="mt-5 mb-4">Why Schedule Your Conversation With Us?</h3>
+            <ul class="contact-benefits">
+              <li>
+                <strong>Personalized analysis:</strong>
+                we identify your challenges and show how LibreSign fits perfectly.
+              </li>
+              <li>
+                <strong>ROI calculation:</strong>
+                we demonstrate the return on investment and the economy your company will have.
+              </li>
+              <li>
+                <strong>Strategic solution:</strong>
+                we present a partnership vision for your growth.
+              </li>
+              <li>
+                <strong>Experienced consultants:</strong>
+                our team deeply understands the digital signature market and the needs of your sector.
+              </li>
+              <li>
+                <strong>Focus on your needs:</strong>
+                our specialists understand your challenges and build, in partnership, a 100% personalized proposal with LibreSign.
+              </li>
+              <li>
+                <strong>Fast return:</strong>
+                we contact you within 24 useful hours to schedule your conversation.
+              </li>
+            </ul>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <!-- ====== Contact Start ====== -->
-<section id="contact" class="ud-contact">
-  <div class="container">
-    <div class="row align-items-center">
-      <div class="col-xl-8 col-lg-7">
-        <div class="ud-contact-content-wrapper">
-          <div class="ud-contact-title">
-            <span>CONTACT US</span>
-            <h2>
-              Let’s talk about digitally signing your documents!
-            </h2>
-          </div>
-        </div>
-      </div>
-      <div class="col-xl-4 col-lg-5">
-        <div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;" id="message"></div>
-        <div
-          class="ud-contact-form-wrapper wow fadeInUp"
-          data-aos-delay=".2s"
-        >
+        <div class="col-lg-6">
+          <div class="contact-form-wrapper">
+            <!-- ====== Contact Form Start ====== -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;" id="message"></div>
+<div class="ud-contact-form-wrapper wow fadeInUp" data-aos-delay=".2s">
           <form class="ud-contact-form" id="WebToLeadForm"
             name="WebToLeadForm">
             <div class="ud-form-group">
@@ -290,11 +300,29 @@
               />
             </div>
             <div class="ud-form-group">
-              <label for="description">Message *</label>
+              <label for="company_name">Company Name</label>
+              <input
+                type="text"
+                name="company_name"
+                id="company_name"
+                placeholder="Type your company name"
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="position">Position/Role</label>
+              <input
+                type="text"
+                name="position"
+                id="position"
+                placeholder="Type your position"
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="description">What is your main challenge? *</label>
               <textarea
                 name="description"
                 id="description"
-                rows="1"
+                rows="3"
                 placeholder="Type your message here"
                 required=""
               ></textarea>
@@ -407,17 +435,19 @@
               </script>
             </div>
             <div class="ud-form-group mb-0">
-              <button type="submit" class="ud-main-btn">
-                Send Message
+              <button type="submit" class="ud-main-btn w-100">
+                Talk to a Specialist
               </button>
             </div>
           </form>
         </div>
+<!-- ====== Contact Form End ====== -->
+          </div>
+        </div>
       </div>
     </div>
-  </div>
-</section>
-<!-- ====== Contact End ====== -->
+  </section>
+  <!-- ====== Contact/Sales End ====== -->
     </main>
     <footer class="ud-footer wow fadeInUp" data-aos-delay=".15s">
     <div>
