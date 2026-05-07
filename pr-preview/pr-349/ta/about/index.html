@@ -135,19 +135,19 @@
               <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/solutions" role="menuitem">Solutions</a>
           </li>
           <li class="nav-item nav-item-has-children" role="none">
-            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/features" role="menuitem">நற்பொருத்தங்கள்</a>
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/features" role="menuitem">Features</a>
           </li>
           <li class="nav-item nav-item-has-children" role="none">
             <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/pricing" role="menuitem">Plans and Pricing</a>
           </li>
           <li class="nav-item" role="none">
-            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/about" role="menuitem">பற்றி</a>
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/about" role="menuitem">About</a>
           </li>
           <li class="nav-item nav-item-has-children" role="none">
             <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/posts" role="menuitem">Content</a>
           </li>
           <li class="nav-item nav-item-has-children" role="none">
-            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/contact-us" role="menuitem">தொடர்பு</a>
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/contact-us" role="menuitem">Contact</a>
           </li>
           <li class="nav-item" id="customer-area-link" role="none">
             <a class="ud-menu-scroll link-button" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/client-area" role="menuitem" aria-label="Client Area">
@@ -211,7 +211,7 @@
                     </ul>
         </div>
         <button class="navbar-toggler" 
-                aria-label="வழிசெலுத்தல் மெனுவை மாற்றவும்"
+                aria-label="Toggle navigation menu"
                 aria-expanded="false"
                 aria-controls="main-navigation">
           <span class="toggler-icon" aria-hidden="true"> </span>
@@ -421,12 +421,12 @@
           <form class="ud-contact-form" id="WebToLeadForm"
             name="WebToLeadForm">
             <div class="ud-form-group">
-              <label for="fullName">முழு பெயர் *</label>
+              <label for="fullName">Full Name *</label>
               <input
                 type="text"
                 name="name"
                 id="name"
-                placeholder="உங்கள் பெயரைத் தட்டச்சு செய்க"
+                placeholder="Type your name"
                 required=""
               />
             </div>
@@ -441,7 +441,7 @@
               />
             </div>
             <div class="ud-form-group">
-              <label for="phone_mobile">தொலைபேசி</label>
+              <label for="phone_mobile">Phone</label>
               <input
                 type="text"
                 name="phone_mobile"
@@ -473,24 +473,24 @@
                 name="description"
                 id="description"
                 rows="3"
-                placeholder="உங்கள் செய்தியை இங்கே தட்டச்சு செய்க"
+                placeholder="Type your message here"
                 required=""
               ></textarea>
             </div>
             <div class="ud-form-group">
-              <label for="message">கீழே உள்ள குறியீட்டைத் தட்டச்சு செய்க *</label>
+              <label for="message">Type the code below *</label>
               <input type="text" name="codeImg" id="codeImg"
-                placeholder="கீழே உள்ள குறியீட்டைத் தட்டச்சு செய்க"
+                placeholder="Type the code below"
                 required/>
             </div>
             <div class="ud-form-group">
-              <img alt="கேப்ட்சா உரையுடன் படம்"
+              <img alt="Image with captcha text"
                 class="me-3 mb-3"
                 id="captcha"
               />
               <button id="btnReload" type="button">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/reload.svg"
-                  alt="எழுத்துக்களை மீண்டும் ஏற்ற பொத்தான் கேப்ட்சா"
+                  alt="Button to reload characters captcha"
                   width="30px"
                 />
               </button>
@@ -551,7 +551,7 @@
                         window.top.location.href = 'thank-you-contact'
                       } else {
                         let message = document.getElementById('message')
-                        message.textContent = 'தவறான கேப்ட்சா'
+                        message.textContent = 'Invalid Captcha'
                         message.style.display = 'block'
                       }
                     }
@@ -563,7 +563,7 @@
 
               <button id="audioIcon" type="button">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/volume-high.svg"
-                  alt="எழுத்துக்கள் கேப்ட்சா விளையாடுவதற்கான பொத்தான்"
+                  alt="Button to play characters captcha"
                   width="30px"
                 />
               </button>
@@ -603,7 +603,7 @@
                             <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo.svg" alt="LibreSign" />
                         </a>
                         <p class="ud-widget-desc">
-                            தொழில்நுட்பத்தைப் பயன்படுத்துவதன் மூலம் பிராண்டுகள் மற்றும் நிறுவனங்களுக்கான டிசிட்டல் அனுபவங்களை உருவாக்குகிறோம்.
+                            We create digital experiences for brands and companies by using technology.
                         </p>
                         <nav aria-label="Social media links">
                             <h3 class="visually-hidden">Follow us on social media</h3>
@@ -692,13 +692,13 @@
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/solutions">Solutions</a>
                             </li>
                             <li>
-                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/features">நற்பொருத்தங்கள்</a>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/features">Features</a>
                             </li>
                             <li>
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/pricing">Plans and Pricing</a>
                             </li>
                             <li>
-                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/about">பற்றி</a>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/about">About</a>
                             </li>
                             <li>
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/blog">Blog</a>
@@ -726,7 +726,7 @@
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/cooperativism">Cooperativism</a>
                             </li>
                             <li>
-                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/sales">விற்பனையுடன் பேசுங்கள்</a>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/sales">Talk to sales</a>
                             </li>
                             <li>
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/support">Support</a>
