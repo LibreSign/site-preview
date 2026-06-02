@@ -1,0 +1,1421 @@
+<!DOCTYPE html>
+<html lang="pt">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>LibreSign - Electronic signature of digital documents</title>
+
+    <!-- Primary Meta Tags -->
+    <meta name="title" content="LibreSign - Electronic signature of digital documents">
+    <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt">
+    <meta name="description" content="Electronic signature of digital documents">
+
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://uideck.com/play/">
+    <meta property="og:title" content="LibreSign - Electronic signature of digital documents">
+    <meta property="og:description" content="LibreSign - Electronic signature of digital documents">
+    <!-- TODO: Think about the image -->
+    <meta property="og:image" content="">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://uideck.com/play/">
+    <meta property="twitter:title" content="LibreSign - Electronic signature of digital documents">
+    <meta property="twitter:description" content="LibreSign - Electronic signature of digital documents">
+    <!-- TODO: Think about the image -->
+    <meta property="twitter:image" content="">
+
+    <!--====== Favicon Icon ======-->
+    <link
+      rel="shortcut icon"
+      href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/favicon.png"
+      type="image/png"
+    />
+
+    <!-- ===== All CSS files ===== -->
+    <link rel="stylesheet" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/build/css/ud-styles.css?id=7e97456d77248cbb97149d6c42afa303" />
+    
+    <!-- ====== All Javascript Files ====== -->
+    <script defer>
+        var _mtm = window._mtm = window._mtm || [];
+        _mtm.push({'mtm.startTime': (new Date().getTime()),
+        'event': 'mtm.Start'});
+        (function() {
+            var d=document, g=d.createElement('script'),
+            s=d.getElementsByTagName('script')[0];
+            g.async=true;
+            g.src='https://matomo.librecode.coop/js/container_8jNjdh8C_dev_dc9cf71ee2745d3690156798.js';
+            s.parentNode.insertBefore(g,s);
+        })();
+    </script>
+
+    <script defer>
+      window.baseUrl = "https://LibreSign.github.io/site-preview/pr-preview/pr-349/";
+    </script>
+
+    <script defer src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/build/js/main.js?id=59a85684aea0dff5567e760371647361"></script>
+
+    <script defer>
+        document.getElementById('back-to-top').onclick = function(e) {
+            e.preventDefault()
+            window.scrollTo({
+                top: 0,
+                left: 0,
+                behavior: 'smooth'
+            })
+        };
+
+        // ==== for menu scroll
+        const pageLink = document.querySelectorAll(".ud-menu-scroll");
+
+        pageLink.forEach((elem) => {
+            elem.addEventListener("click", (e) => {
+                var url = elem.getAttribute("href")
+                var anchor = url.match(/(#.*)$/)
+                if (window.location.pathname !== '/' || anchor === null) {
+                    return
+                }
+                anchor = anchor[1]
+                e.preventDefault();
+                document.querySelector(anchor).scrollIntoView({
+                    behavior: "smooth",
+                    offsetTop: 1 - 60,
+                });
+            });
+        });
+
+        // section menu active
+        function onScroll(event) {
+            const sections = document.querySelectorAll(".ud-menu-scroll");
+            const scrollPos =
+            window.pageYOffset ||
+            document.documentElement.scrollTop ||
+            document.body.scrollTop;
+
+            for (let i = 0; i < sections.length; i++) {
+                const currLink = sections[i];
+                const url = currLink.getAttribute("href");
+                var anchor = url.match(/(#.*)$/)
+                if (anchor === null) {
+                    continue
+                }
+                anchor = anchor[1]
+                const refElement = document.querySelector(anchor);
+                const scrollTopMinus = scrollPos + 73;
+                if (
+                    refElement.offsetTop <= scrollTopMinus &&
+                    refElement.offsetTop + refElement.offsetHeight > scrollTopMinus
+                ) {
+                    document
+                    .querySelector(".ud-menu-scroll")
+                    .classList.remove("active");
+                    currLink.classList.add("active");
+                } else {
+                    currLink.classList.remove("active");
+                }
+            }
+        }
+
+        window.document.addEventListener("scroll", onScroll);
+    </script>
+  </head>
+  <body id="top">
+    <a href="#main-content" class="skip-to-content">Skip to main content</a>
+<header class="ud-header">
+  <div class="container">
+    <nav class="navbar navbar-expand-lg" role="navigation" aria-label="Main navigation">
+      <a class="navbar-brand" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt" aria-label="LibreSign home">
+        <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo.svg" alt="LibreSign" />
+      </a>
+      <div class="navbar-collapse mx-auto" id="main-navigation">
+        <ul class="navbar-nav container" role="menubar">
+          <li class="nav-item nav-item-has-children" role="none">
+              <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/solutions" role="menuitem">Solutions</a>
+          </li>
+          <li class="nav-item nav-item-has-children" role="none">
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/features" role="menuitem">Recursos</a>
+          </li>
+          <li class="nav-item nav-item-has-children" role="none">
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/pricing" role="menuitem">Plans and Pricing</a>
+          </li>
+          <li class="nav-item" role="none">
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/about" role="menuitem">Sobre</a>
+          </li>
+          <li class="nav-item nav-item-has-children" role="none">
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/posts" role="menuitem">Content</a>
+          </li>
+          <li class="nav-item nav-item-has-children" role="none">
+            <a class="ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/contact-us" role="menuitem">Contacto</a>
+          </li>
+          <li class="nav-item" id="customer-area-link" role="none">
+            <a class="ud-menu-scroll link-button" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/client-area" role="menuitem" aria-label="Client Area">
+              <span class="button-text">Client Area</span>
+              <i class="lni lni-user button-icon" aria-hidden="true"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
+      <div class="d-flex align-items-center">
+        <div class="selector">
+          <button type="button" 
+                  aria-label="Select language" 
+                  aria-haspopup="true" 
+                  aria-expanded="false"
+                  aria-controls="language-menu">
+            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/languages/pt.svg" alt="" role="presentation" />
+            <span class="visually-hidden">Current language: English</span>
+          </button>
+          <ul class="ud-submenu" id="language-menu" role="menu" aria-label="Language selection">
+                      <li class="ud-submenu-item" role="none">
+              <a class="ud-submenu-link" 
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/" 
+                 role="menuitem"
+                 lang="en"
+                 aria-label="Switch to English">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/languages/en.svg" alt="" role="presentation" />
+                <span>en</span>
+              </a>
+            </li>
+                      <li class="ud-submenu-item" role="none">
+              <a class="ud-submenu-link" 
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/fr" 
+                 role="menuitem"
+                 lang="fr"
+                 aria-label="Switch to Français">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/languages/fr.svg" alt="" role="presentation" />
+                <span>fr</span>
+              </a>
+            </li>
+                      <li class="ud-submenu-item" role="none">
+              <a class="ud-submenu-link" 
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO" 
+                 role="menuitem"
+                 lang="nb-NO"
+                 aria-label="Switch to Norsk bokmål">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/languages/nb-NO.svg" alt="" role="presentation" />
+                <span>nb-NO</span>
+              </a>
+            </li>
+                      <li class="ud-submenu-item" role="none">
+              <a class="ud-submenu-link" 
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR" 
+                 role="menuitem"
+                 lang="pt-BR"
+                 aria-label="Switch to Português Brasil">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/languages/pt-BR.svg" alt="" role="presentation" />
+                <span>pt-BR</span>
+              </a>
+            </li>
+                    </ul>
+        </div>
+        <button class="navbar-toggler" 
+                aria-label="Alternar menu de navegação"
+                aria-expanded="false"
+                aria-controls="main-navigation">
+          <span class="toggler-icon" aria-hidden="true"> </span>
+          <span class="toggler-icon" aria-hidden="true"> </span>
+          <span class="toggler-icon" aria-hidden="true"> </span>
+        </button>
+      </div>
+    </nav>
+  </div>
+</header>
+    <main id="main-content">
+      
+ <!-- ====== Princiapl Banner Start ====== -->
+    <section class="ud-hero" style="max-width: 1920px; margin-left: auto; margin-right: auto; width: 100%;">
+      <div class="ud-hero-image wow fadeInUp" data-aos-delay=".3s">
+        <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/hero/hero-image.png" alt="Professional using digital signature" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ud-hero-content wow fadeInUp" data-aos-delay=".2s">
+              <h1 class="ud-hero-title">
+                The secure and legally binding digital signature for your world.
+              </h1>
+              <p class="ud-hero-desc">
+                Reduce bureaucracy and speed up your processes: sign, manage, and validate documents with technology you control.
+              </p>
+              <div class="row justify-content-between ud-hero-buttons g-4">
+                <div class="col-sm-6 justify-content-center d-flex">
+                  <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/contact-us" class="ud-main-btn w-100 text-center">
+                    Try it For Free Now!
+                  </a>
+                </div>
+                <div class="col-sm-6 justify-content-center d-flex">
+                  <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/contact-us" class="ud-secondary-btn w-100 text-center">
+                    Talk to Our Experts
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Princiapl Banner End ====== -->
+
+    <section class="clients">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 headline">
+            <p>Validated Trust: LibreSign Solutions from Those Who Understand Governance and Efficiency.</p>
+          </div>
+        </div>
+        <div class="row logos g-5 justify-content-evenly">
+          <div class="col-12 col-md-auto">
+            <img width="264px" src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/clients/ocb.png" alt="Sistema OCB/RJ">
+          </div>
+          <div class="col-12 col-md-auto">
+            <img width="256px" src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/clients/oab.png" alt="OAB|ESA">
+          </div>
+          <div class="col-12 col-md-auto">
+            <img width="80px" src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/clients/fiocruz.png" alt="Fiocruz">
+          </div>
+        </div>
+        <div class="row">
+          <div class="secondary">
+            <p>More than X million documents signed securely and with legal validity.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Target Audience Start ====== -->
+    <section class="ud-about">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <h3 class="card-title fs-1 fw-bold">Eliminate Bureaucracy, Ensure Security: LibreSign Solves Your Biggest Challenges.</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="card-subtitle">We understand the complexities of each industry. See how our platform is the answer you&#039;re looking for.</p>
+          </div>
+        </div>
+        <div class="row text-center justify-content-evenly">
+          <div class="col-md-4 col-sm-12 col-12 text-card mb-4">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>Legal Validity and Undisputed Compliance?</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/legal-validity.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Minimize risks and ensure the authenticity of each document with electronic signatures that fully comply with the LGPD and current legislation.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/public-sector" class="ud-main-btn">
+                      Learn More for the Public Sector
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-12 text-card mb-4">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>Simple, Secure and Affordable Digital Signature?</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/digital-signature.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Optimize your workflows, strengthen governance, and reduce operational costs without sacrificing security or ease of use.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/company-solutions" class="ud-main-btn">
+                      Discover Solutions for Your Company.
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-4 col-sm-12 col-12 text-card mb-4">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>Total Control and Flexibility to Integrate?</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/integration-flexibility.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Easily integrate, customize to your needs, and enjoy the freedom of a robust, scalable architecture under your control.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/tecnical-details" class="ud-main-btn">
+                      Technical Details for IT.
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ====== Features Start ====== -->
+    <section class="ud-features">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <h3 class="card-title fs-1 fw-bold">Unlock the Future of Your Management: The Exclusive Benefits of LibreSign.</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="card-subtitle">More than a tool, a strategic partner for digital efficiency and security.</p>
+          </div>
+        </div>
+        <div class="row text-center gy-5">
+          <div class="col-md-6 col-sm-12 col-12 text-card d-flex justify-content-center">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>Advanced Security</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/advanced-security.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Keep your documents secure with end-to-end encryption and multi-layer authentication, ensuring protection throughout the entire electronic document signing process.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/advantages" class="ud-main-btn">
+                      Explore all the advantages of LibreSign
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-12 text-card d-flex justify-content-center">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>Hybrid Signatures</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/hybrid-signatures.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Hybrid signatures simplify negotiation processes by offering flexibility in choosing between personal or system-generated digital certificates to digitally sign documents with LibreSign.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/advantages" class="ud-main-btn">
+                      Explore all the advantages of LibreSign
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-12 text-card d-flex justify-content-center">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>Real-Time Monitoring.</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/realtime-monitoring.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Transform document management in public organizations with LibreSign, monitoring signatures in real time, sending automatic reminders, and optimizing your team&#039;s efficiency. Try our solution for transparent and productive administration.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/advantages" class="ud-main-btn">
+                      Explore all the advantages of LibreSign
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="col-md-6 col-sm-12 col-12 text-card d-flex justify-content-center">
+            <div class="main-cards">
+              <div class="card-header-section">
+                <h5>QR Code validation</h5>
+              </div>
+              <div class="card-icon-section">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/qrcode-validation.svg" alt="" />
+              </div>
+              <div class="card-description-section">
+                <p>
+                  Perform document authenticity verification using QR codes, ensuring security, efficiency, and convenience. Its instant validation, speed, transparency, and compatibility with various platforms make it perfect for sustainable businesses.
+                </p>
+              </div>
+              <div class="card-button-section">
+                <ul class="ud-hero-buttons">
+                  <li>
+                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/advantages" class="ud-main-btn">
+                      Explore all the advantages of LibreSign
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Features End ====== -->
+
+    <!-- ====== Solutions Section Start ====== -->
+    <section class="ud-solutions">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <h3 class="card-title fs-1 fw-bold">Tailored Solutions: LibreSign Meets the Unique Demands of Your Business.</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="card-subtitle">Developed with expertise to optimize processes across various segments.</p>
+          </div>
+        </div>
+        <div class="row text-center justify-content-center gy-5">
+          <div class="col-lg col-md-6 col-sm-12">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/public-sector.svg" alt="" />
+              </div>
+              <h4>Public Management: Transparency, Validity, and Efficiency</h4>
+              <p>Digitize bids, contracts, and administrative processes with total compliance and agility, respecting public value.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/public-sector" class="ud-main-btn">
+                Discover the Perfect Solution for the Public Sector
+              </a>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/small-business.svg" alt="" />
+              </div>
+              <h4>Small and Medium Businesses: Grow with Security</h4>
+              <p>Optimize contracts, reduce costs, and ensure the legal validity of your commercial agreements, streamlining your business.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/company-solutions" class="ud-main-btn">
+                Discover the Perfect Solution for Small and Medium Businesses
+              </a>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/cooperatives.svg" alt="" />
+              </div>
+              <h4>Cooperatives: Strengthen Governance and Member Participation</h4>
+              <p>Digitize assemblies and internal processes, promoting transparency, collaboration, and alignment with your cooperative values.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/cooperatives" class="ud-main-btn">
+                Discover the Perfect Solution for Cooperatives
+              </a>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/it-professionals.svg" alt="" />
+              </div>
+              <h4>Information Technology: Control and Total Flexibility</h4>
+              <p>Integrate, customize, and scale a robust, open-source solution with autonomy that your infrastructure demands.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/tecnical-details" class="ud-main-btn">
+                Discover the Perfect Solution for IT Professionals
+              </a>
+            </div>
+          </div>
+          <div class="col-lg col-md-6 col-sm-12">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/legal-sector.svg" alt="" />
+              </div>
+              <h4>Legal Sector: Agility and Unquestionable Legal Security</h4>
+              <p>Ensure the legal validity of each signature and simplify document management, with total protection for confidential information.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/lawyers" class="ud-main-btn">
+                Discover the Perfect Solution for Lawyers
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Solutions Section End ====== -->
+
+    <!-- ====== About Start ====== -->
+    <section id="about" class="ud-about">
+      <div class="container">
+        <div class="ud-about-wrapper wow fadeInUp" data-aos-delay=".2s">
+          <div class="ud-about-content-wrapper">
+            <div class="ud-about-content">
+              <span class="tag">Sobre nós</span>
+              <h2>A ferramenta perfeita para gerir o fluxo de assinaturas dos seus documentos</h2>
+              <p>
+                LibreSign é uma aplicação web para assinaturas eletrônicas (e-Sign) desenvolvida pela cooperativa LibreCode (cooperativa brasileira especializada em desenvolvimento de software livre). O seu desenvolvimento começou no início de 2020, em plena pandemia, quando pessoas e empresas migravam a sua documentação física para digital e depois surgiu a necessidade de desenvolver uma solução web que pudesse oferecer a possibilidade de assinatura de documentos, contratos e propostas online com segurança e agilidade.
+              </p>
+
+              <p>
+                Usamos tecnologia PKI para gerar chaves de certificados digitais. O LibreSign é open source (e sempre será), o que permite que seja auditado e customizado para diversas necessidades e integrado a qualquer sistema e, claro, mantido pela comunidade.
+              </p>
+              
+            </div>
+          </div>
+          <div class="ud-about-image">
+            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/about/about-image.svg" alt="" />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== About End ====== -->
+
+    <!-- ====== Video Demo Section Start ====== -->
+    <section class="ud-video-demo">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <h3 class="card-title fs-1 fw-bold text-white">See LibreSign in Action: Simplify Your Signatures in Detail.</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="card-subtitle text-white">Our complete video guide shows how to sign, manage, and validate documents step by step, in an easy and secure way.</p>
+          </div>
+        </div>
+        <div class="row justify-content-center mt-5">
+          <div class="col-lg-6 text-center">
+            <div class="video-demo-image">
+              <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/libresign_mobile_acess_oficial.png" alt="LibreSign mobile application demo" />
+            </div>
+            <div class="mt-4">
+              <a href="#" class="ud-main-btn ud-demo-btn">
+                See How It Works
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Video Demo Section End ====== -->
+
+    <!-- ====== Solutions Below Video Start ====== -->
+    <section class="ud-solutions ud-solutions-below-video">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <h3 class="card-title fs-1 fw-bold">Tailored Solutions: LibreSign Meets the Unique Demands of Your Business.</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="card-subtitle">Developed with expertise to optimize processes across various segments.</p>
+          </div>
+        </div>
+        <div class="row text-center row-cols-1 row-cols-md-3 row-cols-lg-5 g-4">
+          <div class="col">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/public-sector.svg" alt="" />
+              </div>
+              <h4>Public Management: Transparency, Validity, and Efficiency</h4>
+              <p>Digitize bids, contracts, and administrative processes with total compliance and agility, respecting public value.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/public-sector" class="ud-main-btn">
+                Discover the Perfect Solution for the Public Sector
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/small-business.svg" alt="" />
+              </div>
+              <h4>Small and Medium Businesses: Grow with Security</h4>
+              <p>Optimize contracts, reduce costs, and ensure the legal validity of your commercial agreements, streamlining your business.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/company-solutions" class="ud-main-btn">
+                Discover the Perfect Solution for Small and Medium Businesses
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/cooperatives.svg" alt="" />
+              </div>
+              <h4>Cooperatives: Strengthen Governance and Member Participation</h4>
+              <p>Digitize assemblies and internal processes, promoting transparency, collaboration, and alignment with your cooperative values.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/cooperatives" class="ud-main-btn">
+                Discover the Perfect Solution for Cooperatives
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/it-professionals.svg" alt="" />
+              </div>
+              <h4>Information Technology: Control and Total Flexibility</h4>
+              <p>Integrate, customize, and scale a robust, open-source solution with autonomy that your infrastructure demands.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/tecnical-details" class="ud-main-btn">
+                Discover the Perfect Solution for IT Professionals
+              </a>
+            </div>
+          </div>
+          <div class="col">
+            <div class="solution-card">
+              <div class="solution-icon">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/legal-sector.svg" alt="" />
+              </div>
+              <h4>Legal Sector: Agility and Unquestionable Legal Security</h4>
+              <p>Ensure the legal validity of each signature and simplify document management, with total protection for confidential information.</p>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/lawyers" class="ud-main-btn">
+                Discover the Perfect Solution for Lawyers
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Solutions Below Video End ====== -->
+
+    <section class="section_testimonial">
+    <p class="title-testimonial text-center mt-3">Depoimentos</p>
+    <h2 class="text-center mb-5">O que os nossos clientes dizem</h2>
+    <button class="pre-btn"><img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/arrow.png" alt="Go back pagination of testimonials"></button>
+    <button class="nxt-btn"><img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/arrow.png" alt="Show more testimonials of the caroseul"></button>
+    <div class="testimonial-container">
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">A integração nextcloud da Libresign percorreu um longo caminho no ano passado. Se já experimentou antes e achou que faltava, dê outra chance. Vejo que é uma opção real e uma alternativa a outros serviços de assinatura eletrônica.</p>
+                    <h6 class="testimonial-brand">Matt Nelson</h6>
+                </div>
+            </div>
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">Parabéns à equipa de desenvolvimento do LibreSign por criar uma solução tão eficiente para assinaturas eletrônicas! O LibreSign possui uma interface intuitiva e fácil de usar, a permitir integração com diversas APIs. Tenho acompanhado o desenvolvimento e vejo que ele melhora a cada novo lançamento. O LibreSign faz a gestão de assinaturas digitais uma experiência simples e confiável. Recomendo-o!</p>
+                    <h6 class="testimonial-brand">Lua Mello</h6>
+                </div>
+            </div>
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">Finalmente uma excelente app para assinar documentos. Muito bom!</p>
+                    <h6 class="testimonial-brand">Daiane Alves</h6>
+                </div>
+            </div>
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">O Libresign está a fazer-se uma alternativa completa a serviços de nuvem dispendiosos como o DocuSign. A integração com a nuvem seguinte faz-o uma verdadeira opção para assinaturas electrónicas.</p>
+                    <h6 class="testimonial-brand">Metheos</h6>
+                </div>
+            </div>
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">O LibreSign já percorreu um longo caminho e é um excelente substituto para a maioria das soluções comerciais de assinatura eletrónica e é de código aberto.</p>
+                    <h6 class="testimonial-brand">0-bandage-dugouts</h6>
+                </div>
+            </div>
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">Funciona perfeitamente com o certificado eletrónico emitido pelo Governo espanhol. A instalação fez-se muito simples e acessível para qualquer pessoa com conhecimentos mínimos de Nextcloud. O apoio aos programadores é fantástico. Funciona em todos os dispositivos, a incluir os móveis. Dispõe de diferentes opções para criar, solicitar e assinar assinaturas. A versão 9 é um grande salto de qualidade e tem muito futuro. É incrível que esta aplicação funcione tão bem e seja gratuita.</p>
+                    <h6 class="testimonial-brand">Iván Gómez Fernández</h6>
+                </div>
+            </div>
+                    <div class="testimonial-card">
+                <div class="testimonial_color_stars">
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                    <i class="lni lni-star-fat"></i>
+                </div>
+                <div class="testimonial-info">
+                    <p class="text-justify">Uma solução simples e completa. Agiliza os processos e pode eliminar o uso de papel. Integramos com o nosso sistema de gestão pública ou e-Cidade, ficou absurdamente bom. Parabéns.</p>
+                    <h6 class="testimonial-brand">Igor Afonso Oliveira Ruas</h6>
+                </div>
+            </div>
+            </div>
+</section>
+
+<script>
+    const productContainers = [...document.querySelectorAll('.testimonial-container')];
+    const nxtBtn = [...document.querySelectorAll('.nxt-btn')];
+    const preBtn = [...document.querySelectorAll('.pre-btn')];
+
+    productContainers.forEach((item, i) => {
+        let containerDimensions = item.getBoundingClientRect();
+        let containerWidth = containerDimensions.width;
+
+        nxtBtn[i].addEventListener('click', () => {
+            item.scrollLeft += containerWidth;
+        })
+
+        preBtn[i].addEventListener('click', () => {
+            item.scrollLeft -= containerWidth;
+        })
+    })
+</script>
+
+    <!-- ====== Start Importance of digital signature ====== -->
+    <section id="features" class="ud-features">
+      <div class="container">
+        <h3 class="mb-5">Sabia que a assinatura digital é a forma mais segura e eficiente de validar documentos eletrônicos?</h3>
+
+        <div class="row justify-content-md-center">
+          <div class="col-lg-6 mb-4">
+              <p>Ao utilizar certificados digitais emitidos por uma Autoridade Certificadora, é possível garantir a identidade do signatário e a integridade do documento. Assinaturas físicas podem ser falsificadas, a comprometer a validade dos seus documentos. Porém, as assinaturas digitais, regulamentadas pela Medida Provisória nº 2.200-2/2001, proporcionam a segurança necessária para proteger a autenticidade e a validade jurídica dos seus documentos.</p>
+
+              <h4 class="mb-3 mt-4">Transforme os seus processos com mais segurança e eficiência</h4>
+              <div class="row justify-content-md-center">
+                <div class="col-lg-6 mb-2 d-flex justify-content-center">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="me-2 card-title"><i class="lni lni-shield-2"></i> Segurança</h5>
+                      <p class="card-text">Assinaturas criptografadas que garantem a integridade dos seus documentos.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 mb-2 d-flex justify-content-center">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="lni lni-dashboard-square-1"></i> Rapidez</h5>
+                      <p class="card-text">Assine e envie documentos em segundos, de qualquer lugar do mundo.</p>
+                    </div>
+                  </div>
+                </div>
+                <div class="col-lg-6 d-flex justify-content-center">
+                  <div class="card" style="width: 18rem;">
+                    <div class="card-body">
+                      <h5 class="card-title"><i class="lni lni-leaf-1"></i> Sustentabilidade</h5>
+                      <p class="card-text">Contribua para um mundo mais verde eliminando o uso de papel.</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <div class="col-lg-4">
+            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/mobile_libresign.png" alt=""/>
+          </div>
+          <div class="col-lg-12 d-flex justify-content-center mt-5">
+            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/contact-us" class="ud-main-btn ud-border-btn">
+              Falar com Vendas
+            </a>
+          </div>
+        </div>
+      </div>
+
+    </section>
+    <!-- ====== End Importance of digital signature ====== -->
+
+    <!-- ====== Blog/Content Section Start ====== -->
+    <section class="ud-blog-section">
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <h3 class="card-title fs-1 fw-bold">LibreSign: Knowledge that Drives Your Digital Transformation.</h3>
+            </div>
+          </div>
+          <div class="col-lg-12">
+            <p class="card-subtitle">Explore articles, guides, and insights about GDPR, technology, management, and the world of electronic signatures.</p>
+          </div>
+        </div>
+        <div class="row gy-4 mt-4">
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/blog/digital-signature-article.jpg" alt="Digital signature article" />
+                <span class="blog-tag">Digital Signature</span>
+              </div>
+              <div class="blog-content">
+                <h4>Digital document signature: see real situations where digital signature transforms contracts</h4>
+                <p>Digital signature has become an essential tool in the corporate, legal, and even personal world. More than a trend, it represents a definitive change in the way we deal with documents...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/blog/digital-signature-myths.jpg" alt="Digital signature myths" />
+                <span class="blog-tag">Digital Signature</span>
+              </div>
+              <div class="blog-content">
+                <h4>4 doubts about digital signature: Learn about the common myths created about this term</h4>
+                <p>To help you clarify the most frequent doubts about digital signature, our specialists answer some questions raised through social media and public forums. Check it now and learn how digital signature can transform your life...</p>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-4 col-md-6">
+            <div class="blog-card">
+              <div class="blog-image">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/blog/how-to-create-signature.jpg" alt="How to create digital signature" />
+                <span class="blog-tag">Digital Signature</span>
+              </div>
+              <div class="blog-content">
+                <h4>How to create a digital signature: learn the step-by-step process of how to do it</h4>
+                <p>How about saying goodbye to paper, unnecessary travel to the notary, and waiting times? Digital transformation made office workflows more streamlined than ever. The digital signature market has become increasingly...</p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== Blog/Content Section End ====== -->
+
+    <!-- ====== FAQ Start ====== -->
+    <section id="faq" class="ud-faq">
+      <div class="shape">
+        <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/faq/shape.svg" alt="" />
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="ud-section-title text-center mx-auto">
+              <span>FAQ</span>
+              <h2>Alguma pergunta? Respondidas</h2>
+              <p>
+                Perguntas frequentes sobre o LibreSign
+              </p>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+            <div class="ud-single-faq wow fadeInUp" data-aos-delay=".1s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseOne"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Por que LibreSign?</span>
+                </button>
+                <div id="collapseOne" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    O LibreSign permite que documentos sejam assinados de forma segura e com validade jurídica, já que o sistema gera hashing – algoritmo que garante que o ficheiro não foi alterado após ser assinado – além de números e regista os horários de cada assinatura realizada no documento. Desta forma, o sistema atende a todas as exigências da LGPD – Lei Geral de Proteção de Dados.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-aos-delay=".15s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseTwo"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>O que é captura de assinatura eletrônica?</span>
+                </button>
+                <div id="collapseTwo" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    A assinatura eletrônica é uma tecnologia para assinar ficheiros de documentos eletrônicos com assinatura manuscrita. A utilização desta tecnologia permite eliminar o envio, armazenamento, arquivamento, cópia e recuperação de documentos em papel. Isto economizará tempo e dinheiro para a sua empresa.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-aos-delay=".2s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseThree"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>
+                    Quais são os principais recursos dos blocos de assinatura LibreCode?
+                  </span>
+                </button>
+                <div id="collapseThree" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Criação de Ficheiros, Assinatura com Certificado Digital, Gestão de Assinaturas, Gestão de Documentos, Validação, API
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="col-lg-6">
+            <div class="ud-single-faq wow fadeInUp" data-aos-delay=".1s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFour"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>
+                    Uma assinatura digital é o mesmo que uma assinatura digitalizada?
+                  </span>
+                </button>
+                <div id="collapseFour" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Não. A assinatura digitalizada é a reprodução da assinatura manuscrita em forma de imagem por meio de scanner. Não garante a autoria e do documento eletrônico, pois não há associação entre o signatário e o texto, pois pode ser facilmente copiado e inserido noutro documento.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="ud-single-faq wow fadeInUp" data-aos-delay=".15s">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#collapseFive"
+                >
+                  <span class="icon flex-shrink-0">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>
+                    Qual é o nome da empresa pela qual o LibreSign foi desenvolvido?
+                  </span>
+                </button>
+                <div id="collapseFive" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    LibreCode, uma cooperativa brasileira de programadores de software livre.
+                  </div>
+                </div>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== FAQ End ====== -->
+    <!-- ====== Contact Form Start ====== -->
+<div class="alert alert-danger alert-dismissible fade show" role="alert" style="display: none;" id="message"></div>
+<div class="ud-contact-form-wrapper wow fadeInUp" data-aos-delay=".2s">
+          <form class="ud-contact-form" id="WebToLeadForm"
+            name="WebToLeadForm">
+            <div class="ud-form-group">
+              <label for="fullName">Nome completo *</label>
+              <input
+                type="text"
+                name="name"
+                id="name"
+                placeholder="Digite o seu nome"
+                required=""
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="email">Email*</label>
+              <input
+                type="email"
+                name="email"
+                id="email"
+                placeholder="example@yourmail.com"
+                required=""
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="phone_mobile">Telefone</label>
+              <input
+                type="text"
+                name="phone_mobile"
+                id="phone_mobile"
+                placeholder="+885 1254 5211 552"
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="company_name">Company Name</label>
+              <input
+                type="text"
+                name="company_name"
+                id="company_name"
+                placeholder="Type your company name"
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="position">Position/Role</label>
+              <input
+                type="text"
+                name="position"
+                id="position"
+                placeholder="Type your position"
+              />
+            </div>
+            <div class="ud-form-group">
+              <label for="description">What is your main challenge? *</label>
+              <textarea
+                name="description"
+                id="description"
+                rows="3"
+                placeholder="Digite a sua mensagem aqui"
+                required=""
+              ></textarea>
+            </div>
+            <div class="ud-form-group">
+              <label for="message">Digite o código abaixo *</label>
+              <input type="text" name="codeImg" id="codeImg"
+                placeholder="Digite o código abaixo"
+                required/>
+            </div>
+            <div class="ud-form-group">
+              <img alt="Imagem com texto de captcha"
+                class="me-3 mb-3"
+                id="captcha"
+              />
+              <button id="btnReload" type="button">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/reload.svg"
+                  alt="Botão para atualizar os caracteres do captcha"
+                  width="30px"
+                />
+              </button>
+              <script>
+                function contentLoad(url) {
+                  return new Promise(function (resolve, reject) {
+                    var http = new XMLHttpRequest();
+                    http.withCredentials = true
+                    http.open('GET', url);
+                    http.responseType = 'blob';
+                    http.onload = function () {
+                      if (http.status === 200) {
+                        resolve(http.response);
+                      } else {
+                        reject(new Error('Response didn\'t load successfully; error code:' + http.statusText));
+                      }
+                    };
+                    http.onerror = function () {
+                      reject(new Error('There was a network error.'));
+                    };
+                    http.send();
+                  });
+                }
+
+                function loadImage(token) {
+                  contentLoad('https://contactform.libresign.coop/captcha.php?'+ token).then(function (response) {
+                    var myImage = document.getElementById('captcha');
+                    myImage.crossOrigin = "";
+                    myImage.src = window.URL.createObjectURL(response);
+                  }, function (Error) {
+                    console.log(Error);
+                  });
+                }
+                let token = new Date().getTime()
+                loadImage(token)
+
+                let reloadButton = document.getElementById("btnReload");
+                let captcha = document.getElementById("captcha");
+                let formCaptpcha = document.forms["WebToLeadForm"];
+
+                reloadButton.onclick = function () {
+                    token = new Date().getTime()
+                    loadImage(token)
+                };
+
+                formCaptpcha.addEventListener("submit", (e) =>  {
+                  e.preventDefault();
+
+                  const http = new XMLHttpRequest()
+                  http.withCredentials = true
+                  http.open('POST', 'https://contactform.libresign.coop/validate.php')
+                  var form_data = new URLSearchParams(new FormData(formCaptpcha));
+
+                  http.onreadystatechange = function receiveResponse() {
+
+                    if (this.readyState == 4) {
+                      if (this.status == 200) {
+                        window.top.location.href = 'thank-you-contact'
+                      } else {
+                        let message = document.getElementById('message')
+                        message.textContent = 'Captcha inválido'
+                        message.style.display = 'block'
+                      }
+                    }
+                  };
+
+                  http.send(form_data);
+                });
+              </script>
+
+              <button id="audioIcon" type="button">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/volume-high.svg"
+                  alt="Botão para reproduzir os caracteres do captcha"
+                  width="30px"
+                />
+              </button>
+
+              <script>
+                let audio_icon = document.getElementById('audioIcon')
+
+                function sound(){
+                  contentLoad('https://contactform.libresign.coop/audio_captcha.php?'+ token + '&lang=pt').then(function (response) {
+                      let audio = new Audio()
+                      audio.src = window.URL.createObjectURL(response);
+                      audio.play();
+                  }, function (Error) {
+                      console.log(Error);
+                  });
+                }
+
+                audio_icon.addEventListener("click", sound)
+              </script>
+            </div>
+            <div class="ud-form-group mb-0">
+              <button type="submit" class="ud-main-btn w-100">
+                Talk to a Specialist
+              </button>
+            </div>
+          </form>
+        </div>
+<!-- ====== Contact Form End ====== -->
+    </main>
+    <footer class="ud-footer wow fadeInUp" data-aos-delay=".15s">
+    <div>
+        <div class="container">
+            <div class="row widgets">
+                <div class="col-12 col-lg-4">
+                    <div class="ud-widget">
+                        <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt" class="ud-footer-logo" aria-label="LibreSign - Go to homepage">
+                            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo.svg" alt="LibreSign" />
+                        </a>
+                        <p class="ud-widget-desc">
+                            Criamos experiências digitais para marcas e empresas usando tecnologia.
+                        </p>
+                        <nav aria-label="Social media links">
+                            <h3 class="visually-hidden">Follow us on social media</h3>
+                            <ul class="ud-widget-socials">
+                                <li>
+                                    <a target="_blank" 
+                                       rel="noopener noreferrer"
+                                       href="https://github.com/LibreSign/libresign" 
+                                       aria-label="Visit our GitHub repository (opens in new tab)">
+                                        <svg width="32" height="32" viewBox="0 0 8.9045515 8.4666739" xmlns="http://www.w3.org/2000/svg" class="social-icon" role="img" aria-label="GitHub">
+  <title>GitHub</title>
+  <path d="m 0,0 c -0.876,0.168 -1.719,0.49 -2.472,0.969 -4.656,2.968 -7.581,8.092 -7.581,14.062 v 0 c 0,9.293 7.534,16.827 16.828,16.827 v 0 c 9.293,0 16.827,-7.534 16.827,-16.827 v 0 C 23.602,10.079 21.462,5.629 18.057,2.55 16.659,1.286 14.882,0.497 12.999,0.403 11.014,0.303 10.837,1.13 10.837,1.13 v 4.196 c 0,0.261 -0.022,0.523 -0.079,0.777 -0.081,0.359 -0.208,0.712 -0.397,1.029 -0.058,0.097 -0.122,0.19 -0.192,0.278 -0.03,0.037 -0.06,0.074 -0.093,0.107 -0.024,0.025 -0.062,0.048 -0.068,0.085 0.043,0.037 0.153,0.028 0.208,0.037 0.092,0.017 0.184,0.039 0.276,0.06 0.166,0.039 0.333,0.068 0.501,0.099 0.35,0.065 0.696,0.153 1.036,0.257 0.956,0.291 1.882,0.745 2.577,1.478 0.376,0.396 0.66,0.864 0.896,1.356 0.884,1.844 1.018,4.103 0.133,5.973 -0.151,0.319 -0.327,0.627 -0.531,0.916 -0.023,0.032 -0.252,0.278 -0.242,0.312 0.581,2.093 -0.17,3.634 -0.17,3.634 -1.843,0.014 -3.77,-1.432 -3.77,-1.432 C 7.548,21.412 3.948,20.32 3.948,20.32 1.851,21.766 0.235,21.724 0.235,21.724 -0.403,20.42 0.008,18.09 0.008,18.09 -1.863,15.86 -1.594,12.171 -0.233,10.087 1.128,8.004 4.959,7.597 4.959,7.597 4.562,7.271 4.147,6.393 4.099,5.953 4.052,5.514 2.857,5.438 2.857,5.438 0.986,5.268 0.32,6.515 0.32,6.515 -0.332,7.72 -0.927,7.933 -0.927,7.933 c 0,0 -0.539,0.354 -1.276,0.326 C -2.94,8.23 -2.614,7.862 -2.614,7.862 -1.296,7.167 -0.885,6.076 -0.885,6.076 -0.29,4.517 0.377,4.163 0.377,4.163 1.766,3.114 4.048,3.652 4.048,3.652 V 1.115 C 3.523,-0.699 0.083,-0.016 0.083,-0.016 Z" transform="matrix(0.26458333,0,0,-0.26458333,2.65986,8.43837)" fill="currentColor"/>
+</svg>
+
+
+
+
+
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" 
+                                       rel="noopener noreferrer"
+                                       href="https://www.linkedin.com/company/libresign/" 
+                                       aria-label="Follow us on LinkedIn (opens in new tab)">
+                                        <svg width="32" height="32" viewBox="0 0 8.4666662 8.4666662" xmlns="http://www.w3.org/2000/svg" class="social-icon" role="img" aria-label="LinkedIn">
+  <title>LinkedIn</title>
+  <path d="m 0,0 h -3.162 v 5.143 c 0,1.292 -0.464,2.174 -1.623,2.174 -0.885,0 -1.412,-0.595 -1.644,-1.169 C -6.513,5.943 -6.534,5.655 -6.534,5.368 V 0 h -3.223 v 0 c 0,0 0.042,8.786 0,9.696 h 3.223 V 8.253 C -6.111,8.908 -5.355,9.84 -3.665,9.84 -1.57,9.84 0,8.466 0,5.513 Z m -13.09,10.96 v 10e-4 h -0.02 c -1.073,0 -1.766,0.738 -1.766,1.66 0,0.944 0.714,1.661 1.808,1.661 1.093,0 1.765,-0.717 1.786,-1.661 0,-0.922 -0.693,-1.661 -1.808,-1.661 m -1.665,-1.264 h 3.162 V 0 h -3.162 z m 7.317,13.445 v 0 c -8.837,0 -16,-7.163 -16,-16 v 0 c 0,-8.836 7.163,-16 16,-16 v 0 c 8.836,0 16,7.164 16,16 v 0 c 0,8.837 -7.164,16 -16,16" transform="matrix(0.26458333,0,0,-0.26458333,6.20130465,6.12272)" fill="currentColor"/>
+</svg>
+
+
+
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" 
+                                       rel="noopener noreferrer"
+                                       href="https://t.me/LibreSign" 
+                                       aria-label="Join our Telegram group (opens in new tab)">
+                                        <svg width="32" height="32" viewBox="0 0 8.4666662 8.4666662" xmlns="http://www.w3.org/2000/svg" class="social-icon" role="img" aria-label="Telegram">
+  <title>Telegram</title>
+  <path d="m 0,0 c -0.279,-1.345 -0.485,-2.708 -0.736,-4.059 -0.392,-2.11 -0.748,-4.228 -1.082,-6.349 -0.049,-0.312 -0.074,-0.64 -0.176,-0.941 -0.092,-0.272 -0.267,-0.514 -0.491,-0.692 -0.218,-0.173 -0.481,-0.287 -0.757,-0.323 -0.279,-0.037 -0.552,0.016 -0.807,0.13 -0.249,0.112 -0.476,0.269 -0.703,0.418 -0.27,0.177 -0.536,0.359 -0.8,0.544 -0.528,0.372 -1.045,0.758 -1.557,1.152 -0.515,0.396 -1.023,0.8 -1.531,1.205 -0.241,0.193 -0.497,0.373 -0.725,0.581 -0.192,0.174 -0.332,0.393 -0.321,0.66 0.01,0.258 0.15,0.491 0.312,0.683 0.264,0.311 0.603,0.546 0.922,0.796 0.965,0.758 1.892,1.566 2.765,2.429 0.24,0.236 0.482,0.471 0.709,0.72 0.255,0.28 0.609,0.602 0.671,0.996 0.042,0.269 -0.126,0.39 -0.369,0.259 -0.644,-0.345 -1.203,-0.825 -1.805,-1.236 -0.474,-0.324 -0.96,-0.628 -1.434,-0.952 -0.485,-0.333 -0.965,-0.672 -1.446,-1.011 -1.031,-0.727 -2.181,-1.625 -3.505,-1.64 -0.418,-0.005 -0.831,0.07 -1.236,0.169 -0.404,0.098 -0.805,0.21 -1.207,0.319 -0.519,0.141 -2.482,0.563 -1.672,1.463 0.178,0.197 0.435,0.299 0.682,0.395 0.719,0.279 1.437,0.559 2.155,0.841 0,0.042 0.617,0.242 0.685,0.269 0.239,0.094 0.478,0.189 0.717,0.283 0.479,0.19 0.956,0.38 1.434,0.57 0.926,0.369 1.85,0.739 2.776,1.106 1.135,0.451 2.271,0.902 3.398,1.375 0.557,0.235 1.11,0.48 1.671,0.707 0.67,0.27 1.351,0.516 2.021,0.788 0.047,0.019 0.095,0.038 0.144,0.055 0.144,0.05 0.292,0.087 0.446,0.079 C -0.418,1.767 -0.024,1.444 0.087,1.025 0.177,0.687 0.069,0.331 0,0 m -7.152,10.707 v 0 c -8.836,0 -16,-7.163 -16,-16 v 0 c 0,-8.837 7.164,-16 16,-16 v 0 c 8.837,0 16,7.163 16,16 v 0 c 0,8.837 -7.163,16 -16,16" transform="matrix(0.26458333,0,0,-0.26458333,6.12563,2.83289)" fill="currentColor"/>
+</svg>
+
+
+                                    </a>
+                                </li>
+                                <li>
+                                    <a target="_blank" 
+                                       rel="noopener noreferrer"
+                                       href="https://www.instagram.com/libresign/" 
+                                       aria-label="Follow us on Instagram (opens in new tab)">
+                                        <svg width="32" height="32" viewBox="0 0 8.4665594 8.4667759" xmlns="http://www.w3.org/2000/svg" class="social-icon" role="img" aria-label="Instagram">
+  <title>Instagram</title>
+  <g transform="translate(-86.518751,-126.20626)">
+    <path d="m 0,0 c -1.321,0 -2.397,-1.075 -2.397,-2.397 0,-1.321 1.076,-2.396 2.397,-2.396 1.321,0 2.397,1.075 2.397,2.396 C 2.397,-1.075 1.321,0 0,0" transform="matrix(0.26458333,0,0,-0.26458333,90.745918,129.79171)" fill="currentColor"/>
+    <path d="m 0,0 c 0,-0.355 -0.288,-0.643 -0.643,-0.643 h -0.503 c -0.355,0 -0.643,0.288 -0.643,0.643 v 0.503 c 0,0.355 0.288,0.643 0.643,0.643 h 0.503 C -0.288,1.146 0,0.858 0,0.503 Z m -5.735,-7.84 c -2.062,0 -3.739,1.677 -3.739,3.739 0,2.061 1.677,3.738 3.739,3.738 2.061,0 3.738,-1.677 3.738,-3.738 0,-2.062 -1.677,-3.739 -3.738,-3.739 m 3.11,11.051 H -8.8 c -2.362,0 -4.277,-1.915 -4.277,-4.277 v -6.175 c 0,-2.362 1.915,-4.277 4.277,-4.277 h 6.175 c 2.362,0 4.277,1.915 4.277,4.277 v 6.175 c 0,2.362 -1.915,4.277 -4.277,4.277" transform="matrix(0.26458333,0,0,-0.26458333,92.263384,129.34066)" fill="currentColor"/>
+    <path d="m 0,0 c 0,-3.103 -2.516,-5.618 -5.618,-5.618 h -6.245 c -3.103,0 -5.618,2.515 -5.618,5.618 v 6.244 c 0,3.103 2.515,5.619 5.618,5.619 h 6.245 C -2.516,11.863 0,9.347 0,6.244 Z m -6.921,19.017 v 0 C -15.7,20.022 -23.631,13.72 -24.635,4.941 v 0 c -1.005,-8.778 5.297,-16.709 14.075,-17.714 v 0 C -1.781,-13.777 6.149,-7.476 7.154,1.303 8.159,10.081 1.857,18.012 -6.921,19.017" transform="matrix(0.26458333,0,0,-0.26458333,93.064621,131.2657)" fill="currentColor"/>
+  </g>
+</svg>
+                                    </a>
+                                </li>
+                            </ul>
+                        </nav>
+                    </div>
+                    <div class="ud-widget">
+                        <a id="coop-logo" 
+                           target="_blank" 
+                           rel="noopener noreferrer"
+                           href="https://www.somos.coop.br/" 
+                           aria-label="Somos.Coop - National movement that values cooperative initiatives (opens in new tab)">
+                            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/somoscoop.png" alt="Somos.Coop" aria-hidden="true">
+                        </a>
+
+                        <p id="copyright">&copy; 2026 LibreSign. All rights reserved.</p>
+                    </div>
+                </div>
+
+                <div class="col-12 col-sm-6 col-lg">
+                    <nav class="ud-widget" aria-labelledby="footer-nav-1">
+                        <h3 id="footer-nav-1" class="visually-hidden">Quick links</h3>
+                        <ul class="ud-widget-links">
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/solutions">Solutions</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/features">Recursos</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/pricing">Plans and Pricing</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/about">Sobre</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/blog">Blog</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/ebooks">E-books library</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/newsletter">Newsletter</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-sm-6 col-lg">
+                    <nav class="ud-widget" aria-labelledby="footer-nav-2">
+                        <h3 id="footer-nav-2" class="visually-hidden">Resources and support</h3>
+                        <ul class="ud-widget-links">
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/success-stories">Success stories</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/academy">LibreSign Academy</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/cooperativism">Cooperativism</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/sales">Falar com Vendas</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/support">Support</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/jobs">Work with us</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/privacy">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-lg">
+                    <div class="ud-widget ud-widget-address">
+                        <h3 class="visually-hidden">Contact information</h3>
+                        <address id="address">
+                            Quinze de Novembro Street, 106, 3rd Floor, Room 309 - Centro <br />
+                            Niteroi - RJ
+                        </address>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- ====== Back To Top Start ====== -->
+    <a id="back-to-top" 
+       class="back-to-top" 
+       href="#top" 
+       aria-label="Back to top">
+        <i class="lni lni-chevron-up" aria-hidden="true"></i>
+    </a>
+    <!-- ====== Back To Top End ====== -->
+    <button id="footer-contact"
+            type="button"
+            data-contact-url="https://wa.me/552120422073?text=Ol%C3%A1%2C%20quero%20um%20or%C3%A7amento%20do%20LibreSign"
+            aria-label="Contact sales team for a quote">
+        <div class="bubble bubble-text">
+            <p>How about an exclusive quote to sign up for LibreSign?</p>
+        </div>
+        <div class="image-wrapper">
+            <div class="image">
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/footer/attendant.png" alt="" role="presentation" />
+                <div class="status" aria-hidden="true"></div>
+            </div>
+        </div>
+    </button>
+
+</footer>
+  </body>
+</html>
