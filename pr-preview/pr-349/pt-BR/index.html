@@ -4,28 +4,40 @@
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>LibreSign - Electronic signature of digital documents</title>
+    <title>LibreSign - Open Source Electronic Signature for Nextcloud</title>
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="LibreSign - Electronic signature of digital documents">
     <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR">
-    <meta name="description" content="Electronic signature of digital documents">
+    <meta name="description" content="LibreSign is a free and open source electronic signature app for Nextcloud. Sign, request, and manage digital documents securely in your own self-hosted environment.">
+    <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
+    <meta name="author" content="LibreSign / LibreCode">
+
+    <!-- Hreflang: multilingual support -->
+        <link rel="alternate" hreflang="cs" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/cs" />
+        <link rel="alternate" hreflang="en" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/" />
+        <link rel="alternate" hreflang="fr" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/fr" />
+        <link rel="alternate" hreflang="nb-NO" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO" />
+        <link rel="alternate" hreflang="pt" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt" />
+        <link rel="alternate" hreflang="pt-BR" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR" />
+        <link rel="alternate" hreflang="ta" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta" />
+        <link rel="alternate" hreflang="x-default" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://uideck.com/play/">
-    <meta property="og:title" content="LibreSign - Electronic signature of digital documents">
-    <meta property="og:description" content="LibreSign - Electronic signature of digital documents">
-    <!-- TODO: Think about the image -->
-    <meta property="og:image" content="">
+    <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR">
+    <meta property="og:title" content="LibreSign - Open Source Electronic Signature for Nextcloud">
+    <meta property="og:description" content="LibreSign is a free and open source electronic signature app for Nextcloud. Sign, request, and manage digital documents securely in your own self-hosted environment.">
+    <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo-libresign-large.png">
+    <meta property="og:site_name" content="LibreSign">
+    <meta property="og:locale" content="pt_BR">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://uideck.com/play/">
-    <meta property="twitter:title" content="LibreSign - Electronic signature of digital documents">
-    <meta property="twitter:description" content="LibreSign - Electronic signature of digital documents">
-    <!-- TODO: Think about the image -->
-    <meta property="twitter:image" content="">
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR">
+    <meta name="twitter:title" content="LibreSign - Open Source Electronic Signature for Nextcloud">
+    <meta name="twitter:description" content="LibreSign is a free and open source electronic signature app for Nextcloud. Sign, request, and manage digital documents securely in your own self-hosted environment.">
+    <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo-libresign-large.png">
+    <meta name="twitter:site" content="@libresign">
 
     <!--====== Favicon Icon ======-->
     <link
@@ -57,18 +69,18 @@
 
     <script defer type="module" src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/build/assets/main-3ElflS-v.js"></script>
 
-    <script defer>
-        document.getElementById('back-to-top').onclick = function(e) {
-            e.preventDefault()
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-            })
-        };
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backToTop = document.getElementById('back-to-top');
+            if (backToTop) {
+                backToTop.onclick = function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                };
+            }
 
-        // ==== for menu scroll
-        const pageLink = document.querySelectorAll(".ud-menu-scroll");
+            // ==== for menu scroll
+            const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
         pageLink.forEach((elem) => {
             elem.addEventListener("click", (e) => {
@@ -119,7 +131,152 @@
         }
 
         window.document.addEventListener("scroll", onScroll);
+        }); // end DOMContentLoaded
     </script>
+
+    <!-- Structured data: base Organization + WebSite -->
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://libresign.coop/#organization",
+          "name": "LibreSign",
+          "url": "https://libresign.coop",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://libresign.coop/assets/images/logo/logo.svg"
+          },
+          "sameAs": [
+            "https://github.com/LibreSign/libresign",
+            "https://www.linkedin.com/company/libresign/",
+            "https://t.me/LibreSign",
+            "https://www.instagram.com/libresign/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://libresign.coop/#website",
+          "url": "https://libresign.coop",
+          "name": "LibreSign",
+          "description": "Open source electronic signature and digital document management, integrated with Nextcloud.",
+          "publisher": {
+            "@id": "https://libresign.coop/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+    
+    
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "SoftwareApplication",
+  "@id": "https://libresign.coop/#software",
+  "name": "LibreSign",
+  "alternateName": "LibreSign Electronic Signature",
+  "applicationCategory": "BusinessApplication",
+  "applicationSubCategory": "Electronic Signature",
+  "operatingSystem": "Nextcloud, Linux, Docker",
+  "url": "https://libresign.coop",
+  "downloadUrl": "https://apps.nextcloud.com/apps/libresign",
+  "codeRepository": "https://github.com/LibreSign/libresign",
+  "license": "https://www.gnu.org/licenses/agpl-3.0.html",
+  "description": "LibreSign is a free and open source electronic signature application for Nextcloud. It enables secure document signing, signature requests, and digital document management in a fully self-hosted environment.",
+  "featureList": [
+    "Electronic document signing",
+    "Digital certificate support (A1)",
+    "Multiple signers per document",
+    "Nextcloud integration",
+    "Self-hosted deployment",
+    "API access",
+    "Document validation and audit trail",
+    "End-to-end document security"
+  ],
+  "offers": {
+    "@type": "Offer",
+    "price": "0",
+    "priceCurrency": "USD",
+    "description": "Free and open source. Managed hosting plans available."
+  },
+  "author": {
+    "@id": "https://libresign.coop/#organization"
+  },
+  "publisher": {
+    "@id": "https://libresign.coop/#organization"
+  },
+  "isAccessibleForFree": true,
+  "isFamilyFriendly": true
+}
+</script>
+<script type="application/ld+json">
+{
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": [
+    {
+      "@type": "Question",
+      "name": "What is LibreSign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LibreSign is an open source electronic signature application integrated with Nextcloud. It allows individuals and organizations to sign, request signatures on, and manage digital documents securely — without relying on proprietary third-party services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Is LibreSign free and open source?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. LibreSign is released under the AGPL-3.0 license. The full source code is publicly available on GitHub. You are free to use, study, modify, and distribute the software according to the license terms."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Does LibreSign work with Nextcloud?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. LibreSign is a native Nextcloud application. It is installed directly into your Nextcloud instance and uses Nextcloud's users, storage, and authentication infrastructure. You can find it in the official Nextcloud App Store."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Can LibreSign be self-hosted?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Yes. LibreSign is designed for self-hosting. You install it on your own servers or private cloud infrastructure, keeping full control over your data and signing workflows. No data is sent to external services."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "Who can use LibreSign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "LibreSign is suitable for individuals, small businesses, enterprises, government agencies, cooperatives, law firms, and any organization that needs to sign or collect digital signatures on documents while maintaining data sovereignty."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can I contribute to LibreSign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "You can contribute by reporting bugs, improving documentation, translating the interface, developing new features, or sponsoring the project. Visit the GitHub repository at https://github.com/LibreSign/libresign or contact the LibreCode cooperative to learn how to get involved."
+      }
+    },
+    {
+      "@type": "Question",
+      "name": "How can companies or governments support LibreSign?",
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": "Organizations can support LibreSign through sponsorship, purchasing managed hosting plans from LibreCode, or contributing development resources. Sustainable funding helps ensure ongoing maintenance, security updates, and new features for the entire community."
+      }
+    }
+  ]
+}
+</script>
+
   </head>
   <body id="top">
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -409,7 +566,7 @@
     <div class="row">
   <div class="col-lg-12">
     <div class="ud-section-title text-center mx-auto">
-      <h3 class="ud-home-section__title">Eliminate Bureaucracy, Ensure Security: LibreSign Solves Your Biggest Challenges.</h3>
+      <h2 class="ud-home-section__title">Eliminate Bureaucracy, Ensure Security: LibreSign Solves Your Biggest Challenges.</h2>
     </div>
   </div>
       <div class="col-lg-12">
@@ -422,11 +579,11 @@
         <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="0">
           <div class="ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Legal Validity and Undisputed Compliance?</h5>
+                <h3 class="ud-card__title">Legal Validity and Undisputed Compliance?</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/legal-validity.svg" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/legal-validity.svg" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -444,11 +601,11 @@
         <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="150">
           <div class="ud-card ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Simple, Secure and Affordable Digital Signature?</h5>
+                <h3 class="ud-card__title">Simple, Secure and Affordable Digital Signature?</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/digital-signature.svg" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/digital-signature.svg" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -466,11 +623,11 @@
         <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
           <div class="ud-card ud-card ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Total Control and Flexibility to Integrate?</h5>
+                <h3 class="ud-card__title">Total Control and Flexibility to Integrate?</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/integration-flexibility.svg" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/features/integration-flexibility.svg" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -498,7 +655,7 @@
           <div class="row">
   <div class="col-lg-12">
     <div class="ud-section-title text-center mx-auto">
-      <h3 class="ud-home-section__title">Unlock the Future of Your Management: The Exclusive Benefits of LibreSign.</h3>
+      <h2 class="ud-home-section__title">Unlock the Future of Your Management: The Exclusive Benefits of LibreSign.</h2>
     </div>
   </div>
       <div class="col-lg-12">
@@ -510,7 +667,7 @@
                       <div class="col-md-6 d-flex">
           <div class="ud-card">
   <div class="ud-card__header">
-    <h5 class="ud-card__title">Segurança avançada</h5>
+    <h3 class="ud-card__title">Segurança avançada</h3>
   </div>
 
       <div class="ud-card__icon">
@@ -531,7 +688,7 @@
                       <div class="col-md-6 d-flex">
           <div class="ud-card">
   <div class="ud-card__header">
-    <h5 class="ud-card__title">Monitoramento em tempo real</h5>
+    <h3 class="ud-card__title">Monitoramento em tempo real</h3>
   </div>
 
       <div class="ud-card__icon">
@@ -552,7 +709,7 @@
                       <div class="col-md-6 d-flex">
           <div class="ud-card">
   <div class="ud-card__header">
-    <h5 class="ud-card__title">Validação de documentos por QR Code</h5>
+    <h3 class="ud-card__title">Validação de documentos por QR Code</h3>
   </div>
 
       <div class="ud-card__icon">
@@ -573,7 +730,7 @@
                       <div class="col-md-6 d-flex">
           <div class="ud-card">
   <div class="ud-card__header">
-    <h5 class="ud-card__title">Assinaturas híbridas</h5>
+    <h3 class="ud-card__title">Assinaturas híbridas</h3>
   </div>
 
       <div class="ud-card__icon">
@@ -608,7 +765,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="ud-section-title text-center mx-auto">
-              <h3 class="ud-home-section__title">See LibreSign in Action: Simplify Your Signatures in Detail.</h3>
+              <h2 class="ud-home-section__title">See LibreSign in Action: Simplify Your Signatures in Detail.</h2>
             </div>
           </div>
           <div class="col-lg-12">
@@ -618,10 +775,10 @@
         <div class="row justify-content-center mt-5">
           <div class="col-lg-6 text-center">
             <div class="ud-home-video__media">
-              <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/libresign_mobile_acess_oficial.png" alt="LibreSign mobile application demo" />
+              <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/libresign_mobile_acess_oficial.png" alt="LibreSign mobile application demo" loading="lazy" />
             </div>
             <div class="mt-4">
-              <a href="#" class="btn ud-btn-solid-warm ud-home-video__action">
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/features" class="btn ud-btn-solid-warm ud-home-video__action">
                 See How It Works
               </a>
             </div>
@@ -637,7 +794,7 @@
     <div class="row">
   <div class="col-lg-12">
     <div class="ud-section-title text-center mx-auto">
-      <h3 class="ud-home-section__title">Tailored Solutions: LibreSign Meets the Unique Demands of Your Business.</h3>
+      <h2 class="ud-home-section__title">Tailored Solutions: LibreSign Meets the Unique Demands of Your Business.</h2>
     </div>
   </div>
       <div class="col-lg-12">
@@ -650,11 +807,11 @@
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="0">
           <div class="ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Public Management: Transparency, Validity, and Efficiency</h5>
+                <h3 class="ud-card__title">Public Management: Transparency, Validity, and Efficiency</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/public-sector.png" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/public-sector.png" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -672,11 +829,11 @@
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="150">
           <div class="ud-card ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Small and Medium Businesses: Grow with Security</h5>
+                <h3 class="ud-card__title">Small and Medium Businesses: Grow with Security</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/small-business.png" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/small-business.png" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -694,11 +851,11 @@
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="300">
           <div class="ud-card ud-card ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Cooperatives: Strengthen Governance and Member Participation</h5>
+                <h3 class="ud-card__title">Cooperatives: Strengthen Governance and Member Participation</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/cooperatives.png" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/cooperatives.png" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -716,11 +873,11 @@
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="450">
           <div class="ud-card ud-card ud-card ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Information Technology: Control and Total Flexibility</h5>
+                <h3 class="ud-card__title">Information Technology: Control and Total Flexibility</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/it-professionals.png" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/it-professionals.png" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -738,11 +895,11 @@
         <div class="col d-flex" data-aos="fade-up" data-aos-delay="600">
           <div class="ud-card ud-card ud-card ud-card ud-card">
                           <div class="ud-card__header">
-                <h5 class="ud-card__title">Legal Sector: Agility and Unquestionable Legal Security</h5>
+                <h3 class="ud-card__title">Legal Sector: Agility and Unquestionable Legal Security</h3>
               </div>
             
                           <div class="ud-card__icon">
-                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/legal-sector.png" alt="" />
+                <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/icon/solutions/legal-sector.png" alt="" loading="lazy" />
               </div>
             
                           <div class="ud-card__body">
@@ -770,7 +927,7 @@
           <div class="row">
   <div class="col-lg-12">
     <div class="ud-section-title text-center mx-auto">
-      <h3 class="ud-home-section__title">LibreSign: Knowledge that Drives Your Digital Transformation.</h3>
+      <h2 class="ud-home-section__title">LibreSign: Knowledge that Drives Your Digital Transformation.</h2>
     </div>
   </div>
       <div class="col-lg-12">
@@ -791,7 +948,7 @@
     </span>
   </div>
   <div class="ud-home-blog-card__content">
-    <h4 class="ud-home-blog-card__title">Envelopes - Batch document signing in LibreSign</h4>
+    <h3 class="ud-home-blog-card__title">Envelopes - Batch document signing in LibreSign</h3>
     <p class="ud-home-blog-card__excerpt">LibreSign now supports envelopes, allowing multiple documents to be grouped and signed as a single signing process with shared signers and unified progress tracking.</p>
     <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/posts/envelopes-batch-document-signing-in-libresign" class="ud-home-blog-card__link">Read more »</a>
   </div>
@@ -809,7 +966,7 @@
     </span>
   </div>
   <div class="ud-home-blog-card__content">
-    <h4 class="ud-home-blog-card__title">CRL (Certificate Revocation List) Implementation in LibreSign</h4>
+    <h3 class="ud-home-blog-card__title">CRL (Certificate Revocation List) Implementation in LibreSign</h3>
     <p class="ud-home-blog-card__excerpt">Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.</p>
     <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign" class="ud-home-blog-card__link">Read more »</a>
   </div>
@@ -827,7 +984,7 @@
     </span>
   </div>
   <div class="ud-home-blog-card__content">
-    <h4 class="ud-home-blog-card__title">DocMDP (Document Modification Detection and Prevention) in LibreSign</h4>
+    <h3 class="ud-home-blog-card__title">DocMDP (Document Modification Detection and Prevention) in LibreSign</h3>
     <p class="ud-home-blog-card__excerpt">Learn how LibreSign implements DocMDP support according to ISO 32000 standards, providing document protection policies that ensure integrity and control over modifications after digital signature.</p>
     <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/posts/docmdp-document-modification-detection-and-prevention-in-libresign" class="ud-home-blog-card__link">Read more »</a>
   </div>
@@ -846,6 +1003,98 @@
   </div>
 </section>
     <!-- ====== Blog/Content Section End ====== -->
+
+    <!-- ====== About LibreSign Section (GEO) Start ====== -->
+    <section class="ud-home-about" aria-labelledby="about-libresign-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8 text-center">
+            <h2 id="about-libresign-heading" class="ud-home-section__title">What is LibreSign?</h2>
+            <p class="ud-home-section__subtitle">
+              LibreSign is a free and open source application for electronic and digital document signing, developed and maintained by LibreCode — a cooperative of open source specialists.
+            </p>
+          </div>
+        </div>
+        <div class="row gy-4 mt-3">
+          <div class="col-md-4 text-center">
+            <div class="ud-about-feature">
+              <h3>Open Source</h3>
+              <p>All code is publicly auditable on GitHub. No hidden tracking, no vendor lock-in. You are free to inspect, modify, and redistribute.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="ud-about-feature">
+              <h3>Nextcloud Integration</h3>
+              <p>LibreSign is a native Nextcloud app. It integrates seamlessly with your existing Nextcloud environment, keeping all documents within your own infrastructure.</p>
+            </div>
+          </div>
+          <div class="col-md-4 text-center">
+            <div class="ud-about-feature">
+              <h3>Self-Hosted</h3>
+              <p>Run LibreSign on your own servers or private cloud. Your documents and signing data never leave your infrastructure — full privacy and data sovereignty.</p>
+            </div>
+          </div>
+        </div>
+        <div class="row mt-4 justify-content-center">
+          <div class="col-lg-8 text-center">
+            <p class="ud-home-about__cta-text">
+              Trusted by government agencies, cooperatives, law firms, and businesses that value control, transparency, and security over their document workflows.
+            </p>
+            <div class="d-flex flex-wrap gap-3 justify-content-center mt-3">
+              <a href="https://github.com/LibreSign/libresign" target="_blank" rel="noopener noreferrer" class="btn ud-btn-outline-brand">
+                View on GitHub
+              </a>
+              <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/about" class="btn ud-btn-solid-brand">
+                About the Project
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== About LibreSign Section (GEO) End ====== -->
+
+    <!-- ====== FAQ Section Start ====== -->
+    <section class="ud-home-faq" aria-labelledby="faq-heading">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-8">
+            <h2 id="faq-heading" class="ud-home-section__title text-center">Frequently Asked Questions</h2>
+            <dl class="ud-faq-list">
+              <div class="ud-faq-item">
+                <dt>What is LibreSign?</dt>
+                <dd>LibreSign is an open source electronic signature application integrated with Nextcloud. It allows individuals and organizations to sign, request signatures on, and manage digital documents securely — without relying on proprietary third-party services.</dd>
+              </div>
+              <div class="ud-faq-item">
+                <dt>Is LibreSign free and open source?</dt>
+                <dd>Yes. LibreSign is released under the AGPL-3.0 license. The full source code is publicly available on GitHub. You are free to use, study, modify, and distribute the software according to the license terms.</dd>
+              </div>
+              <div class="ud-faq-item">
+                <dt>Does LibreSign work with Nextcloud?</dt>
+                <dd>Yes. LibreSign is a native Nextcloud application. It is installed directly into your Nextcloud instance and uses Nextcloud&#039;s users, storage, and authentication infrastructure. You can find it in the official Nextcloud App Store.</dd>
+              </div>
+              <div class="ud-faq-item">
+                <dt>Can LibreSign be self-hosted?</dt>
+                <dd>Yes. LibreSign is designed for self-hosting. You install it on your own servers or private cloud infrastructure, keeping full control over your data and signing workflows. No data is sent to external services.</dd>
+              </div>
+              <div class="ud-faq-item">
+                <dt>Who can use LibreSign?</dt>
+                <dd>LibreSign is suitable for individuals, small businesses, enterprises, government agencies, cooperatives, law firms, and any organization that needs to sign or collect digital signatures on documents while maintaining data sovereignty.</dd>
+              </div>
+              <div class="ud-faq-item">
+                <dt>How can I contribute to LibreSign?</dt>
+                <dd>You can contribute by reporting bugs, improving documentation, translating the interface, developing new features, or sponsoring the project. Visit the GitHub repository or contact the LibreCode cooperative to learn how to get involved.</dd>
+              </div>
+              <div class="ud-faq-item">
+                <dt>How can my company or organization support LibreSign?</dt>
+                <dd>Organizations can support LibreSign through sponsorship, purchasing managed hosting plans from LibreCode, or contributing development resources. Sustainable funding helps ensure ongoing maintenance, security updates, and new features for the entire community.</dd>
+              </div>
+            </dl>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- ====== FAQ Section End ====== -->
 
     <!-- ====== CTA Start ====== -->
     <section
@@ -870,6 +1119,8 @@
   </div>
 </section>
     <!-- ====== CTA End ====== -->
+
+
     </main>
     <footer class="ud-footer wow fadeInUp" data-aos-delay=".15s">
     <div>
@@ -881,7 +1132,7 @@
                             <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo.svg" alt="LibreSign" />
                         </a>
                         <p class="ud-widget-desc">
-                            Criamos experiências digitais para marcas e empresas usando tecnologia.
+                            Open source electronic signature integrated with Nextcloud. Self-hosted, secure, and built for organizations that value privacy and data sovereignty.
                         </p>
                         <nav aria-label="Social media links">
                             <h3 class="visually-hidden">Follow us on social media</h3>
@@ -1014,6 +1265,28 @@
                             </li>
                             <li>
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/privacy">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-sm-6 col-lg">
+                    <nav class="ud-widget" aria-labelledby="footer-nav-open-source">
+                        <h3 id="footer-nav-open-source" class="ud-widget-title">Open Source</h3>
+                        <ul class="ud-widget-links">
+                            <li>
+                                <a href="https://github.com/LibreSign/libresign" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                            </li>
+                            <li>
+                                <a href="https://docs.libresign.coop" target="_blank" rel="noopener noreferrer">Documentation</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/LibreSign/libresign/issues" target="_blank" rel="noopener noreferrer">Report an issue</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/LibreSign/libresign/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">How to contribute</a>
+                            </li>
+                            <li>
+                                <a href="https://apps.nextcloud.com/apps/libresign" target="_blank" rel="noopener noreferrer">Nextcloud App Store</a>
                             </li>
                         </ul>
                     </nav>

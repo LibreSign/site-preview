@@ -7,25 +7,37 @@
     <title>The Digital Revolution in Public Administration - Integrating e-Cidade with LibreSign</title>
 
     <!-- Primary Meta Tags -->
-    <meta name="title" content="LibreSign - Electronic signature of digital documents">
     <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign">
     <meta name="description" content="Discover the main benefits of integrating e-Cidade with LibreSign and see how this partnership is transforming the digitalization of municipalities, promoting agility, security, and sustainability.">
+    <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
+    <meta name="author" content="LibreSign / LibreCode">
+
+    <!-- Hreflang: multilingual support -->
+        <link rel="alternate" hreflang="cs" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/cs/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="en" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="fr" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/fr/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="nb-NO" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/nb-NO/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="pt" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="pt-BR" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/pt-BR/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="ta" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/ta/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
+        <link rel="alternate" hreflang="x-default" href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign" />
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://uideck.com/play/">
-    <meta property="og:title" content="LibreSign - Electronic signature of digital documents">
-    <meta property="og:description" content="LibreSign - Electronic signature of digital documents">
-    <!-- TODO: Think about the image -->
-    <meta property="og:image" content="">
+    <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign">
+    <meta property="og:title" content="The Digital Revolution in Public Administration - Integrating e-Cidade with LibreSign">
+    <meta property="og:description" content="Discover the main benefits of integrating e-Cidade with LibreSign and see how this partnership is transforming the digitalization of municipalities, promoting agility, security, and sustainability.">
+    <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo-libresign-large.png">
+    <meta property="og:site_name" content="LibreSign">
+    <meta property="og:locale" content="en">
 
-    <!-- Twitter -->
-    <meta property="twitter:card" content="summary_large_image">
-    <meta property="twitter:url" content="https://uideck.com/play/">
-    <meta property="twitter:title" content="LibreSign - Electronic signature of digital documents">
-    <meta property="twitter:description" content="LibreSign - Electronic signature of digital documents">
-    <!-- TODO: Think about the image -->
-    <meta property="twitter:image" content="">
+    <!-- Twitter / X Card -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign">
+    <meta name="twitter:title" content="The Digital Revolution in Public Administration - Integrating e-Cidade with LibreSign">
+    <meta name="twitter:description" content="Discover the main benefits of integrating e-Cidade with LibreSign and see how this partnership is transforming the digitalization of municipalities, promoting agility, security, and sustainability.">
+    <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo-libresign-large.png">
+    <meta name="twitter:site" content="@libresign">
 
     <!--====== Favicon Icon ======-->
     <link
@@ -57,18 +69,18 @@
 
     <script defer type="module" src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/build/assets/main-3ElflS-v.js"></script>
 
-    <script defer>
-        document.getElementById('back-to-top').onclick = function(e) {
-            e.preventDefault()
-            window.scrollTo({
-                top: 0,
-                left: 0,
-                behavior: 'smooth'
-            })
-        };
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            var backToTop = document.getElementById('back-to-top');
+            if (backToTop) {
+                backToTop.onclick = function(e) {
+                    e.preventDefault();
+                    window.scrollTo({ top: 0, left: 0, behavior: 'smooth' });
+                };
+            }
 
-        // ==== for menu scroll
-        const pageLink = document.querySelectorAll(".ud-menu-scroll");
+            // ==== for menu scroll
+            const pageLink = document.querySelectorAll(".ud-menu-scroll");
 
         pageLink.forEach((elem) => {
             elem.addEventListener("click", (e) => {
@@ -119,8 +131,46 @@
         }
 
         window.document.addEventListener("scroll", onScroll);
+        }); // end DOMContentLoaded
     </script>
-  </head>
+
+    <!-- Structured data: base Organization + WebSite -->
+    
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://libresign.coop/#organization",
+          "name": "LibreSign",
+          "url": "https://libresign.coop",
+          "logo": {
+            "@type": "ImageObject",
+            "url": "https://libresign.coop/assets/images/logo/logo.svg"
+          },
+          "sameAs": [
+            "https://github.com/LibreSign/libresign",
+            "https://www.linkedin.com/company/libresign/",
+            "https://t.me/LibreSign",
+            "https://www.instagram.com/libresign/"
+          ]
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://libresign.coop/#website",
+          "url": "https://libresign.coop",
+          "name": "LibreSign",
+          "description": "Open source electronic signature and digital document management, integrated with Nextcloud.",
+          "publisher": {
+            "@id": "https://libresign.coop/#organization"
+          }
+        }
+      ]
+    }
+    </script>
+    
+      </head>
   <body id="top">
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
 <header class="ud-header">
@@ -510,7 +560,7 @@ Reduces paper usage, contributing to environmental sustainability and minimizing
                             <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/logo/logo.svg" alt="LibreSign" />
                         </a>
                         <p class="ud-widget-desc">
-                            We create digital experiences for brands and companies by using technology.
+                            Open source electronic signature integrated with Nextcloud. Self-hosted, secure, and built for organizations that value privacy and data sovereignty.
                         </p>
                         <nav aria-label="Social media links">
                             <h3 class="visually-hidden">Follow us on social media</h3>
@@ -643,6 +693,28 @@ Reduces paper usage, contributing to environmental sustainability and minimizing
                             </li>
                             <li>
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/privacy">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </nav>
+                </div>
+                <div class="col-12 col-sm-6 col-lg">
+                    <nav class="ud-widget" aria-labelledby="footer-nav-open-source">
+                        <h3 id="footer-nav-open-source" class="ud-widget-title">Open Source</h3>
+                        <ul class="ud-widget-links">
+                            <li>
+                                <a href="https://github.com/LibreSign/libresign" target="_blank" rel="noopener noreferrer">GitHub Repository</a>
+                            </li>
+                            <li>
+                                <a href="https://docs.libresign.coop" target="_blank" rel="noopener noreferrer">Documentation</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/LibreSign/libresign/issues" target="_blank" rel="noopener noreferrer">Report an issue</a>
+                            </li>
+                            <li>
+                                <a href="https://github.com/LibreSign/libresign/blob/main/CONTRIBUTING.md" target="_blank" rel="noopener noreferrer">How to contribute</a>
+                            </li>
+                            <li>
+                                <a href="https://apps.nextcloud.com/apps/libresign" target="_blank" rel="noopener noreferrer">Nextcloud App Store</a>
                             </li>
                         </ul>
                     </nav>
