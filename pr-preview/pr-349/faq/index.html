@@ -170,96 +170,158 @@
     }
     </script>
     
-    
-<script type="application/ld+json">
+    <script type="application/ld+json">
 {
-  "@context": "https://schema.org",
-  "@type": "FAQPage",
-  "mainEntity": [
-    {
-      "@type": "Question",
-      "name": "What is LibreSign?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "LibreSign is an open source electronic signature application integrated with Nextcloud. It allows individuals and organizations to sign, request signatures on, and manage digital documents securely — without relying on proprietary third-party services."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Is LibreSign free and open source?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. LibreSign is released under the AGPL-3.0 license. The full source code is publicly available on GitHub. You are free to use, study, modify, and distribute the software according to the license terms."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does LibreSign work with Nextcloud?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. LibreSign is a native Nextcloud application. It is installed directly into your Nextcloud instance and uses Nextcloud's users, storage, and authentication infrastructure. You can find it in the official Nextcloud App Store."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Can LibreSign be self-hosted?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. LibreSign is designed for self-hosting. You install it on your own servers or private cloud infrastructure, keeping full control over your data and signing workflows. No data is sent to external services."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Who can use LibreSign?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "LibreSign is suitable for individuals, small businesses, enterprises, government agencies, cooperatives, law firms, and any organization that needs to sign or collect digital signatures on documents while maintaining data sovereignty."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "What types of signatures does LibreSign support?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "LibreSign supports simple electronic signatures, signatures with A1 digital certificates, and hybrid signature modes. It also supports sequential or parallel signing flows with multiple signers per document."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I validate a signed document?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Each document signed with LibreSign includes a QR code that allows anyone to verify the authenticity and integrity of the signature without needing access to the system. A complete audit trail is also stored."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "Does LibreSign have an API?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Yes. LibreSign exposes a REST API that allows developers to integrate document signing workflows into their own applications and systems. Full API documentation is available through the Nextcloud OCS API Viewer."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can I contribute to LibreSign?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "You can contribute by reporting bugs, improving documentation, translating the interface, developing new features, or sponsoring the project. Visit the GitHub repository at https://github.com/LibreSign/libresign or contact the LibreCode cooperative to learn how to get involved."
-      }
-    },
-    {
-      "@type": "Question",
-      "name": "How can companies or governments support LibreSign?",
-      "acceptedAnswer": {
-        "@type": "Answer",
-        "text": "Organizations can support LibreSign through sponsorship, purchasing managed hosting plans from LibreCode, or contributing development resources. Sustainable funding helps ensure ongoing maintenance, security updates, and new features for the entire community."
-      }
-    }
-  ]
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+        {
+            "@type": "Question",
+            "name": "Why LibreSign?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LibreSign allows documents to be signed securely and with legal validity, since the system generates hashing - an algorithm that ensures that the file has not been altered after being signed - as well as numbers and records the times of each signature carried out in the document. In this way, the system meets all the requirements of the GDPR - General Data Protection Law."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What are the key features of LibreCode signature pads?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "File Creation, Signature with Digital Certificate, Signature Management, Document Management, Validation, API"
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is a digital signature the same as a digitized signature?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. The digitized signature is the reproduction of the handwritten signature as an image using scanner-type. It does not guarantee the authorship and of the electronic document, as there is no association between the signer and the text, as it can be easily copied and inserted another document."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the name of the company that LibreSign was developed by?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LibreCode, a Brazilian cooperative of free software developers."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does the plan have any kind of loyalty?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You are free to cancel your plan at any time. By canceling, Signater undertakes not to renew the billing for your plan."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What happens if I cancel my plan?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, at any time. After canceling, you will no longer be charged and there will be no automatic renewal."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can I use my personal digital certificate to sign documents?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes. You can store your digital certificate in LibreSign and when you sign a document you will be asked for your password."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Do I need a digital certificate to sign documents?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "No. LibreSign creates a digital certificate for each user who does not have a personal digital certificate."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is LibreSign?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LibreSign is a platform that makes it easy to sign documents digitally and electronically, guaranteeing security and compliance with the law. With it, you can sign documents using personal and company digital certificates in a simple and secure way."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What types of digital certificates does LibreSign accept?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "LibreSign accepts personal and company digital certificates, including certificates issued by Certificate Authorities in the ICP-Brasil standard. In addition, if you prefer, you can use certificates generated by the system itself."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "What is the difference between digital and electronic signatures?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "A digital signature uses a digital certificate, which provides greater security and legal validity. Electronic signatures, on the other hand, are made in other ways, such as by e-mail or cell phone, and also have legal validity, depending on the context."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is LibreSign compatible with mobile devices?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, you can use LibreSign directly from your smartphone or tablet by simply accessing the browser. This allows you to sign your documents from anywhere."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Is it possible to integrate LibreSign with other systems?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Absolutely! LibreSign has APIs that allow you to integrate the platform with other systems you already use, helping to automate processes and make everything more agile."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Can LibreSign be used by public bodies?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, LibreSign is perfect for town halls and public bodies that need a secure and legally valid solution for signing documents."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How can I buy LibreSign?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "You can purchase LibreSign directly on our website or talk to our sales team, who will help you find the ideal plan for your needs."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does LibreSign offer technical support?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, our support team is ready to help you with the configuration and with any questions or problems you may have."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "How are documents signed in LibreSign?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "It is very simple! All you have to do is upload the document to the platform, choose who is going to sign it and select the form of signature (digital or electronic). The system will record everything and ensure that the process is secure and traceable."
+            }
+        },
+        {
+            "@type": "Question",
+            "name": "Does LibreSign time-stamp documents?",
+            "acceptedAnswer": {
+                "@type": "Answer",
+                "text": "Yes, LibreSign offers time stamping, which guarantees the exact date and time of the signature, which brings even more security and legal validity."
+            }
+        }
+    ]
 }
 </script>
-
   </head>
   <body id="top">
     <a href="#main-content" class="skip-to-content">Skip to main content</a>
@@ -463,68 +525,466 @@
             Frequently Asked Questions
           </h1>
           <p class="fs-5 text-white-50">
-            Everything you need to know about LibreSign — open source, self-hosted, and built for digital sovereignty.
+            Everything you need to know about LibreSign.
           </p>
         </div>
       </div>
     </div>
   </section>
 
-  <section class="ud-faq-page py-5" aria-labelledby="faq-page-heading">
+  <section class="ud-faq" aria-labelledby="faq-section-heading">
+    <div class="shape" aria-hidden="true">
+      <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-349/assets/images/faq/shape.svg" alt="" />
+    </div>
     <div class="container">
-      <div class="row justify-content-center">
-        <div class="col-lg-8">
-          <h2 id="faq-page-heading" class="visually-hidden">FAQ</h2>
-          <dl class="ud-faq-list">
-            <div class="ud-faq-item">
-              <dt>What is LibreSign?</dt>
-              <dd>LibreSign is an open source electronic signature application integrated with Nextcloud. It allows individuals and organizations to sign, request signatures on, and manage digital documents securely — without relying on proprietary third-party services.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>Is LibreSign free and open source?</dt>
-              <dd>Yes. LibreSign is released under the AGPL-3.0 license. The full source code is publicly available on GitHub. You are free to use, study, modify, and distribute the software according to the license terms.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>Does LibreSign work with Nextcloud?</dt>
-              <dd>Yes. LibreSign is a native Nextcloud application. It is installed directly into your Nextcloud instance and uses Nextcloud&#039;s users, storage, and authentication infrastructure. You can find it in the official Nextcloud App Store.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>Can LibreSign be self-hosted?</dt>
-              <dd>Yes. LibreSign is designed for self-hosting. You install it on your own servers or private cloud infrastructure, keeping full control over your data and signing workflows. No data is sent to external services.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>Who can use LibreSign?</dt>
-              <dd>LibreSign is suitable for individuals, small businesses, enterprises, government agencies, cooperatives, law firms, and any organization that needs to sign or collect digital signatures on documents while maintaining data sovereignty.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>What types of signatures does LibreSign support?</dt>
-              <dd>LibreSign supports simple electronic signatures, signatures with A1 digital certificates, and hybrid signature modes. It also supports sequential or parallel signing flows with multiple signers per document.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>How can I validate a signed document?</dt>
-              <dd>Each document signed with LibreSign includes a QR code that allows anyone to verify the authenticity and integrity of the signature without needing access to the system. A complete audit trail is also stored.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>Does LibreSign have an API?</dt>
-              <dd>Yes. LibreSign exposes a REST API that allows developers to integrate document signing workflows into their own applications and systems. Full API documentation is available through the Nextcloud OCS API Viewer.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>How can I contribute to LibreSign?</dt>
-              <dd>You can contribute by reporting bugs, improving documentation, translating the interface, developing new features, or sponsoring the project. Visit the GitHub repository or contact the LibreCode cooperative to learn how to get involved.</dd>
-            </div>
-            <div class="ud-faq-item">
-              <dt>How can my company or organization support LibreSign?</dt>
-              <dd>Organizations can support LibreSign through sponsorship, purchasing managed hosting plans from LibreCode, or contributing development resources. Sustainable funding helps ensure ongoing maintenance, security updates, and new features for the entire community.</dd>
-            </div>
-          </dl>
-
-          <div class="text-center mt-5 pt-3">
-            <p class="mb-4">Still have questions? Our team is ready to help.</p>
-            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/faq/contact-us" class="btn ud-btn-solid-brand">
-              Talk to Our Specialists
-            </a>
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="ud-section-title text-center mx-auto">
+            <h2 id="faq-section-heading">LibreSign frequently asked questions</h2>
           </div>
         </div>
+      </div>
+
+      <div class="row">
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="0">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-0"
+                  aria-expanded="false"
+                  aria-controls="faq-item-0"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Why LibreSign?</span>
+                </button>
+                <div id="faq-item-0" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    LibreSign allows documents to be signed securely and with legal validity, since the system generates hashing - an algorithm that ensures that the file has not been altered after being signed - as well as numbers and records the times of each signature carried out in the document. In this way, the system meets all the requirements of the GDPR - General Data Protection Law.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="100">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-1"
+                  aria-expanded="false"
+                  aria-controls="faq-item-1"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>What are the key features of LibreCode signature pads?</span>
+                </button>
+                <div id="faq-item-1" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    File Creation, Signature with Digital Certificate, Signature Management, Document Management, Validation, API
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="200">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-2"
+                  aria-expanded="false"
+                  aria-controls="faq-item-2"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Is a digital signature the same as a digitized signature?</span>
+                </button>
+                <div id="faq-item-2" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    No. The digitized signature is the reproduction of the handwritten signature as an image using scanner-type. It does not guarantee the authorship and of the electronic document, as there is no association between the signer and the text, as it can be easily copied and inserted another document.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="300">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-3"
+                  aria-expanded="false"
+                  aria-controls="faq-item-3"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>What is the name of the company that LibreSign was developed by?</span>
+                </button>
+                <div id="faq-item-3" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    LibreCode, a Brazilian cooperative of free software developers.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="400">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-4"
+                  aria-expanded="false"
+                  aria-controls="faq-item-4"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Does the plan have any kind of loyalty?</span>
+                </button>
+                <div id="faq-item-4" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    You are free to cancel your plan at any time. By canceling, Signater undertakes not to renew the billing for your plan.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="500">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-5"
+                  aria-expanded="false"
+                  aria-controls="faq-item-5"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>What happens if I cancel my plan?</span>
+                </button>
+                <div id="faq-item-5" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Yes, at any time. After canceling, you will no longer be charged and there will be no automatic renewal.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="600">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-6"
+                  aria-expanded="false"
+                  aria-controls="faq-item-6"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Can I use my personal digital certificate to sign documents?</span>
+                </button>
+                <div id="faq-item-6" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Yes. You can store your digital certificate in LibreSign and when you sign a document you will be asked for your password.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="700">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-7"
+                  aria-expanded="false"
+                  aria-controls="faq-item-7"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Do I need a digital certificate to sign documents?</span>
+                </button>
+                <div id="faq-item-7" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    No. LibreSign creates a digital certificate for each user who does not have a personal digital certificate.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="800">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-8"
+                  aria-expanded="false"
+                  aria-controls="faq-item-8"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>What is LibreSign?</span>
+                </button>
+                <div id="faq-item-8" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    LibreSign is a platform that makes it easy to sign documents digitally and electronically, guaranteeing security and compliance with the law. With it, you can sign documents using personal and company digital certificates in a simple and secure way.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="900">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-9"
+                  aria-expanded="false"
+                  aria-controls="faq-item-9"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>What types of digital certificates does LibreSign accept?</span>
+                </button>
+                <div id="faq-item-9" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    LibreSign accepts personal and company digital certificates, including certificates issued by Certificate Authorities in the ICP-Brasil standard. In addition, if you prefer, you can use certificates generated by the system itself.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1000">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-10"
+                  aria-expanded="false"
+                  aria-controls="faq-item-10"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>What is the difference between digital and electronic signatures?</span>
+                </button>
+                <div id="faq-item-10" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    A digital signature uses a digital certificate, which provides greater security and legal validity. Electronic signatures, on the other hand, are made in other ways, such as by e-mail or cell phone, and also have legal validity, depending on the context.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1100">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-11"
+                  aria-expanded="false"
+                  aria-controls="faq-item-11"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Is LibreSign compatible with mobile devices?</span>
+                </button>
+                <div id="faq-item-11" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Yes, you can use LibreSign directly from your smartphone or tablet by simply accessing the browser. This allows you to sign your documents from anywhere.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1200">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-12"
+                  aria-expanded="false"
+                  aria-controls="faq-item-12"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Is it possible to integrate LibreSign with other systems?</span>
+                </button>
+                <div id="faq-item-12" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Absolutely! LibreSign has APIs that allow you to integrate the platform with other systems you already use, helping to automate processes and make everything more agile.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1300">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-13"
+                  aria-expanded="false"
+                  aria-controls="faq-item-13"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Can LibreSign be used by public bodies?</span>
+                </button>
+                <div id="faq-item-13" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Yes, LibreSign is perfect for town halls and public bodies that need a secure and legally valid solution for signing documents.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1400">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-14"
+                  aria-expanded="false"
+                  aria-controls="faq-item-14"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>How can I buy LibreSign?</span>
+                </button>
+                <div id="faq-item-14" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    You can purchase LibreSign directly on our website or talk to our sales team, who will help you find the ideal plan for your needs.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1500">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-15"
+                  aria-expanded="false"
+                  aria-controls="faq-item-15"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Does LibreSign offer technical support?</span>
+                </button>
+                <div id="faq-item-15" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Yes, our support team is ready to help you with the configuration and with any questions or problems you may have.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1600">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-16"
+                  aria-expanded="false"
+                  aria-controls="faq-item-16"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>How are documents signed in LibreSign?</span>
+                </button>
+                <div id="faq-item-16" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    It is very simple! All you have to do is upload the document to the platform, choose who is going to sign it and select the form of signature (digital or electronic). The system will record everything and ensure that the process is secure and traceable.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+                  <div class="col-lg-6">
+            <div class="ud-single-faq" data-aos="fade-up" data-aos-delay="1700">
+              <div class="accordion">
+                <button
+                  class="ud-faq-btn collapsed"
+                  type="button"
+                  data-bs-toggle="collapse"
+                  data-bs-target="#faq-item-17"
+                  aria-expanded="false"
+                  aria-controls="faq-item-17"
+                >
+                  <span class="icon flex-shrink-0" aria-hidden="true">
+                    <i class="lni lni-chevron-down"></i>
+                  </span>
+                  <span>Does LibreSign time-stamp documents?</span>
+                </button>
+                <div id="faq-item-17" class="accordion-collapse collapse">
+                  <div class="ud-faq-body">
+                    Yes, LibreSign offers time stamping, which guarantees the exact date and time of the signature, which brings even more security and legal validity.
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+              </div>
+
+      <div class="text-center mt-5 pt-2">
+        <p class="mb-4">Still have questions? Our team is ready to help.</p>
+        <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/faq/contact-us" class="btn ud-btn-solid-brand">
+          Talk to Our Specialists
+        </a>
       </div>
     </div>
   </section>
@@ -649,6 +1109,9 @@
                             </li>
                             <li>
                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/faq/newsletter">Newsletter</a>
+                            </li>
+                            <li>
+                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-349/frequently-questions">FAQ</a>
                             </li>
                         </ul>
                     </nav>
