@@ -220,7 +220,7 @@
     "src": "node_modules/lineicons/dist/d495aba62101f856c80f.eot"
   },
   "source/_assets/js/main.js": {
-    "file": "assets/main-qOCr_fHK.js",
+    "file": "assets/main-5oD38LOi.js",
     "name": "main",
     "src": "source/_assets/js/main.js",
     "isEntry": true,
@@ -228,8 +228,14 @@
       "assets/main-BZ5jLx49.css"
     ]
   },
+  "source/_assets/js/pages/pricing.js": {
+    "file": "assets/pricing-qvv2SMZU.js",
+    "name": "pricing",
+    "src": "source/_assets/js/pages/pricing.js",
+    "isEntry": true
+  },
   "source/_assets/scss/ud-styles.scss": {
-    "file": "assets/ud-styles-p1mYyQkI.css",
+    "file": "assets/ud-styles-C-yq_ZUw.css",
     "name": "ud-styles",
     "names": [
       "ud-styles.css"
