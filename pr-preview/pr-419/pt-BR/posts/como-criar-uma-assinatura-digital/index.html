@@ -4,38 +4,38 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRL (Certificate Revocation List) Implementation in LibreSign</title>
+    <title>Como criar uma assinatura digital</title>
 
     <!-- Primary Meta Tags -->
-    <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta name="description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/como-criar-uma-assinatura-digital">
+    <meta name="description" content="">
         <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
     <meta name="author" content="LibreSign / LibreCode">
 
     <!-- Hreflang: multilingual support -->
-        <link rel="alternate" hreflang="cs" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="en" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="fr" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="nb-NO" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="pt" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="pt-BR" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="ta" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="x-default" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign">
+        <link rel="alternate" hreflang="cs" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="en" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="fr" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="nb-NO" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="pt" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="pt-BR" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="ta" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/como-criar-uma-assinatura-digital">
+        <link rel="alternate" hreflang="x-default" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/como-criar-uma-assinatura-digital">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta property="og:title" content="CRL (Certificate Revocation List) Implementation in LibreSign">
-    <meta property="og:description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/como-criar-uma-assinatura-digital">
+    <meta property="og:title" content="Como criar uma assinatura digital">
+    <meta property="og:description" content="">
     <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo-libresign-large.png">
     <meta property="og:site_name" content="LibreSign">
     <meta property="og:locale" content="pt_BR">
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta name="twitter:title" content="CRL (Certificate Revocation List) Implementation in LibreSign">
-    <meta name="twitter:description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/como-criar-uma-assinatura-digital">
+    <meta name="twitter:title" content="Como criar uma assinatura digital">
+    <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo-libresign-large.png">
     <meta name="twitter:site" content="@libresign">
 
@@ -49,7 +49,8 @@
 
     <!-- ===== All CSS files ===== -->
         <link rel="stylesheet" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/build/assets/ud-styles-CJ5TipCE.css">
-    
+      <link rel="stylesheet" href="https://account.libresign.coop/wp-includes/css/dist/block-library/style.min.css?ver=7.0">
+
     <!-- ====== All Javascript Files ====== -->
     <script>
         var _mtm = window._mtm = window._mtm || [];
@@ -304,7 +305,7 @@
           <ul class="dropdown-menu ud-submenu" id="language-menu" hidden aria-label="Language selection">
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/como-criar-uma-assinatura-digital"
                  lang="cs"
                  aria-label="Switch to čeština">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/cs.svg" alt="" aria-hidden="true">
@@ -313,7 +314,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/como-criar-uma-assinatura-digital"
                  lang="en"
                  aria-label="Switch to English">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/en.svg" alt="" aria-hidden="true">
@@ -322,7 +323,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/como-criar-uma-assinatura-digital"
                  lang="fr"
                  aria-label="Switch to français">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/fr.svg" alt="" aria-hidden="true">
@@ -331,7 +332,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/como-criar-uma-assinatura-digital"
                  lang="nb-NO"
                  aria-label="Switch to Norwegian Bokmål (Norway)">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/nb-NO.svg" alt="" aria-hidden="true">
@@ -340,7 +341,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/como-criar-uma-assinatura-digital"
                  lang="pt"
                  aria-label="Switch to português">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/pt.svg" alt="" aria-hidden="true">
@@ -349,7 +350,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/como-criar-uma-assinatura-digital"
                  lang="pt-BR"
                  aria-label="Switch to português (Brasil)">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/pt-BR.svg" alt="" aria-hidden="true">
@@ -358,7 +359,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/como-criar-uma-assinatura-digital"
                  lang="ta"
                  aria-label="Switch to தமிழ்">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/ta.svg" alt="" aria-hidden="true">
@@ -399,7 +400,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="ud-banner-content">
-              <h1>CRL (Certificate Revocation List) Implementation in LibreSign</h1>
+              <h1>Como criar uma assinatura digital</h1>
             </div>
           </div>
         </div>
@@ -414,22 +415,22 @@
                       <div class="col-lg-12">
               <div class="ud-blog-details-image">
                 <img
-                  src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/posts/crl-implementation/banner.png"
+                  src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo.svg"
                   alt=""
                 >
                 <div class="ud-blog-overlay">
                   <div class="ud-blog-overlay-content">
                     <div class="ud-blog-author">
-                                                                    <img src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
-                        alt="Vitor Mattos">
+                                                                    <img src="https://www.gravatar.com/avatar/7a69b05d6c780495b970d121081d667a?size=40"
+                        alt="Viviane">
                                             <span>
-                                                Por <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos"> Vitor Mattos</a>
+                                                Por <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/viviane"> Viviane</a>
                       </span>
                     </div>
 
                     <div class="ud-blog-meta">
                       <p class="date">
-                                                <i class="lni lni-calendar-days"></i> <span>22 de dez de 2025</span>
+                                                <i class="lni lni-calendar-days"></i> <span>15 de abr de 2025</span>
                       </p>
                     </div>
                   </div>
@@ -440,84 +441,67 @@
           <div class="col-lg-8">
             <div class="ud-blog-details-content text-justify">
               <div class="article" style="text-align:justify;">
-                <h3>CRL (Certificate Revocation List) Implementation in LibreSign</h3>
+                <p class="wp-block-paragraph">Que tal dizer adeus ao papel, ao deslocamento desnecessário até o cartório e ao tempo de espera em fila. A transformação digital fez com que o mercado de assinaturas digital fosse cada vez mais requisitado pelas pessoas e empresas que necessitam fazer com segurança, rapidez e praticidade, a assinatura de seus documentos com validade jurídica. Hoje podemos criar uma assinatura digital remotamente e ao mesmo tempo ser ecologicamente sustentável, pois esse processo elimina a necessidade da impressão em papel.</p>
 
-<p>The <strong>Certificate Revocation List (CRL)</strong> is an essential technical feature for any solution that takes digital certification and security seriously. Although it is not always visible to end users, it plays a critical role in the <strong>trustworthiness of digital signatures</strong>.</p>
+<p class="wp-block-paragraph">Para criar uma assinatura digital é simples, mas precisamos fazer a escolha de um sistema de gestão de assinaturas eletrônicas. No caso da cooperativa<a href="https://librecode.coop/"> LibreCode</a> a solução é o desenvolvimento do software sob medida chamado<a href="https://libresign.coop/pt-BR/"> LibreSign</a>, que faz a gestão da assinatura digital de documentos.</p>
 
-<h4>What is a CRL?</h4>
+<p class="wp-block-paragraph">O sistema de gestão vai automatizar o processo de assinatura desde a distribuição dos documentos até o armazenamento de todos os documentos digitais dos arquivos que foram assinados.&nbsp;</p>
 
-<p>The digital certificates used to sign documents are issued by a <strong>Certificate Authority (CA)</strong>. This authority is responsible for maintaining a list containing the <strong>serial numbers of all revoked certificates</strong>, including the certificate of the certificate authority itself.</p>
+<h2 class="wp-block-heading">Assinatura digital e certificado digital</h2>
 
-<p>When a CA supports CRL, the issued certificate includes a <strong>public URL</strong> pointing to the revocation list. This URL allows systems and validators to check, at any time, whether a specific certificate has been revoked.</p>
+<p class="wp-block-paragraph">Após a escolha do sistema de gestão de assinaturas, é necessário obter o certificado digital. Existem vários tipos de certificados, como o e-CPF e e-CNPJ. Vale ressaltar que os certificados digitais precisam ser emitidos por entidades apropriadas. No Brasil, essas entidades se dividem em duas categorias: Autoridade Certificadora (AC) e Autoridade de Registro (AR). Então, escolha conforme a necessidade.</p>
 
-<h4>When can a certificate be revoked?</h4>
+<p class="wp-block-paragraph">É importante salientar que o LibreSign, pioneiro em assinaturas eletrônicas híbridas, traz aos seus clientes a flexibilidade de escolher entre utilizar seu certificado digital pessoal (e-CPF ou e-CNPJ) ou o certificado gerado pelo sistema para assinar documentos de qualquer lugar do mundo.</p>
 
-<p>Certificate revocation may occur for several legitimate reasons, such as:</p>
+<p class="wp-block-paragraph">O certificado digital e-CPF ou e-CNPJ é fundamental nas assinaturas eletrônicas. Ele é adquirido através de uma Autoridade Certificadora, que serve como uma identidade eletrônica que valida documentos e a identidade do titular. O certificado digital é armazenado em dispositivos como tokens, cartões inteligentes ou na nuvem, sendo essencial para garantir a legitimidade em assinaturas digitais, isto é, que a pessoa realmente seja o autor da assinatura</p>
 
-<ul>
-<li>An employee leaving the organization</li>
-<li>Death of the certificate holder</li>
-<li>Compromise or loss of the password or private key</li>
-<li>Security incidents</li>
-</ul>
+<h2 class="wp-block-heading">Assinatura digital e validade jurídica</h2>
 
-<p>In these situations, keeping the certificate active would represent a security risk.</p>
+<p class="wp-block-paragraph">Como vimos, uma das vantagens únicas do LibreSign é a sua capacidade de gerar sua própria Autoridade Certificadora. Caso seja feita a opção por esse recurso, os clientes recebem um certificado gerado internamente pelo sistema, agilizando o processo com inovação.</p>
 
-<h4>How does CRL-based validation work?</h4>
+<p class="wp-block-paragraph">A Autoridade Certificadora autogerada pela LibreSign traz uma solução segura e eficiente, alinhada aos padrões da ICP-Brasil. Entre as características essenciais da LibreSign estão a segurança e a validade jurídica, fundamentais para cada assinatura realizada pela ferramenta. Desta forma, garante e atende os rigorosos padrões estabelecidos pela &nbsp;Infraestrutura de Chaves Públicas Brasileira (ICP-Brasil), proporcionando autenticidade e legalidade dos documentos assinados.</p>
 
-<p>When a document is signed using a certificate that has an associated CRL, this information is embedded in the signature data.</p>
+<p class="wp-block-paragraph">Confira como é o passo a passo comum da maioria das plataformas para assinatura de documentos digitais.</p>
 
-<p>When validating the document with a CRL-compatible system, the following process takes place:</p>
+<h2 class="wp-block-heading">Passo a passo</h2>
 
-<ol>
-<li>The CRL URL is queried</li>
-<li>The certificate serial number is checked against the list</li>
-<li>The revocation date is compared with the signature date</li>
-</ol>
+<p class="wp-block-paragraph">1. A pessoa deve escolher o sistema, cadastrar o login e entrar com a senha cadastrada. No LibreSign, é simples basta acessar o site<a href="https://cloud.libresign.coop/"> https://cloud.libresign.coop/</a>. A interface do sistema é intuitiva, isto é, fácil de usar, permitindo que os funcionários se concentrem em suas principais tarefas, sem gastar energia com sistemas complicados.</p>
 
-<p>If the certificate was revoked <strong>before the signing date</strong>, the document is considered <strong>invalid</strong>, as it was signed using a certificate that was no longer trustworthy at that time. If the revocation occurred after the signing date, the signature remains valid.</p>
+<p class="wp-block-paragraph">2. O usuário deve fazer o upload dos documentos para serem assinados na plataforma em formato PDF.</p>
 
-<h4>What has changed in LibreSign?</h4>
+<p class="wp-block-paragraph">3. O próximo passo é realizar o envio dos documentos aos destinatários que irão assinar, que chamamos de signatários.</p>
 
-<p>From now on, CRL support is a <strong>standard feature in LibreSign</strong>.</p>
+<p class="wp-block-paragraph">4. O destinatário receberá um e-mail para realizar a assinatura, que pode ser de dispositivos móveis ou computador com acesso à internet.</p>
 
-<p>This means that:</p>
+<p class="wp-block-paragraph">5. Com a abertura do documento, o destinatário segue as orientações da plataforma para assinar e concluir o procedimento. No LibreSign o destinatário consegue personalizar a sua assinatura, isto é, consegue desenhar a sua própria assinatura, e inclusive, alterar a cor. Além disso, também pode optar por uma assinatura com uma fonte preestabelecida.</p>
 
-<ul>
-<li><p><strong>Before signing</strong>, LibreSign checks whether the user's certificate has been revoked</p>
+<p class="wp-block-paragraph">6. Em cada plataforma, a pessoa consegue consultar o status dos documentos enviados e ver quais estão pendentes de assinatura e os que já foram assinados. No LibreSign este acompanhamento do status dos documentos é feito em tempo real, o que traz agilidade para ações como o envio de lembretes de assinaturas que ainda estão pendentes.</p>
 
-<ul>
-<li>If it has, the system requests the creation of a new certificate</li>
-<li>In LibreSign, this simply requires defining a new password, provided that the administrator has enabled internal certificate issuance</li>
-</ul></li>
-<li><p><strong>During document validation</strong>, LibreSign:</p>
+<p class="wp-block-paragraph">7. Nas plataformas é possível fazer a gestão dessas assinaturas e o usuário pode consultar conforme sua necessidade. O LibreSign traz como benefício adicional a integração com outros sistemas usados ​​pelas organizações, oferecendo um gerenciamento de documentos mais centralizado e eficiente.</p>
 
-<ul>
-<li>Queries the CRL (when published and accessible by the certificate authority)</li>
-<li>Verifies the certificate's validity</li>
-<li>Displays the CRL URL</li>
-<li>Presents validity information for both the signer's certificate and the issuer's certificate</li>
-</ul></li>
-<li><p><strong>Certificate management</strong>, administrators can:</p>
+<p class="wp-block-paragraph">8. Depois dos documentos estarem assinados é feito o armazenamento dos arquivos que podem ser acessados de qualquer ambiente com acesso à internet. No caso da plataforma da LibreSign o armazenamento dos documentos é feito no Nextcloud, ou seja, uma nuvem privada para armazenamento de documentos e colaboração eficiente para equipes de qualquer tamanho.</p>
 
-<ul>
-<li>Manage the certificate revocation list</li>
-<li>Revoke any certificate when necessary</li>
-</ul></li>
-</ul>
+<p class="wp-block-paragraph"><a href="https://www.instagram.com/p/DGik5a4xcy_/">Assista o vídeo</a> e acompanhe todo o caminho de como fazer assinatura na plataforma da LibreSign.</p>
 
-<h4>Why is this important?</h4>
+<h2 class="wp-block-heading">Como fazer assinatura digital no celular</h2>
 
-<p>With the implementation of CRL, LibreSign:</p>
+<p class="wp-block-paragraph">Para realizar a assinatura digital pelo celular é muito simples e prático. Basta acessar o link recebido por e-mail do sistema de gestão de assinaturas eletrônicas e clicar no link para fazer o aceite.</p>
 
-<ul>
-<li>Raises the level of <strong>cryptographic security</strong></li>
-<li>Ensures greater <strong>legal reliability</strong></li>
-<li>Aligns with <strong>international best practices</strong> for digital signature validation</li>
-<li>Prevents the misuse of compromised certificates</li>
-</ul>
+<p class="wp-block-paragraph">Algumas ferramentas de assinatura eletrônica, como a plataforma da LibreSign, você pode acompanhar todo o processo de gestão das assinaturas digitais já realizadas em tempo real, além de gerenciar e buscar todos os documentos que já foram assinados ou que ainda estão pendentes.</p>
 
-<p>This is another step in LibreSign's commitment to <strong>security, transparency, and technical compliance</strong>. Security is not an optional feature — it is a design principle in LibreSign.</p>
+<h2 class="wp-block-heading">Quais tipos de documentos pode usar a assinatura digital</h2>
+
+<p class="wp-block-paragraph">A assinatura digital pode ser usada em diversos tipos de documentos para realizar diferentes transações. Desde documentos de validade jurídica, como por&nbsp; exemplo, os contratos de prestação de serviços, até documentos mais simples, como relatórios de comunicação para funcionários. Esses documentos podem ser utilizados pelo setor público, instituições de ensino e empresas privadas.</p>
+
+<p class="wp-block-paragraph">Para esclarecer ainda mais sobre os tipos de documentos, confira alguns outros exemplos:</p>
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><td>Procurações;<br>Receitas médicas;<br>Autorizações de trabalho, autorizações de uso de imagem e autorizações de uso de marca;<br>Termos de uso;<br>Ordens de pagamento;<br>Documentos fiscais;<br>Notas fiscais eletrônicas;<br>Contratos de aluguel;<br>Contratos de prestação de serviços;</td><td>Contratos de compra e venda com fornecedores e clientes;&nbsp;<br>Contratos de admissão digital;<br>Envio e recebimento de documentos aos cartórios;<br>Prontuário eletrônico do paciente (PEP);<br>Declaração de renda e outros serviços prestados na Secretaria da Receita Federal: documentos bancários como de financiamento e abertura de contas;<br>Documentos societários como alterações contratuais e atas de assembleia.&nbsp;</td></tr></tbody></table></figure>
+
+<p class="wp-block-paragraph">Como vimos, é possível assinar uma série de documentos de forma segura, prática, ágil, sem perda desnecessária de tempo. É importante salientar que cada país possui uma legislação diferente, podendo variar as regras para assinatura digital da lista de documentos que vimos anteriormente. Desta forma, se você mora fora do Brasil ou tem relação com documentos de outros países, busque mais informações sobre como funciona em cada local.</p>
+
+<p class="wp-block-paragraph">Não perca o nosso próximo assunto &#8220;4 dúvidas sobre<strong> </strong>assinatura digital&#8221;<em>, </em>no qual vamos trazer as principais perguntas das pessoas sobre assinatura digital. Este pode ser um ótimo momento para você também esclarecer suas dúvidas.</p>
+
+<p class="wp-block-paragraph"></p>
               </div>
             </div>
           </div>
@@ -545,7 +529,25 @@
                           <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos"> Vitor Mattos </a>
                         </div>
                       </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                  <li>
+                        <div class="ud-article-image">
+                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos">
+                              <img
+                                  src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
+                                  alt="Vitor Mattos"
+                                >
+                            </a>
+                                                  </div>
+                        <div class="ud-article-content">
+                          <h5 class="ud-article-title">
+                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
+                              CRL (Certificate Revocation List) Implementation in LibreSign
+                            </a>
+                          </h5>
+                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos"> Vitor Mattos </a>
+                        </div>
+                      </li>
+                                                                                                                                  <li>
                         <div class="ud-article-image">
                                                                                 <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos">
                               <img
@@ -579,24 +581,6 @@
                             </a>
                           </h5>
                           <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos"> Vitor Mattos </a>
-                        </div>
-                      </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <li>
-                        <div class="ud-article-image">
-                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/admin">
-                              <img
-                                  src="https://www.gravatar.com/avatar/3b5774949f3130e56ec0bb7ac0eccda2?size=40"
-                                  alt="Admin"
-                                >
-                            </a>
-                                                  </div>
-                        <div class="ud-article-content">
-                          <h5 class="ud-article-title">
-                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/assinatura-digital-de-documentos">
-                              Assinatura digital de documentos
-                            </a>
-                          </h5>
-                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/admin"> Admin </a>
                         </div>
                       </li>
                                                                                                           </ul>

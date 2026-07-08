@@ -1,41 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="en">
   <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>CRL (Certificate Revocation List) Implementation in LibreSign</title>
+    <title>How to create a Digital Signature</title>
 
     <!-- Primary Meta Tags -->
-    <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta name="description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/how-to-create-a-digital-signature">
+    <meta name="description" content="">
         <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
     <meta name="author" content="LibreSign / LibreCode">
 
     <!-- Hreflang: multilingual support -->
-        <link rel="alternate" hreflang="cs" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="en" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="fr" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="nb-NO" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="pt" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="pt-BR" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="ta" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/crl-certificate-revocation-list-implementation-in-libresign">
-        <link rel="alternate" hreflang="x-default" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign">
+        <link rel="alternate" hreflang="cs" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="en" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="fr" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="nb-NO" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="pt" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="pt-BR" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="ta" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/how-to-create-a-digital-signature">
+        <link rel="alternate" hreflang="x-default" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/how-to-create-a-digital-signature">
 
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
-    <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta property="og:title" content="CRL (Certificate Revocation List) Implementation in LibreSign">
-    <meta property="og:description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/how-to-create-a-digital-signature">
+    <meta property="og:title" content="How to create a Digital Signature">
+    <meta property="og:description" content="">
     <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo-libresign-large.png">
     <meta property="og:site_name" content="LibreSign">
-    <meta property="og:locale" content="pt_BR">
+    <meta property="og:locale" content="en">
 
     <!-- Twitter / X Card -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta name="twitter:title" content="CRL (Certificate Revocation List) Implementation in LibreSign">
-    <meta name="twitter:description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/how-to-create-a-digital-signature">
+    <meta name="twitter:title" content="How to create a Digital Signature">
+    <meta name="twitter:description" content="">
     <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo-libresign-large.png">
     <meta name="twitter:site" content="@libresign">
 
@@ -49,7 +49,8 @@
 
     <!-- ===== All CSS files ===== -->
         <link rel="stylesheet" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/build/assets/ud-styles-CJ5TipCE.css">
-    
+      <link rel="stylesheet" href="https://account.libresign.coop/wp-includes/css/dist/block-library/style.min.css?ver=7.0">
+
     <!-- ====== All Javascript Files ====== -->
     <script>
         var _mtm = window._mtm = window._mtm || [];
@@ -179,7 +180,7 @@
   <header class="ud-header" data-libresign-header>
     <div class="container">
       <nav class="navbar navbar-expand-xl" aria-label="Main navigation">
-      <a class="navbar-brand" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR" aria-label="LibreSign home">
+      <a class="navbar-brand" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/" aria-label="LibreSign home">
         <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo.svg" alt="LibreSign">
       </a>
       <div class="collapse navbar-collapse mx-auto" id="main-navigation">
@@ -201,27 +202,27 @@
                 aria-labelledby="solutions-menu-toggle"
                 aria-label="Solutions submenu">
               <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/lawyers">
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/lawyers">
                   Lawyers
                 </a>
               </li>
               <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/tecnical-details">
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/tecnical-details">
                   IT Professionals
                 </a>
               </li>
               <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/company-solutions">
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/company-solutions">
                   Companies
                 </a>
               </li>
               <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/cooperatives">
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cooperatives">
                   Cooperatives
                 </a>
               </li>
               <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/public-sector">
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/public-sector">
                   Public Sector
                 </a>
               </li>
@@ -236,7 +237,7 @@
                aria-controls="features-menu"
                aria-expanded="false"
                aria-label="Open features submenu">
-              Recursos
+              Features
             </a>
             <ul class="dropdown-menu ud-nav-submenu"
                 id="features-menu"
@@ -244,44 +245,44 @@
                 aria-labelledby="features-menu-toggle"
                 aria-label="Features submenu">
                             <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/advanced-security">
-                  Segurança avançada
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/advanced-security">
+                  Advanced security
                 </a>
               </li>
                             <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/hybrid-signatures">
-                  Assinaturas híbridas
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/hybrid-signatures">
+                  Hybrid signatures
                 </a>
               </li>
                             <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/document-validation-by-qr-code">
-                  Validação de documentos por QR Code
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/document-validation-by-qr-code">
+                  Document validation by QR Code
                 </a>
               </li>
                             <li>
-                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/real-time-monitoring">
-                  Monitoramento em tempo real
+                <a class="dropdown-item ud-nav-submenu-link" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/real-time-monitoring">
+                  Real-time monitoring
                 </a>
               </li>
                             <li><hr class="dropdown-divider"></li>
               <li>
-                <a class="dropdown-item ud-nav-submenu-link ud-nav-submenu-link--all" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/features">
+                <a class="dropdown-item ud-nav-submenu-link ud-nav-submenu-link--all" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/features">
                   All Features →
                 </a>
               </li>
             </ul>
           </li>
           <li class="nav-item">
-            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/pricing">Plans and Pricing</a>
+            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pricing">Plans and Pricing</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/about">Sobre</a>
+            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/about">About</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts">Blog</a>
+            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts">Blog</a>
           </li>
           <li class="nav-item">
-            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/contact-us">Contato</a>
+            <a class="nav-link ud-menu-scroll" href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/contact-us">Contact</a>
           </li>
           <li class="nav-item" id="customer-area-link">
             <a class="nav-link ud-menu-scroll link-button" href="https://account.libresign.coop/" target="_blank" rel="noopener noreferrer">
@@ -298,13 +299,13 @@
                   aria-controls="language-menu"
                   aria-expanded="false"
                   aria-label="Select language">
-            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/pt-BR.svg" alt="" aria-hidden="true">
-            <span class="visually-hidden">Current language: português (Brasil)</span>
+            <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/en.svg" alt="" aria-hidden="true">
+            <span class="visually-hidden">Current language: English</span>
           </button>
           <ul class="dropdown-menu ud-submenu" id="language-menu" hidden aria-label="Language selection">
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cs/posts/how-to-create-a-digital-signature"
                  lang="cs"
                  aria-label="Switch to čeština">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/cs.svg" alt="" aria-hidden="true">
@@ -313,7 +314,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/how-to-create-a-digital-signature"
                  lang="en"
                  aria-label="Switch to English">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/en.svg" alt="" aria-hidden="true">
@@ -322,7 +323,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/fr/posts/how-to-create-a-digital-signature"
                  lang="fr"
                  aria-label="Switch to français">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/fr.svg" alt="" aria-hidden="true">
@@ -331,7 +332,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/nb-NO/posts/how-to-create-a-digital-signature"
                  lang="nb-NO"
                  aria-label="Switch to Norwegian Bokmål (Norway)">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/nb-NO.svg" alt="" aria-hidden="true">
@@ -340,7 +341,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt/posts/how-to-create-a-digital-signature"
                  lang="pt"
                  aria-label="Switch to português">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/pt.svg" alt="" aria-hidden="true">
@@ -349,7 +350,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/how-to-create-a-digital-signature"
                  lang="pt-BR"
                  aria-label="Switch to português (Brasil)">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/pt-BR.svg" alt="" aria-hidden="true">
@@ -358,7 +359,7 @@
             </li>
                       <li class="ud-submenu-item">
               <a class="ud-nav-submenu-link ud-submenu-link"
-                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/crl-certificate-revocation-list-implementation-in-libresign"
+                 href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ta/posts/how-to-create-a-digital-signature"
                  lang="ta"
                  aria-label="Switch to தமிழ்">
                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/icon/languages/ta.svg" alt="" aria-hidden="true">
@@ -380,7 +381,7 @@
         <button class="navbar-toggler collapsed"
           data-libresign-header-toggle
                 type="button"
-                aria-label="Alternar menu de navegação"
+                aria-label="Toggle navigation menu"
                 aria-expanded="false"
                 aria-controls="main-navigation">
           <span class="toggler-icon" aria-hidden="true"> </span>
@@ -399,7 +400,7 @@
         <div class="row">
           <div class="col-lg-12">
             <div class="ud-banner-content">
-              <h1>CRL (Certificate Revocation List) Implementation in LibreSign</h1>
+              <h1>How to create a Digital Signature</h1>
             </div>
           </div>
         </div>
@@ -414,22 +415,22 @@
                       <div class="col-lg-12">
               <div class="ud-blog-details-image">
                 <img
-                  src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/posts/crl-implementation/banner.png"
+                  src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo.svg"
                   alt=""
                 >
                 <div class="ud-blog-overlay">
                   <div class="ud-blog-overlay-content">
                     <div class="ud-blog-author">
-                                                                    <img src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
-                        alt="Vitor Mattos">
+                                                                    <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/Avatar-LibreSign.png"
+                        alt="LibreSign">
                                             <span>
-                                                Por <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos"> Vitor Mattos</a>
+                                                By <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/libresign"> LibreSign</a>
                       </span>
                     </div>
 
                     <div class="ud-blog-meta">
                       <p class="date">
-                                                <i class="lni lni-calendar-days"></i> <span>22 de dez de 2025</span>
+                                                <i class="lni lni-calendar-days"></i> <span>Apr 16, 2025</span>
                       </p>
                     </div>
                   </div>
@@ -440,84 +441,65 @@
           <div class="col-lg-8">
             <div class="ud-blog-details-content text-justify">
               <div class="article" style="text-align:justify;">
-                <h3>CRL (Certificate Revocation List) Implementation in LibreSign</h3>
+                <p class="wp-block-paragraph">How about saying goodbye to paper, unnecessary trips to notary offices, and time wasted in lines? Digital transformation has made the digital signature market increasingly in demand by people and companies that need to sign documents with legal validity in a secure, fast, and practical way. Today, we can create a digital signature remotely while also being environmentally sustainable, as this process eliminates the need for paper printing.</p>
 
-<p>The <strong>Certificate Revocation List (CRL)</strong> is an essential technical feature for any solution that takes digital certification and security seriously. Although it is not always visible to end users, it plays a critical role in the <strong>trustworthiness of digital signatures</strong>.</p>
+<p class="wp-block-paragraph">Creating a digital signature is simple, but you need to choose an electronic signature management system. In the case of the <a href="https://librecode.coop/">LibreCode</a> cooperative, the solution is the development of a custom software called <a href="https://libresign.coop/pt-BR/">LibreSign</a>, which manages the digital signing of documents.</p>
 
-<h4>What is a CRL?</h4>
+<p class="wp-block-paragraph">The management system automates the signature process—from distributing documents to storing all digitally signed files.</p>
 
-<p>The digital certificates used to sign documents are issued by a <strong>Certificate Authority (CA)</strong>. This authority is responsible for maintaining a list containing the <strong>serial numbers of all revoked certificates</strong>, including the certificate of the certificate authority itself.</p>
+<h2 class="wp-block-heading">Digital Signature and Digital Certificate</h2>
 
-<p>When a CA supports CRL, the issued certificate includes a <strong>public URL</strong> pointing to the revocation list. This URL allows systems and validators to check, at any time, whether a specific certificate has been revoked.</p>
+<p class="wp-block-paragraph">After choosing the signature management system, it’s necessary to obtain a digital certificate. There are several types of certificates, such as e-CPF and e-CNPJ. It is worth noting that digital certificates must be issued by proper entities. In Brazil, these entities are divided into two categories: Certifying Authority (CA) and Registration Authority (RA). So, choose according to your needs.</p>
 
-<h4>When can a certificate be revoked?</h4>
+<p class="wp-block-paragraph">It is important to highlight that LibreSign, a pioneer in hybrid electronic signatures, offers clients the flexibility to use their personal digital certificate (e-CPF or e-CNPJ) or the certificate generated by the system to sign documents from anywhere in the world.</p>
 
-<p>Certificate revocation may occur for several legitimate reasons, such as:</p>
+<p class="wp-block-paragraph">The e-CPF or e-CNPJ digital certificate is essential for electronic signatures. It is acquired through a Certifying Authority and serves as an electronic identity that validates documents and the signer’s identity. The digital certificate is stored on devices such as tokens, smart cards, or in the cloud, and it is essential to ensure the legitimacy of digital signatures—confirming that the person is indeed the one signing.</p>
 
-<ul>
-<li>An employee leaving the organization</li>
-<li>Death of the certificate holder</li>
-<li>Compromise or loss of the password or private key</li>
-<li>Security incidents</li>
-</ul>
+<h2 class="wp-block-heading">Digital Signature and Legal Validity</h2>
 
-<p>In these situations, keeping the certificate active would represent a security risk.</p>
+<p class="wp-block-paragraph">As we’ve seen, one of LibreSign’s unique advantages is its ability to generate its own Certifying Authority. If this feature is chosen, clients receive a certificate internally generated by the system, streamlining the process with innovation.</p>
 
-<h4>How does CRL-based validation work?</h4>
+<p class="wp-block-paragraph">LibreSign’s self-generated Certifying Authority provides a secure and efficient solution aligned with ICP-Brasil standards. Among LibreSign’s essential features are security and legal validity, fundamental for each signature performed through the tool. This way, it ensures compliance with the rigorous standards established by the Brazilian Public Key Infrastructure (ICP-Brasil), ensuring the authenticity and legality of signed documents.</p>
 
-<p>When a document is signed using a certificate that has an associated CRL, this information is embedded in the signature data.</p>
+<p class="wp-block-paragraph">Check out the common step-by-step process used by most platforms for signing digital documents.</p>
 
-<p>When validating the document with a CRL-compatible system, the following process takes place:</p>
+<h2 class="wp-block-heading">Step-by-step</h2>
 
-<ol>
-<li>The CRL URL is queried</li>
-<li>The certificate serial number is checked against the list</li>
-<li>The revocation date is compared with the signature date</li>
-</ol>
+<p class="wp-block-paragraph">1. The user must choose the system, register a login, and enter the chosen password. In LibreSign, it’s simple—just access https://cloud.libresign.coop/. The system interface is intuitive, meaning it’s easy to use, allowing employees to focus on their core tasks without struggling with complicated systems.</p>
 
-<p>If the certificate was revoked <strong>before the signing date</strong>, the document is considered <strong>invalid</strong>, as it was signed using a certificate that was no longer trustworthy at that time. If the revocation occurred after the signing date, the signature remains valid.</p>
+<p class="wp-block-paragraph">2. The user must upload the documents to be signed in PDF format.</p>
 
-<h4>What has changed in LibreSign?</h4>
+<p class="wp-block-paragraph">3. Next, the user sends the documents to the recipients (called signatories).</p>
 
-<p>From now on, CRL support is a <strong>standard feature in LibreSign</strong>.</p>
+<p class="wp-block-paragraph">4. The recipient will receive an email and can sign the document using a mobile device or computer with internet access.</p>
 
-<p>This means that:</p>
+<p class="wp-block-paragraph">5. Upon opening the document, the recipient follows the platform instructions to sign and complete the process. In LibreSign, the recipient can customize their signature by drawing it or changing its color. It’s also possible to use a pre-set font.</p>
 
-<ul>
-<li><p><strong>Before signing</strong>, LibreSign checks whether the user's certificate has been revoked</p>
+<p class="wp-block-paragraph">6. Each platform allows users to check the status of sent documents—pending or already signed. In LibreSign, document status can be monitored in real time, making it easier to send reminders for pending signatures.</p>
 
-<ul>
-<li>If it has, the system requests the creation of a new certificate</li>
-<li>In LibreSign, this simply requires defining a new password, provided that the administrator has enabled internal certificate issuance</li>
-</ul></li>
-<li><p><strong>During document validation</strong>, LibreSign:</p>
+<p class="wp-block-paragraph">7. Platforms allow signature management. LibreSign offers integration with other systems used by organizations, providing centralized and efficient document management.</p>
 
-<ul>
-<li>Queries the CRL (when published and accessible by the certificate authority)</li>
-<li>Verifies the certificate's validity</li>
-<li>Displays the CRL URL</li>
-<li>Presents validity information for both the signer's certificate and the issuer's certificate</li>
-</ul></li>
-<li><p><strong>Certificate management</strong>, administrators can:</p>
+<p class="wp-block-paragraph">8. After documents are signed, they are stored and accessible from anywhere with internet. In LibreSign, documents are stored using Nextcloud—a private cloud solution for secure team collaboration and document storage.</p>
 
-<ul>
-<li>Manage the certificate revocation list</li>
-<li>Revoke any certificate when necessary</li>
-</ul></li>
-</ul>
+<p class="wp-block-paragraph"><a href="https://www.instagram.com/p/DGik5a4xcy_/">Watch the video</a> and follow the entire process of how to sign using the LibreSign platform.</p>
 
-<h4>Why is this important?</h4>
+<h2 class="wp-block-heading">How to Sign Digitally Using a Mobile Phone</h2>
 
-<p>With the implementation of CRL, LibreSign:</p>
+<p class="wp-block-paragraph">Signing a document digitally on your phone is very simple and convenient. Just click the link received by email from the electronic signature system and approve the document.</p>
 
-<ul>
-<li>Raises the level of <strong>cryptographic security</strong></li>
-<li>Ensures greater <strong>legal reliability</strong></li>
-<li>Aligns with <strong>international best practices</strong> for digital signature validation</li>
-<li>Prevents the misuse of compromised certificates</li>
-</ul>
+<p class="wp-block-paragraph">Some platforms, like LibreSign, allow real-time tracking of digital signature management, as well as management and search of all signed or pending documents.</p>
 
-<p>This is another step in LibreSign's commitment to <strong>security, transparency, and technical compliance</strong>. Security is not an optional feature — it is a design principle in LibreSign.</p>
+<h2 class="wp-block-heading">What Types of Documents Can Be Signed Digitally</h2>
+
+<p class="wp-block-paragraph">Digital signatures can be used for a wide variety of documents and transactions. From documents with legal validity—such as service contracts—to simpler ones like internal communication reports. These documents may be used by public institutions, educational institutions, and private companies.</p>
+
+<p class="wp-block-paragraph">To further clarify the types of documents, here are some other examples:</p>
+
+<figure class="wp-block-table"><table class="has-fixed-layout"><tbody><tr><td>Powers of attorney;<br>Medical prescriptions;<br>Work authorizations, image and brand use authorizations;<br>Terms of use;<br>Payment orders;<br>Tax documents;<br>Electronic invoices;<br>Lease contracts;<br>Service agreements;<br>Purchase and sale agreements with suppliers and clients;</td><td class="has-text-align-left" data-align="left">Digital hiring contracts;<br>Document submission to notaries;<br>Electronic medical records (EMR);<br>Income declarations and other services provided to the Federal Revenue Service;<br>Banking documents like financing and account openings;<br>Corporate documents like contract amendments and meeting minutes. </td></tr></tbody></table></figure>
+
+<p class="wp-block-paragraph">As we’ve seen, it’s possible to sign a wide range of documents securely, conveniently, and quickly—without unnecessary time loss. It is important to note that each country has different legislation, and the rules for digital signature and document types may vary. So, if you live outside Brazil or handle documents from other countries, be sure to research the local rules.</p>
+
+<p class="wp-block-paragraph">Don’t miss our next topic: “4 Frequently Asked Questions About Digital Signatures,” where we’ll answer people’s main questions. It might be the perfect time for you to clarify your own doubts too.</p>
               </div>
             </div>
           </div>
@@ -525,11 +507,11 @@
                       <div class="col-lg-4">
               <div class="ud-blog-sidebar">
                 <div class="ud-articles-box">
-                  <h3 class="ud-articles-box-title">Últimos artigos</h3>
+                  <h3 class="ud-articles-box-title">Last articles</h3>
                   <ul class="ud-articles-list">
-                                                                                                                                                                                                                                                                                                                                            <li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                        <li>
                         <div class="ud-article-image">
-                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos">
+                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos">
                               <img
                                   src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
                                   alt="Vitor Mattos"
@@ -538,16 +520,16 @@
                                                   </div>
                         <div class="ud-article-content">
                           <h5 class="ud-article-title">
-                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/envelopes-batch-document-signing-in-libresign">
+                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/envelopes-batch-document-signing-in-libresign">
                               Envelopes - Batch document signing in LibreSign
                             </a>
                           </h5>
-                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos"> Vitor Mattos </a>
+                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos"> Vitor Mattos </a>
                         </div>
                       </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                            <li>
+                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                          <li>
                         <div class="ud-article-image">
-                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos">
+                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos">
                               <img
                                   src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
                                   alt="Vitor Mattos"
@@ -556,16 +538,16 @@
                                                   </div>
                         <div class="ud-article-content">
                           <h5 class="ud-article-title">
-                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/docmdp-document-modification-detection-and-prevention-in-libresign">
-                              DocMDP (Document Modification Detection and Prevention) in LibreSign
+                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/crl-certificate-revocation-list-implementation-in-libresign">
+                              CRL (Certificate Revocation List) Implementation in LibreSign
                             </a>
                           </h5>
-                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos"> Vitor Mattos </a>
+                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos"> Vitor Mattos </a>
                         </div>
                       </li>
                                                                                                                                   <li>
                         <div class="ud-article-image">
-                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos">
+                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos">
                               <img
                                   src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
                                   alt="Vitor Mattos"
@@ -574,29 +556,29 @@
                                                   </div>
                         <div class="ud-article-content">
                           <h5 class="ud-article-title">
-                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/signature-order-sequential-or-parallel-signing-in-libresign">
-                              Signature Order - Sequential or Parallel Signing in LibreSign
+                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/docmdp-document-modification-detection-and-prevention-in-libresign">
+                              DocMDP (Document Modification Detection and Prevention) in LibreSign
                             </a>
                           </h5>
-                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/vitor-mattos"> Vitor Mattos </a>
+                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos"> Vitor Mattos </a>
                         </div>
                       </li>
-                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                      <li>
+                                                                                                                                  <li>
                         <div class="ud-article-image">
-                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/admin">
+                                                                                <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos">
                               <img
-                                  src="https://www.gravatar.com/avatar/3b5774949f3130e56ec0bb7ac0eccda2?size=40"
-                                  alt="Admin"
+                                  src="https://www.gravatar.com/avatar/35d3d1e49e1939461e2670a4d1fac6a3?size=40"
+                                  alt="Vitor Mattos"
                                 >
                             </a>
                                                   </div>
                         <div class="ud-article-content">
                           <h5 class="ud-article-title">
-                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts/assinatura-digital-de-documentos">
-                              Assinatura digital de documentos
+                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts/signature-order-sequential-or-parallel-signing-in-libresign">
+                              Signature Order - Sequential or Parallel Signing in LibreSign
                             </a>
                           </h5>
-                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team/admin"> Admin </a>
+                          <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team/vitor-mattos"> Vitor Mattos </a>
                         </div>
                       </li>
                                                                                                           </ul>
@@ -616,7 +598,7 @@
                 <div class="row widgets">
                     <div class="col-12 col-lg-4">
                         <div class="ud-widget">
-                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR" class="ud-footer-logo" aria-label="LibreSign - Go to homepage">
+                            <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/" class="ud-footer-logo" aria-label="LibreSign - Go to homepage">
                                 <img src="https://LibreSign.github.io/site-preview/pr-preview/pr-419/assets/images/logo/logo.svg" alt="LibreSign">
                             </a>
                             <p class="ud-widget-desc">
@@ -710,22 +692,22 @@
                             <h3 id="footer-nav-product" class="ud-widget-title">Product</h3>
                             <ul class="ud-widget-links">
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/features">Recursos</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/features">Features</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/pricing">Plans and Pricing</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pricing">Plans and Pricing</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/about">Sobre</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/about">About</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/posts">Blog</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/posts">Blog</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/ebooks">E-books</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/ebooks">E-books</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/faq">FAQ</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/faq">FAQ</a>
                                 </li>
                             </ul>
                         </nav>
@@ -735,19 +717,19 @@
                             <h3 id="footer-nav-company" class="ud-widget-title">Company</h3>
                             <ul class="ud-widget-links">
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/contact-us">Contact us</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/contact-us">Contact us</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/success-stories">Success Stories</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/success-stories">Success Stories</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/team">Team</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/team">Team</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/cooperatives">Cooperatives</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/cooperatives">Cooperatives</a>
                                 </li>
                                 <li>
-                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/pt-BR/privacy-policy">Privacy Policy</a>
+                                    <a href="https://LibreSign.github.io/site-preview/pr-preview/pr-419/privacy-policy">Privacy Policy</a>
                                 </li>
                             </ul>
                         </nav>
