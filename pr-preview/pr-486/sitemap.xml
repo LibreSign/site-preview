@@ -2,22 +2,22 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9" xmlns:image="http://www.google.com/schemas/sitemap-image/1.1">
  <url>
   <loc>https://libresign.github.io/.well-known/funding-manifest-urls</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/category/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/category/security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -25,7 +25,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -33,7 +33,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -41,7 +41,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -49,7 +49,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -57,7 +57,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -65,7 +65,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -73,7 +73,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -81,7 +81,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -89,7 +89,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -97,7 +97,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -105,7 +105,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -113,7 +113,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -121,7 +121,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -129,7 +129,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -137,7 +137,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -145,7 +145,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -153,7 +153,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -161,7 +161,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -169,7 +169,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -177,7 +177,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -185,7 +185,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -193,7 +193,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -201,7 +201,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -209,7 +209,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -217,7 +217,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -225,7 +225,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -233,7 +233,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -241,7 +241,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -249,7 +249,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -257,7 +257,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -265,7 +265,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -273,7 +273,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -281,7 +281,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -289,7 +289,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -297,7 +297,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -305,7 +305,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -313,7 +313,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -321,7 +321,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -329,7 +329,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -337,7 +337,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -345,7 +345,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -353,7 +353,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -361,7 +361,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -369,7 +369,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -377,7 +377,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -385,7 +385,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -393,7 +393,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -401,7 +401,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -409,7 +409,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -417,7 +417,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -425,7 +425,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -433,7 +433,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -441,7 +441,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -449,7 +449,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -457,7 +457,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -465,7 +465,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -473,7 +473,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -481,7 +481,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -489,7 +489,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -497,7 +497,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -505,7 +505,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -513,7 +513,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -521,7 +521,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -529,7 +529,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -537,7 +537,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -545,7 +545,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -553,7 +553,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -561,7 +561,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -569,7 +569,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -577,7 +577,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -585,7 +585,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -593,7 +593,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -601,7 +601,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -609,7 +609,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -617,7 +617,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -625,7 +625,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -633,7 +633,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -641,7 +641,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -649,7 +649,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -657,7 +657,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -665,7 +665,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -673,7 +673,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -681,7 +681,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -689,7 +689,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -697,7 +697,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -705,7 +705,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -713,7 +713,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -721,7 +721,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -729,7 +729,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -737,7 +737,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -745,7 +745,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -753,7 +753,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -761,7 +761,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -769,7 +769,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -777,7 +777,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -785,7 +785,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/advanced-security</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/advanced-security/banner.jpg</image:loc>
@@ -793,7 +793,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/libresign-api-guide</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -801,7 +801,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/crl-certificate-revocation-list-implementation-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/crl-implementation/banner.png</image:loc>
@@ -809,7 +809,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/libresign-brings-digital-signature-solutions-with-agility-security-and-autonomy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -817,7 +817,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/docmdp-document-modification-detection-and-prevention-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/docmdp/banner.png</image:loc>
@@ -825,7 +825,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/document-management-in-education-challenges-and-solutions-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/document-management-education/banner.jpg</image:loc>
@@ -833,7 +833,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/free-and-open-source-software-for-electronic-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/logo/logo.svg</image:loc>
@@ -841,7 +841,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/envelopes-batch-document-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/envelopes/banner.png</image:loc>
@@ -849,7 +849,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/hybrid-signatures</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/hybrid-signatures/banner.jpg</image:loc>
@@ -857,7 +857,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/the-digital-revolution-in-public-administration-integrating-e-cidade-with-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/integrating-ecidade-libresign/banner.jpg</image:loc>
@@ -865,7 +865,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/legal-validity-of-electronic-signatures-in-brazil-and-around-the-world</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/legal-validity-signatures/banner.jpg</image:loc>
@@ -873,7 +873,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/multiple-signers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/multiple-signers/banner.jpg</image:loc>
@@ -881,7 +881,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/document-validation-by-qr-code</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/qr-code/banner.jpg</image:loc>
@@ -889,7 +889,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/real-time-monitoring</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/real-time-monitoring/banner.jpg</image:loc>
@@ -897,7 +897,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/signature-order-sequential-or-parallel-signing-in-libresign</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/signature-order/banner.png</image:loc>
@@ -905,7 +905,7 @@
  </url>
  <url>
   <loc>https://libresign.github.io/posts/what-is-a-digital-signature-types-advantages-and-how-to-obtain-it</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
   <image:image>
    <image:loc>https://LibreSign.github.io/site-preview/pr-preview/pr-486/assets/images/posts/what-is-a-digital-signature/banner.jpg</image:loc>
@@ -913,707 +913,707 @@
  </url>
  <url>
   <loc>https://libresign.github.io/account</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/produto/libresign-cloud</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/recursos</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/register</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/sobre</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/suporte</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/blog</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/support</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/termos-e-condicoes</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/atendimento-lgpd</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cadastre-se</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/categoria-produto/cloud</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/doe</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/envolva-se</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/loja</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/password-reset</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/politica-de-privacidade</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/team/crisciany-silva</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/team/daiane-alves</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/team/vitor-mattos</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/cs/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/fr/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/nb-NO/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt-BR/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/pt/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/robots.txt</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/about</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/company-solutions</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/contact-us</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/cooperatives</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/ebooks</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/faq</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/features</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/lawyers</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/posts</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/pricing</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/privacy-policy</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/public-sector</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/success-stories</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/ta/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/team</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/tecnical-details</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
  <url>
   <loc>https://libresign.github.io/thank-you-contact</loc>
-  <lastmod>2026-08-26T21:29:38+00:00</lastmod>
+  <lastmod>2026-08-28T16:35:24+00:00</lastmod>
   <changefreq>daily</changefreq>
  </url>
 </urlset>
