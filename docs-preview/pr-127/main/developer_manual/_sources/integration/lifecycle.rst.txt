@@ -1,0 +1,162 @@
+.. SPDX-FileCopyrightText: 2026 LibreCode coop and contributors
+.. SPDX-License-Identifier: CC-BY-3.0
+
+.. _integration-lifecycle:
+
+Notifications, completion and document recovery
+===============================================
+
+Choose **one owner** for invitation delivery, but always reconcile the
+document-level state before applying the business system's final status.
+
+Notification ownership
+----------------------
+
+**LibreSign delivers invitations (default)**
+   Let the configured LibreSign channels notify signers. This is safest when
+   the integrator has no verified way to obtain the correct, per-signer
+   invitation URL. Email, activity and optional gateways depend on server
+   settings and policy. A request being accepted does not prove the recipient
+   received the message.
+
+**The integrator delivers invitations**
+   On creation, set ``notify: 0`` on each relevant ``NewSigner`` to suppress
+   automatic signer-request notifications. This field is in the LibreSign
+   13/14/15/development OpenAPI schemas. Only take over delivery when a
+   **verified and authorized** way to retrieve the exact signer invitation is
+   available for the installed version. Do not guess a URL from file IDs or
+   share the application's privileged credentials. Test expiration, redirects,
+   privacy and retries before enabling this mode.
+
+**LibreSign sends on demand**
+   The authenticated requester can invoke ``POST /notify/signers`` for
+   selected signers on an existing, open request; LibreSign verifies requester
+   permissions. The supported body has ``fileId`` and ``signers``. For example:
+
+.. code-block:: json
+
+   {
+     "fileId": 123,
+     "signers": [{"email": "signer@example.test"}]
+   }
+
+The transport's acknowledgement is **not** delivery confirmation. Avoid blind
+retries that could duplicate messages. The development line additionally
+documents ``GET /notify/status``; do not assume it exists in stable releases.
+
+What counts as complete?
+------------------------
+
+.. list-table:: File-level status values
+   :header-rows: 1
+   :widths: 14 24 62
+
+   * - Value
+     - Name
+     - Business interpretation
+   * - ``0``
+     - Draft
+     - The request is not ready for signing.
+   * - ``1``
+     - Able to sign
+     - At least one required signing action remains.
+   * - ``2``
+     - Partially signed
+     - Some actions may be complete; do not issue the final document.
+   * - ``3``
+     - Signed
+     - Candidate final state for the **specified file**; confirm scope and authorized retrieval.
+   * - ``4``
+     - Deleted
+     - Not a successful signing result; reconcile as terminated.
+
+Other statuses and signer rejection states may be version- or policy-specific:
+consult :doc:`../api/openapi` and do not silently map an unknown state to
+``3``. An individual ``SignedEvent`` or signer action is not necessarily
+the completion of the entire file **or envelope**. For envelopes, check the
+parent and required child file results, not just the first child.
+
+.. code-block:: text
+
+   Draft -> Able to sign -> Partially signed -> Signed (file/envelope complete)
+                              |
+                              +----> more signer actions pending
+   Deleted / rejected / invalid / unknown -> explicit exception handling
+
+Polling is the currently documented fallback
+--------------------------------------------
+
+``GET /file/list`` with ``details=1`` and a specific ``fileIds[]``
+filter is available on all documented release lines. Its response is
+authorization-filtered, so a missing record is **not** proof of deletion.
+
+.. code-block:: bash
+
+   export API_BASE="https://cloud.example.com/ocs/v2.php/apps/libresign/api/v1"
+   export NC_USER="integration-account"
+   export NC_APP_PASSWORD="<retrieve-from-secret-manager>"
+   export FILE_ID="123"
+
+   curl --fail-with-body -sS \
+     -u "$NC_USER:$NC_APP_PASSWORD" \
+     -H "OCS-APIRequest: true" \
+     -H "Accept: application/json" \
+     "$API_BASE/file/list?details=1&fileIds%5B%5D=$FILE_ID"
+
+Check ``ocs.meta``, locate the intended ``ocs.data.data[]`` item, and
+inspect its ``status``, ``nodeType``, ``files`` and signer fields as
+available to the caller. Use bounded retries, backoff and periodic full
+reconciliation. Treat timeouts and ``404``/``403``/empty results distinctly.
+
+Native webhooks: a conditional option
+-------------------------------------
+
+Nextcloud's `Webhook Listeners <https://docs.nextcloud.com/server/stable/admin_manual/webhook_listeners/index.html>`_
+app can subscribe to compatible published events. **A working,
+release-specific LibreSign completion event for Webhook Listeners has not yet
+been verified**. The internal ``SignedEvent`` and current proprietary signed
+callback are not proof of an external, serializable, correctly scoped event.
+Do not configure an invented event class or use the callback as a
+future-proof integration contract.
+
+After the native event contract is implemented and homologated on **your
+installed release**, prefer it for low-latency signals while retaining
+authorized status reconciliation for missed, duplicate or out-of-order
+deliveries. Authenticate the receiver and verify the contract's completion
+granularity; never consider webhook delivery by itself sufficient to authorize
+a PDF download.
+
+Recover the final PDF and evidence
+----------------------------------
+
+Use the LibreSign API to identify the completed **file or envelope** and
+Nextcloud's authenticated file interfaces to retrieve bytes **only under an
+account with file read/download rights**. The OCS listing reports workflow
+metadata, not a universal anonymous PDF-download entitlement. For an
+authorized path already known to the account, the standard Nextcloud WebDAV
+download is:
+
+.. code-block:: bash
+
+   # Substitute the real, URL-encoded path visible to NC_USER.
+   curl --fail-with-body -sS \
+     -u "$NC_USER:$NC_APP_PASSWORD" \
+     -o signed-document.pdf \
+     "https://cloud.example.com/remote.php/dav/files/$NC_USER/Contracts/signed.pdf"
+
+Do **not** assume the original path now refers to the final signed revision:
+resolve the actual completed file/node and current access rights on the
+installed release before downloading it. Signed-node metadata and public
+validation URLs are not substitutes for requester authorization. Do not
+confuse a public verification result with the signed document or a complete
+evidence archive.
+
+Use the published ``GET /file/validate/uuid/{uuid}`` contract when the caller
+is authorized to request validation metadata. Availability of audit logs,
+certificate chain, timestamps, revocation proof or downloadable evidence
+packages depends on the installed version, selected signing method and
+configured providers. Do not promise a single evidence-download endpoint
+that is absent from :doc:`../api/openapi`.
+
+See `Nextcloud WebDAV file operations <https://docs.nextcloud.com/server/stable/developer_manual/client_apis/WebDAV/basic.html>`_
+and :doc:`deployment` for access and retention checks.
