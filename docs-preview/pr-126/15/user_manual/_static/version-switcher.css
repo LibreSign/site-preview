@@ -1,0 +1,52 @@
+.libresign-version-control {
+  padding: .8rem 1rem 1rem;
+  background-color: #184c4e;
+  color: #fff;
+  text-align: left;
+}
+.libresign-version-control label {
+  display: block;
+  font-size: .85rem;
+  font-weight: 700;
+  margin-bottom: .35rem;
+}
+.libresign-version-control select {
+  width: 100%;
+  min-height: 2.65rem;
+  padding: .35rem .45rem;
+  color: #172c2e;
+  background: #fff;
+  border: 2px solid #fff;
+  border-radius: 4px;
+}
+.libresign-version-control select:focus-visible {
+  outline: 3px solid #ffca46;
+  outline-offset: 2px;
+}
+.libresign-version-caption {
+  margin: .5rem 0 0;
+  color: #fff;
+  font-size: .75rem;
+  line-height: 1.5;
+}
+.libresign-version-control .sr-only {
+  position: absolute; width: 1px; height: 1px; padding: 0;
+  margin: -1px; overflow: hidden; clip: rect(0,0,0,0);
+  white-space: nowrap; border: 0;
+}
+
+.libresign-preview-banner {
+  padding: .65rem 1rem;
+  background: #fff5ce;
+  color: #40331c;
+  font-size: .8rem;
+  line-height: 1.45;
+}
+.libresign-preview-banner strong, .libresign-preview-banner span {
+  display: block;
+}
+.libresign-preview-banner a { color: #154c6e; text-decoration: underline; }
+.libresign-preview-banner a:focus-visible {
+  outline: 3px solid #154c6e;
+  outline-offset: 2px;
+}
