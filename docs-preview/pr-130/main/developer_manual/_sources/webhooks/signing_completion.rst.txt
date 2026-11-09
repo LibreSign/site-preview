@@ -1,0 +1,83 @@
+.. SPDX-FileCopyrightText: 2026 LibreCode coop and contributors
+.. SPDX-License-Identifier: CC-BY-3.0
+
+==============================
+Signing workflow completed
+==============================
+
+**Event:** ``OCA\Libresign\Events\SigningRequestCompletedEvent``
+
+**Available in:** LibreSign main (development version 16.0.0-dev)
+on Nextcloud 36. **Not announced as a stable LibreSign 16 feature.**
+The event is not available in LibreSign 13, 14, or 15.
+
+When it is emitted
+------------------
+
+This event indicates that the signing **workflow** for a document or envelope
+has reached LibreSign's completed status. It is not emitted for an individual
+signer completing one step while the overall request is still partially
+signed. An envelope completes when its overall signing workflow reaches the
+completed state, rather than when an individual file is signed.
+
+Completion is not evidence that every invited participant signed: policy may
+allow a workflow to finish after a signer rejects. Inspect the final workflow
+and evidence using the authenticated LibreSign API when that distinction
+matters to your system.
+
+Received body
+-------------
+
+After registering the event as described in :doc:`configuration`, the receiver
+gets Nextcloud's event wrapper. This is a synthetic example; ``user`` can be
+``null`` when no Nextcloud user session is active.
+
+.. code-block:: json
+
+   {
+     "event": {
+       "class": "OCA\\Libresign\\Events\\SigningRequestCompletedEvent",
+       "contractVersion": 1,
+       "eventId": "libresign.workflow.completed.v1:4ce5a91a-3f2c-4cf0-b4a3-8baad19ac82f",
+       "requestUuid": "4ce5a91a-3f2c-4cf0-b4a3-8baad19ac82f",
+       "requestType": "envelope",
+       "status": "completed"
+     },
+     "user": null,
+     "time": 1794170000
+   }
+
+``requestUuid`` identifies the whole signing request, not an individual
+signer's invitation UUID. ``requestType`` is ``document`` or ``envelope``.
+``contractVersion`` is the version of this event's data contract, not a
+LibreSign release number. ``eventId`` is a stable correlation/deduplication
+key for this request, not a unique identifier of each HTTP delivery attempt.
+
+Use the same ``eventId`` to avoid repeated processing of duplicate deliveries.
+If a completed workflow is later reopened, check its current status before
+acting on a new notification with the same identifier.
+
+The LibreSign event data does not contain signer email addresses, private file
+URLs, document contents or credentials. Nextcloud may include information about
+the current user in its outer ``user`` field. Retrieve any signed document or
+evidence separately, using an authenticated and authorized LibreSign API call.
+
+Real runtime evidence and authorization
+---------------------------------------
+
+An external email signer completed a signature without a Nextcloud account
+or session. Nextcloud's worker delivered the completion payload through
+an authenticated HTTP POST. Separately, the request owner downloaded a
+valid PDF with a detached PKCS#7 signature covering the entire file.
+The test certificate issuer was not trusted by the host system (expected
+in this disposable PKI), even though the signature was cryptographically
+valid. The same WebDAV path returned HTTP 401 anonymously and HTTP 404
+to an unrelated authenticated user.
+
+One partially signed two-signer document produced no completion event.
+The final signature produced one authenticated completion POST. A
+cancel-on-rejection request ended Canceled without a completion event.
+A parallel two-signer test completed with one delivered event. These
+finite tests do not establish exactly-once delivery, transaction
+serializability, or universal scheduling guarantees. Receivers must
+deduplicate stable eventId values and reconcile current status.

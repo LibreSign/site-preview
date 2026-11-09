@@ -1,0 +1,46 @@
+.. SPDX-FileCopyrightText: 2026 LibreCode coop and contributors
+.. SPDX-License-Identifier: CC-BY-3.0
+
+========
+Webhooks
+========
+
+Webhooks allow an external system to react to LibreSign events without
+replacing its own interface or repeatedly querying LibreSign. Native event
+delivery is provided by Nextcloud's **Webhook Listeners** app. Each supported
+event has its own reference page, including the point in the workflow that
+triggers delivery and the data sent to the receiver.
+
+**Availability:** LibreSign development branch (currently 16.0.0-dev)
+on Nextcloud 36, **not a stable LibreSign 16 release**. The event is not
+available in LibreSign 13, 14, or 15. Verify the installed application
+revision and its Nextcloud compatibility before registration.
+
+Native webhooks and the existing LibreSign per-request callback are separate
+mechanisms. An integration may receive notifications through both transports.
+
+.. toctree::
+   :maxdepth: 1
+
+   configuration
+   signing_completion
+
+The existing LibreSign callback continues to work independently. When an
+integration enables both mechanisms, it must handle notifications from each
+without assuming they have identical delivery formats or timing.
+
+Runtime acceptance
+------------------
+
+A disposable Nextcloud 36 environment verified: external signing in an
+anonymous browser; authenticated completion-event HTTP delivery from the
+Nextcloud worker; owner-authorized retrieval of a signed PDF; negative
+anonymous and unrelated-user download checks; two-signer partial-versus-final
+completion; and a two-document envelope. These are observations in one
+development revision, not a global exactly-once delivery guarantee.
+
+The pre-existing callback had a separate listener defect. The minimal fix
+and behavioral regression are proposed at
+https://github.com/LibreSign/libresign/pull/9423.
+Do not assume that an older unpatched development revision delivers the
+legacy callback, even if its native completion webhook works.
