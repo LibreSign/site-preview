@@ -225,11 +225,14 @@ the event class are tied to the <strong>installed LibreSign release</strong>, no
 the Nextcloud version or the OCS <code class="docutils literal notranslate"><span class="pre">/api/v1</span></code> path.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>LibreSign 13–15:</strong> These release lines do not publish the native
-aggregate LibreSign signing-completion event for Webhook Listeners.
-Use authenticated polling with reconciliation instead. Nextcloud’s
-Webhook Listeners installation alone does not make an arbitrary internal
-LibreSign event available over HTTP.</p>
+<p><strong>Development line (LibreSign 16 / Nextcloud 36):</strong> The application source
+now implements the aggregate <code class="docutils literal notranslate"><span class="pre">SigningRequestCompletedEvent</span></code> using
+Nextcloud’s <code class="docutils literal notranslate"><span class="pre">IWebhookCompatibleEvent</span></code>. It represents a document or
+envelope workflow changing to <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code>, not each individual signature.
+This is a source-level contract; verify installed event availability,
+Nextcloud worker HTTP delivery and receiver authentication before use.
+The administrator and payload reference is maintained specifically in
+<a class="reference external" href="https://github.com/LibreSign/documentation/blob/main/versioned/16/developer_manual/webhooks/index.rst">LibreSign 16’s Webhooks guide</a>.</p>
 </div>
 <p>Even when a release supports a completion event, the Nextcloud worker sends
 HTTP asynchronously. Do not assume exactly-once delivery, ordering or retries.
