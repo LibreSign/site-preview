@@ -1,0 +1,412 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>LibreSign event catalog &mdash; LibreSign Documentation 16.0.0-dev.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="../_static/version-switcher.css?v=2caec843" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="../_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=fac63cce"></script>
+      <script src="../_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="../_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
+      <script src="../_static/version-switcher.js?v=4937d59b"></script>
+      <script src="../_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="../_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="Configure webhook deliveries" href="configuration.html" />
+    <link rel="prev" title="Webhooks" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #184c4e" >
+
+          
+          
+          <a href="../index.html">
+            
+              <img src="../_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../prologue/index.html">Prologue</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../architecture.html">Architecture and code map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../error-handling.html">Error handling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting started</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../development-workflow.html">Development workflow</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Documentation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration architecture: choose a pattern</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Webhooks</a><ul class="current">
+<li class="toctree-l2 current"><a class="current reference internal" href="#">LibreSign event catalog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#actual-libresign-events">Actual LibreSign events</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#source-locations-and-consumers">Source locations and consumers</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#candidate-public-webhook-contracts">Candidate public webhook contracts</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#requirements-for-any-new-public-event">Requirements for any new public event</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#discovery-and-catalog-maintenance">Discovery and catalog maintenance</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
+<li class="toctree-l2"><a class="reference internal" href="signing_completion.html">Signing workflow completed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
+<li class="toctree-l2"><a class="reference internal" href="index.html#runtime-acceptance">Runtime acceptance</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../translation.html">Translation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features.html">Requesting features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../release-process.html">Release process</a></li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #184c4e" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../index.html">LibreSign Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
+          <li class="breadcrumb-item"><a href="index.html">Webhooks</a></li>
+      <li class="breadcrumb-item active">LibreSign event catalog</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/LibreSign/documentation/blob/main/developer_manual/webhooks/event-catalog.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="libresign-event-catalog">
+<h1>LibreSign event catalog<a class="headerlink" href="#libresign-event-catalog" title="Link to this heading"></a></h1>
+<p>This is a catalog of <strong>LibreSign domain events</strong>, not of all Nextcloud
+events or the currently registered webhook subscriptions.</p>
+<p><strong>Audited source:</strong> LibreSign/libresign development commit
+<code class="docutils literal notranslate"><span class="pre">16d438a66a0412bbfad088e6655eeee53a7dc04a</span></code>, reviewed on
+2026-11-09 (<a class="reference external" href="https://github.com/LibreSign/libresign/pull/9426">PR #9426</a>).
+This is <strong>not a stable LibreSign 16 release</strong>. Confirm the installed
+application revision. LibreSign 13, 14 and 15 do not publish the native
+aggregate signing completion event described here.</p>
+<p>An internal <code class="docutils literal notranslate"><span class="pre">OCP\EventDispatcher\Event</span></code> is <strong>not automatically</strong> usable
+as a webhook. It must implement
+<code class="docutils literal notranslate"><span class="pre">OCP\EventDispatcher\IWebhookCompatibleEvent</span></code> and publish a safe
+<code class="docutils literal notranslate"><span class="pre">getWebhookSerializable()</span></code> payload.</p>
+<section id="actual-libresign-events">
+<h2>Actual LibreSign events<a class="headerlink" href="#actual-libresign-events" title="Link to this heading"></a></h2>
+<p>The audited <code class="docutils literal notranslate"><span class="pre">lib/Events/</span></code> directory defines <strong>five domain event
+classes</strong>. <code class="docutils literal notranslate"><span class="pre">SignedEventFactory</span></code> is a factory, not a sixth event.</p>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Internal events and public webhook support</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 32.0%" />
+<col style="width: 13.0%" />
+<col style="width: 55.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Class in <code class="docutils literal notranslate"><span class="pre">OCA\Libresign\Events</span></code></p></th>
+<th class="head"><p>Native webhook?</p></th>
+<th class="head"><p>What it actually means</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SigningRequestCompletedEvent</span></code></p></td>
+<td><p><strong>Yes</strong></p></td>
+<td><p>A document or <strong>parent envelope</strong> transitioned to aggregate
+<code class="docutils literal notranslate"><span class="pre">SIGNED</span></code>. A partial signature alone does not produce it.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SignedEvent</span></code></p></td>
+<td><p>No</p></td>
+<td><p>A single signer completed a signature. Consumed by Activity,
+notifications and certificate-related handling.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SignatureRejectedEvent</span></code></p></td>
+<td><p>No</p></td>
+<td><p>A rejection was persisted. The dispatcher iterates the signer’s
+<strong>identification methods</strong>, so multiple internal notifications
+may represent one business rejection. Includes a boolean
+<code class="docutils literal notranslate"><span class="pre">workflowCanceled</span></code>.</p></td>
+</tr>
+<tr class="row-odd"><td><p><code class="docutils literal notranslate"><span class="pre">SignRequestCanceledEvent</span></code></p></td>
+<td><p>No</p></td>
+<td><p>Cancellation notice associated with <strong>removing a signer</strong>.
+Despite its name, it does <strong>not</strong> mean an aggregate document
+or envelope was canceled.</p></td>
+</tr>
+<tr class="row-even"><td><p><code class="docutils literal notranslate"><span class="pre">SendSignNotificationEvent</span></code></p></td>
+<td><p>No</p></td>
+<td><p>Request to dispatch an invitation or reminder through enabled
+notification channels, <strong>not a delivery confirmation</strong>.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Only <code class="docutils literal notranslate"><span class="pre">SigningRequestCompletedEvent</span></code> implements
+<code class="docutils literal notranslate"><span class="pre">IWebhookCompatibleEvent</span></code>. It is dispatched by
+<code class="docutils literal notranslate"><span class="pre">SignFileService::dispatchCompletionIfTransition()</span></code>; see
+<a class="reference internal" href="signing_completion.html"><span class="doc">Signing workflow completed</span></a> for the exact class, JSON payload and
+tested HTTP delivery.</p>
+<p>A workflow ending <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code> may contain a rejected signer if policy
+permits the remaining flow to complete. Do <strong>not</strong> infer that every
+signer signed. Under a cancel-on-rejection policy, the workflow may
+end <code class="docutils literal notranslate"><span class="pre">CANCELED</span></code> without a completion webhook.</p>
+</section>
+<section id="source-locations-and-consumers">
+<h2>Source locations and consumers<a class="headerlink" href="#source-locations-and-consumers" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">SendSignNotificationEvent</span></code>: <code class="docutils literal notranslate"><span class="pre">AbstractIdentifyMethod::notify()</span></code>
+dispatches a channel-notification request.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SignedEvent</span></code>: <code class="docutils literal notranslate"><span class="pre">SignFileService::dispatchSignedEvent()</span></code> after a
+completed signing action.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SignatureRejectedEvent</span></code>:
+<code class="docutils literal notranslate"><span class="pre">SignatureRejectionService::dispatchRejectedEvent()</span></code> after
+persistence, iterating identification methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SignRequestCanceledEvent</span></code>:
+<code class="docutils literal notranslate"><span class="pre">SignerRemovalService::notifyCancellation()</span></code> sends cancellation
+notices when a signer is removed, iterating identification methods.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">SigningRequestCompletedEvent</span></code>:
+<code class="docutils literal notranslate"><span class="pre">SignFileService::dispatchCompletionIfTransition()</span></code> observes the
+aggregate document or envelope transition.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">lib/AppInfo/Application.php</span></code> registers internal Activity,
+delivery and certificate-related consumers.</p></li>
+</ul>
+<p>Nextcloud file-system events LibreSign <em>consumes</em>, and platform events
+that it dispatches for internal purposes (such as secure password
+generation), are <strong>not</strong> LibreSign-specific signing webhooks.</p>
+</section>
+<section id="candidate-public-webhook-contracts">
+<h2>Candidate public webhook contracts<a class="headerlink" href="#candidate-public-webhook-contracts" title="Link to this heading"></a></h2>
+<p>The names below are <strong>business concepts</strong>, not implemented classes or
+subscribable events. The order expresses value for integrators, not
+authorization to implement a new event API.</p>
+<table class="docutils align-default" id="id2">
+<caption><span class="caption-text">Recommended event roadmap</span><a class="headerlink" href="#id2" title="Link to this table"></a></caption>
+<colgroup>
+<col style="width: 12.0%" />
+<col style="width: 30.0%" />
+<col style="width: 58.0%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Priority</p></th>
+<th class="head"><p>Business transition</p></th>
+<th class="head"><p>Rationale and contract boundary</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p><strong>P0</strong></p></td>
+<td><p>Workflow canceled</p></td>
+<td><p>Notify an integrator that a <strong>document or parent envelope</strong>
+became <code class="docutils literal notranslate"><span class="pre">CANCELED</span></code>. This must be distinct from the current
+internal signer-removal cancellation event. Handle parent
+versus child status propagation without duplicate events.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>P0</strong></p></td>
+<td><p>Signer rejected</p></td>
+<td><p>Notify <strong>once per committed business rejection</strong>, not once per
+identification method. The workflow can continue, complete
+with other signatures, or cancel; distinguish these outcomes.
+Never include private rejection comments in the webhook.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>P1</strong></p></td>
+<td><p>Signer signed</p></td>
+<td><p>Useful for progress, sequential signing and external
+dashboards. Emission must follow persisted signer state, not
+merely a successful browser request. Do not expose secret
+invitation/signing identifiers.</p></td>
+</tr>
+<tr class="row-odd"><td><p><strong>P2</strong></p></td>
+<td><p>Workflow ready to sign</p></td>
+<td><p>Useful when a request is prepared in the LibreSign UI and
+published later. Trigger on a real draft-to-ready transition,
+not every API create/update call.</p></td>
+</tr>
+<tr class="row-even"><td><p><strong>P2 / conditional</strong></p></td>
+<td><p>Notification delivery state</p></td>
+<td><p>Only useful if backed by a persisted per-channel delivery
+ledger with explicit submitted, failed and unknown states.
+<code class="docutils literal notranslate"><span class="pre">SendSignNotificationEvent</span></code> alone cannot prove actual
+email or WhatsApp receipt.</p></td>
+</tr>
+</tbody>
+</table>
+<p>Avoid exposing events for transient password generation, certificate
+creation, PDF-file writes, UI loads and transport retries as domain
+webhooks. Separate “partially signed” notifications may be redundant
+if a per-signer event plus authenticated reconciliation covers
+progress. Do not promise an expiration event until a supported
+expiration lifecycle is verified.</p>
+</section>
+<section id="requirements-for-any-new-public-event">
+<h2>Requirements for any new public event<a class="headerlink" href="#requirements-for-any-new-public-event" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Define a new, <strong>versioned</strong> public payload with
+<code class="docutils literal notranslate"><span class="pre">contractVersion</span></code>, a stable deduplication <code class="docutils literal notranslate"><span class="pre">eventId</span></code>,
+parent <code class="docutils literal notranslate"><span class="pre">requestUuid</span></code>, <code class="docutils literal notranslate"><span class="pre">requestType</span></code> and a precise business
+status. Do <strong>not</strong> serialize existing internal event objects
+(which may contain signer entities, file objects or certificates).</p></li>
+<li><p>For signer events, use a non-secret correlation reference, <strong>not</strong>
+an invitation URL, bearer-like signer UUID or contact identifier.
+Exclude personal contact data, private comments, credentials,
+unrestricted URLs and signed PDFs.</p></li>
+<li><p>Dispatch only after the relevant state is committed. Test
+idempotence, concurrency, multiple identification methods,
+rejections and envelope parent/child propagation.</p></li>
+<li><p>Publish the exact class and JSON envelope, supported versions,
+filters and negative cases. Use Nextcloud Webhook Listeners,
+not the removed proprietary callback transport.</p></li>
+<li><p>The receiver must authenticate and deduplicate events, verify
+ownership and reconcile state with authorized LibreSign OCS and
+WebDAV operations. A webhook is never PDF-download authorization.</p></li>
+</ul>
+</section>
+<section id="discovery-and-catalog-maintenance">
+<h2>Discovery and catalog maintenance<a class="headerlink" href="#discovery-and-catalog-maintenance" title="Link to this heading"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">occ</span> <span class="pre">webhook_listeners:list</span></code> lists <strong>configured subscriptions</strong>,
+not all available event classes. Nextcloud provides its own webhook
+events independently of LibreSign.</p>
+<p>For each application change, review <code class="docutils literal notranslate"><span class="pre">lib/Events/</span></code>, implementations of
+<code class="docutils literal notranslate"><span class="pre">IWebhookCompatibleEvent</span></code>, real <code class="docutils literal notranslate"><span class="pre">dispatchTyped()</span></code> paths and listener
+registrations in <code class="docutils literal notranslate"><span class="pre">lib/AppInfo/Application.php</span></code>. Review business
+semantics, not just class names. Update this catalog, the associated
+public reference page and tests; verify actual authenticated HTTP
+delivery before marking any new webhook available. Stable 13-15
+manuals must not inherit unverified development events.</p>
+<p><strong>Evidence:</strong> aggregate completion was verified in a disposable
+Nextcloud 36 environment with external browser signing, real
+authenticated HTTP delivery and authorized signed-PDF retrieval.
+<strong>None of the proposed new events has been implemented or homologated.</strong></p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="index.html" class="btn btn-neutral float-left" title="Webhooks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="configuration.html" class="btn btn-neutral float-right" title="Configure webhook deliveries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026 LibreCode coop.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  
+<div class="rst-versions libresign-rst-versions"
+     id="libresign-release-picker"
+     data-version="main"
+     data-site-root="/site-preview/docs-preview/pr-130"
+     data-manual="developer_manual"
+     role="navigation"
+     aria-label="Documentation versions">
+  <button type="button" id="libresign-version-toggle" class="rst-current-version"
+          aria-label="Development documentation, main branch; choose version"
+          aria-controls="libresign-version-menu" aria-expanded="false">
+    <span class="libresign-version-current">main · development</span>
+    <span class="libresign-version-chevron" aria-hidden="true">▴</span>
+  </button>
+  <div id="libresign-version-menu" class="rst-other-versions" hidden>
+    <p class="libresign-version-menu-heading">Documentation versions</p>
+    <ul id="libresign-version-list" class="libresign-version-list">
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-130/15/developer_manual/"
+             data-version-target="15"
+             >
+            <span class="libresign-version-name">
+              LibreSign 15
+            </span>
+            <span class="libresign-version-detail">
+              Latest stable
+            </span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-130/14/developer_manual/"
+             data-version-target="14"
+             >
+            <span class="libresign-version-name">
+              LibreSign 14
+            </span>
+            <span class="libresign-version-detail">
+              NC 34
+            </span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-130/13/developer_manual/"
+             data-version-target="13"
+             >
+            <span class="libresign-version-name">
+              LibreSign 13
+            </span>
+            <span class="libresign-version-detail">
+              NC 33
+            </span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-130/main/developer_manual/"
+             data-version-target="main"
+             aria-current="true">
+            <span class="libresign-version-name">
+              main
+            </span>
+            <span class="libresign-version-detail">
+              Development
+            </span>
+          </a>
+        </li>
+      
+    </ul>
+    <a class="libresign-all-versions" href="/site-preview/docs-preview/pr-130/">All versions and manuals</a>
+    <p id="libresign-version-notice" class="libresign-sr-only" role="status" aria-live="polite"></p>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

@@ -23,6 +23,7 @@ subscriptions and retrieve signed documents separately with authorization.
 .. toctree::
    :maxdepth: 1
 
+   event-catalog
    configuration
    signing_completion
    external-signing-flow
