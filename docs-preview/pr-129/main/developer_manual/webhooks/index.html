@@ -104,7 +104,13 @@ triggers delivery and the data sent to the receiver.</p>
 36 (development line). The exact application revision is
 available through the <a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a> provenance information. Webhooks
 configured in Nextcloud are not equivalent to LibreSign’s existing per-request
-callback. Native event availability depends on the LibreSign version installed.</p>
+callback.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Native signing-completion webhooks are planned for LibreSign 16 on Nextcloud
+36. They are <strong>not available in LibreSign 13, 14 or 15</strong>. This development
+documentation applies only to installations that include the new event.</p>
+</div>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
