@@ -5,181 +5,164 @@
 LibreSign event catalog
 =======================
 
-This is a catalog of **LibreSign domain events**, not of all Nextcloud
-events or the currently registered webhook subscriptions.
+This is the **native webhook catalog**, listing only PHP events
+implemented by LibreSign with
+``OCP\EventDispatcher\IWebhookCompatibleEvent``.
+It is not a list of hypothetical events, and it is not a list of
+subscriptions already registered on a particular Nextcloud server.
 
-**Audited source:** LibreSign/libresign development commit
-``16d438a66a0412bbfad088e6655eeee53a7dc04a``, reviewed on
-2026-11-09 (`PR #9426 <https://github.com/LibreSign/libresign/pull/9426>`_).
-This is **not a stable LibreSign 16 release**. Confirm the installed
-application revision. LibreSign 13, 14 and 15 do not publish the native
-aggregate signing completion event described here.
+**Version and publication status**
 
-An internal ``OCP\EventDispatcher\Event`` is **not automatically** usable
-as a webhook. It must implement
-``OCP\EventDispatcher\IWebhookCompatibleEvent`` and publish a safe
-``getWebhookSerializable()`` payload.
+- ``SigningRequestCompletedEvent`` exists on the LibreSign
+  **development** branch (``main``, Nextcloud 36).
+- The other five entries below are **implemented in unmerged draft PR
+  `LibreSign/libresign#9427 <https://github.com/LibreSign/libresign/pull/9427>`_**.
+  They are **not available on an unmodified installation of main**
+  until that PR is integrated and deployed.
+- No entry here announces a **stable LibreSign 16** release. LibreSign
+  13, 14 and 15 do not expose these aggregate development webhooks.
 
-Actual LibreSign events
+The source audited for the new entries is commit
+``75a368c8be367dc58b1e2d4e500f3a5b4523f49c``.
+Always check the installed revision, not just the Nextcloud version.
+
+Available event classes
 -----------------------
 
-The audited ``lib/Events/`` directory defines **five domain event
-classes**. ``SignedEventFactory`` is a factory, not a sixth event.
+Use the full namespace ``OCA\Libresign\Events`` plus the class name
+shown below in the native Webhook Listeners subscription.
 
-.. list-table:: Internal events and public webhook support
+.. list-table:: Implemented native contracts
    :header-rows: 1
-   :widths: 32 13 55
+   :widths: 35 16 49
 
-   * - Class in ``OCA\Libresign\Events``
-     - Native webhook?
-     - What it actually means
+   * - Event class
+     - Implemented in
+     - Emitted when
    * - ``SigningRequestCompletedEvent``
-     - **Yes**
-     - A document or **parent envelope** transitioned to aggregate
-       ``SIGNED``. A partial signature alone does not produce it.
-   * - ``SignedEvent``
-     - No
-     - A single signer completed a signature. Consumed by Activity,
-       notifications and certificate-related handling.
-   * - ``SignatureRejectedEvent``
-     - No
-     - A rejection was persisted. The dispatcher iterates the signer's
-       **identification methods**, so multiple internal notifications
-       may represent one business rejection. Includes a boolean
-       ``workflowCanceled``.
-   * - ``SignRequestCanceledEvent``
-     - No
-     - Cancellation notice associated with **removing a signer**.
-       Despite its name, it does **not** mean an aggregate document
-       or envelope was canceled.
-   * - ``SendSignNotificationEvent``
-     - No
-     - Request to dispatch an invitation or reminder through enabled
-       notification channels, **not a delivery confirmation**.
+     - Development ``main``
+     - Document or parent envelope reaches aggregate
+       ``SIGNED``. The workflow can contain rejected signers if
+       policy permits completion.
+   * - ``SigningRequestReadyEvent``
+     - PR #9427
+     - A newly created ready request is persisted, or a root
+       document/envelope transitions from ``DRAFT``
+       to ``ABLE_TO_SIGN``. Not on repeated status updates.
+   * - ``SigningRequestCanceledEvent``
+     - PR #9427
+     - A rejection causes the **root** document/envelope workflow
+       to transition to ``CANCELED``. This is not the internal
+       signer-removal cancellation notification.
+   * - ``SignerSignedWebhookEvent``
+     - PR #9427
+     - A document-level signer action has been persisted as signed.
+       An envelope action can produce one event per signed document,
+       all correlated to the same parent ``requestUuid``.
+   * - ``SignerRejectedWebhookEvent``
+     - PR #9427
+     - One signer rejection has been committed, independently
+       of the number of identification methods. It includes
+       whether the workflow was canceled.
+   * - ``NotificationDeliveryStatusChangedEvent``
+     - PR #9427
+     - A notification **transport submission attempt** has reached
+       a persisted outcome in the delivery ledger. This does
+       **not** prove arrival, reading or recipient receipt.
 
-Only ``SigningRequestCompletedEvent`` implements
-``IWebhookCompatibleEvent``. It is dispatched by
-``SignFileService::dispatchCompletionIfTransition()``; see
-:doc:`signing_completion` for the exact class, JSON payload and
-tested HTTP delivery.
+Public payloads
+---------------
 
-A workflow ending ``SIGNED`` may contain a rejected signer if policy
-permits the remaining flow to complete. Do **not** infer that every
-signer signed. Under a cancel-on-rejection policy, the workflow may
-end ``CANCELED`` without a completion webhook.
+All six events use ``contractVersion: 1``,
+a deterministic ``eventId`` for receiver-side deduplication,
+``requestUuid`` of the workflow and ``requestType`` equal
+to ``document`` or ``envelope``. Every receiver should
+authenticate, deduplicate and reconcile the current state through
+authorized OCS/API credentials.
 
-Source locations and consumers
-------------------------------
-
-- ``SendSignNotificationEvent``: ``AbstractIdentifyMethod::notify()``
-  dispatches a channel-notification request.
-- ``SignedEvent``: ``SignFileService::dispatchSignedEvent()`` after a
-  completed signing action.
-- ``SignatureRejectedEvent``:
-  ``SignatureRejectionService::dispatchRejectedEvent()`` after
-  persistence, iterating identification methods.
-- ``SignRequestCanceledEvent``:
-  ``SignerRemovalService::notifyCancellation()`` sends cancellation
-  notices when a signer is removed, iterating identification methods.
-- ``SigningRequestCompletedEvent``:
-  ``SignFileService::dispatchCompletionIfTransition()`` observes the
-  aggregate document or envelope transition.
-- ``lib/AppInfo/Application.php`` registers internal Activity,
-  delivery and certificate-related consumers.
-
-Nextcloud file-system events LibreSign *consumes*, and platform events
-that it dispatches for internal purposes (such as secure password
-generation), are **not** LibreSign-specific signing webhooks.
-
-Candidate public webhook contracts
-----------------------------------
-
-The names below are **business concepts**, not implemented classes or
-subscribable events. The order expresses value for integrators, not
-authorization to implement a new event API.
-
-.. list-table:: Recommended event roadmap
+.. list-table:: Additional payload fields
    :header-rows: 1
-   :widths: 12 30 58
+   :widths: 35 65
 
-   * - Priority
-     - Business transition
-     - Rationale and contract boundary
-   * - **P0**
-     - Workflow canceled
-     - Notify an integrator that a **document or parent envelope**
-       became ``CANCELED``. This must be distinct from the current
-       internal signer-removal cancellation event. Handle parent
-       versus child status propagation without duplicate events.
-   * - **P0**
-     - Signer rejected
-     - Notify **once per committed business rejection**, not once per
-       identification method. The workflow can continue, complete
-       with other signatures, or cancel; distinguish these outcomes.
-       Never include private rejection comments in the webhook.
-   * - **P1**
-     - Signer signed
-     - Useful for progress, sequential signing and external
-       dashboards. Emission must follow persisted signer state, not
-       merely a successful browser request. Do not expose secret
-       invitation/signing identifiers.
-   * - **P2**
-     - Workflow ready to sign
-     - Useful when a request is prepared in the LibreSign UI and
-       published later. Trigger on a real draft-to-ready transition,
-       not every API create/update call.
-   * - **P2 / conditional**
-     - Notification delivery state
-     - Only useful if backed by a persisted per-channel delivery
-       ledger with explicit submitted, failed and unknown states.
-       ``SendSignNotificationEvent`` alone cannot prove actual
-       email or WhatsApp receipt.
+   * - Event
+     - Fields in ``event``
+   * - ``SigningRequestCompletedEvent``
+     - ``status: "completed"``;
+       ``eventId: "libresign.workflow.completed.v1:<requestUuid>"``.
+   * - ``SigningRequestReadyEvent``
+     - ``status: "ready_to_sign"``;
+       ``eventId: "libresign.workflow.ready.v1:<requestUuid>"``.
+   * - ``SigningRequestCanceledEvent``
+     - ``status: "canceled"``;
+       ``eventId: "libresign.workflow.canceled.v1:<requestUuid>"``.
+   * - ``SignerSignedWebhookEvent``
+     - ``status: "signed"``,
+       ``documentUuid``, ``signerId``.
+       ``eventId`` begins with
+       ``libresign.signer.signed.v1:`` followed by
+       a deterministic SHA-256 digest.
+   * - ``SignerRejectedWebhookEvent``
+     - ``status: "rejected"``, ``documentUuid``,
+       ``signerId``, ``workflowCanceled`` (boolean).
+       ``eventId`` starts with
+       ``libresign.signer.rejected.v1:`` and a SHA-256 digest.
+   * - ``NotificationDeliveryStatusChangedEvent``
+     - ``deliveryId``, ``channel``, ``state``,
+       ``attempt``; event ID starts with
+       ``libresign.notification.delivery.v1:`` and includes
+       the delivery ID, attempt and state.
 
-Avoid exposing events for transient password generation, certificate
-creation, PDF-file writes, UI loads and transport retries as domain
-webhooks. Separate "partially signed" notifications may be redundant
-if a per-signer event plus authenticated reconciliation covers
-progress. Do not promise an expiration event until a supported
-expiration lifecycle is verified.
+The notification event's ``state`` is the persisted result of the
+provider adapter: ``accepted``, ``temporary_failure``,
+``permanent_failure``, ``failed`` or ``unknown``.
+The ``accepted`` state **does not mean the recipient received
+the message**. Retried attempts can produce new event IDs.
+``pending`` and ``sending`` are not exposed as terminal
+submission outcomes.
 
-Requirements for any new public event
+Signer events deliberately expose only the **non-secret numeric**
+``signerId``, not a signing invitation URL, bearer-like signer
+UUID, email, phone number, private rejection comment, certificate
+or PDF data. The document UUID is a correlation identifier;
+file retrieval still requires separate authorization.
+
+Subscribing and retrieving the result
 -------------------------------------
 
-- Define a new, **versioned** public payload with
-  ``contractVersion``, a stable deduplication ``eventId``,
-  parent ``requestUuid``, ``requestType`` and a precise business
-  status. Do **not** serialize existing internal event objects
-  (which may contain signer entities, file objects or certificates).
-- For signer events, use a non-secret correlation reference, **not**
-  an invitation URL, bearer-like signer UUID or contact identifier.
-  Exclude personal contact data, private comments, credentials,
-  unrestricted URLs and signed PDFs.
-- Dispatch only after the relevant state is committed. Test
-  idempotence, concurrency, multiple identification methods,
-  rejections and envelope parent/child propagation.
-- Publish the exact class and JSON envelope, supported versions,
-  filters and negative cases. Use Nextcloud Webhook Listeners,
-  not the removed proprietary callback transport.
-- The receiver must authenticate and deduplicate events, verify
-  ownership and reconcile state with authorized LibreSign OCS and
-  WebDAV operations. A webhook is never PDF-download authorization.
+An administrator installs Webhook Listeners and subscribes to an
+available full class name. Configure a receiver with authentication
+and functional Cron background jobs. For detailed configuration and
+the real external signing process, see :doc:`configuration`
+and :doc:`external-signing-flow`.
 
-Discovery and catalog maintenance
----------------------------------
+For example, the existing completion event is registered as:
 
-``occ webhook_listeners:list`` lists **configured subscriptions**,
-not all available event classes. Nextcloud provides its own webhook
-events independently of LibreSign.
+``OCA\Libresign\Events\SigningRequestCompletedEvent``
 
-For each application change, review ``lib/Events/``, implementations of
-``IWebhookCompatibleEvent``, real ``dispatchTyped()`` paths and listener
-registrations in ``lib/AppInfo/Application.php``. Review business
-semantics, not just class names. Update this catalog, the associated
-public reference page and tests; verify actual authenticated HTTP
-delivery before marking any new webhook available. Stable 13-15
-manuals must not inherit unverified development events.
+The Webhook Listeners application transmits the event in its native
+JSON wrapper; the event alone never contains the signed PDF.
+After validating an incoming message, the integrator must confirm
+ownership and retrieve the final document through authenticated
+LibreSign OCS and authorized Nextcloud WebDAV access.
 
-**Evidence:** aggregate completion was verified in a disposable
-Nextcloud 36 environment with external browser signing, real
-authenticated HTTP delivery and authorized signed-PDF retrieval.
-**None of the proposed new events has been implemented or homologated.**
+``occ webhook_listeners:list`` shows **configured subscriptions**
+but is not a full list of every PHP event made available by installed
+applications.
+
+Testing and compatibility
+-------------------------
+
+The existing completion webhook has been verified in an isolated
+Nextcloud 36 runtime through external browser signing, authenticated
+HTTP POST delivery by the Nextcloud worker, and authorized retrieval
+of the signed PDF. The five events implemented in PR #9427 have
+passing focused PHP contract and service tests; their **individual
+real HTTP delivery scenarios have not yet been homologated**.
+Do not assume the documentation's inclusion means those events are
+already installed on a production server.
+
+Existing internal LibreSign events such as
+``SignedEvent``, ``SignatureRejectedEvent``,
+``SignRequestCanceledEvent`` and
+``SendSignNotificationEvent`` are **not** public
+webhook-compatible events. Do not subscribe to them by name.
