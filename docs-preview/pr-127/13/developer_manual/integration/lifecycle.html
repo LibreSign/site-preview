@@ -62,8 +62,8 @@
 <li class="toctree-l3 current"><a class="current reference internal" href="#">Notifications, completion and document recovery</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#notification-ownership">Notification ownership</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#what-counts-as-complete">What counts as complete?</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#polling-is-the-currently-documented-fallback">Polling is the currently documented fallback</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#native-webhooks-a-conditional-option">Native webhooks: a conditional option</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#polling-and-reconciliation">Polling and reconciliation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#native-webhooks-version-specific-completion-events">Native webhooks: version-specific completion events</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#recover-the-final-pdf-and-evidence">Recover the final PDF and evidence</a></li>
 </ul>
 </li>
@@ -113,13 +113,18 @@ invitation URL. Email, activity and optional gateways depend on server
 settings and policy. A request being accepted does not prove the recipient
 received the message.</p>
 </dd>
-<dt><strong>The integrator delivers invitations</strong></dt><dd><p>On creation, set <code class="docutils literal notranslate"><span class="pre">notify:</span> <span class="pre">0</span></code> on each relevant <code class="docutils literal notranslate"><span class="pre">NewSigner</span></code> to suppress
-automatic signer-request notifications. This field is in the LibreSign
-13/14/15/development OpenAPI schemas. Only take over delivery when a
-<strong>verified and authorized</strong> way to retrieve the exact signer invitation is
-available for the installed version. Do not guess a URL from file IDs or
-share the application’s privileged credentials. Test expiration, redirects,
-privacy and retries before enabling this mode.</p>
+<dt><strong>The integrator controls when LibreSign sends</strong></dt><dd><p>On creation, set <code class="docutils literal notranslate"><span class="pre">notify:</span> <span class="pre">0</span></code> on each relevant <code class="docutils literal notranslate"><span class="pre">NewSigner</span></code> to suppress
+initial automatic invitations. Then invoke <code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/notify/signers</span></code> as the
+authenticated requester, as demonstrated in
+<a class="reference internal" href="../api/external-email-signers.html"><span class="doc">External email signers: integration</span></a>. <strong>LibreSign</strong>, not the integrator,
+still sends the invitation with its authorized signer link.</p>
+</dd>
+<dt><strong>The integrator sends its own message</strong></dt><dd><p>This is a separate, conditional design. Only send a signing URL if the
+installed release offers a <strong>verified, authorized</strong> way to obtain that
+signer’s invitation. The reviewed OpenAPI does not establish a generic
+invitation-link retrieval endpoint. Never construct links from file IDs or
+signer UUIDs, or share Nextcloud credentials. If no such contract has been
+verified, use LibreSign’s delivery endpoint instead.</p>
 </dd>
 <dt><strong>LibreSign sends on demand</strong></dt><dd><p>The authenticated requester can invoke <code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/notify/signers</span></code> for
 selected signers on an existing, open request; LibreSign verifies requester
@@ -133,8 +138,10 @@ permissions. The supported body has <code class="docutils literal notranslate"><
 </pre></div>
 </div>
 <p>The transport’s acknowledgement is <strong>not</strong> delivery confirmation. Avoid blind
-retries that could duplicate messages. The development line additionally
-documents <code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/notify/status</span></code>; do not assume it exists in stable releases.</p>
+retries that could duplicate messages. Notification status endpoints differ
+between releases; verify them in <a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a>. Optional gateway
+integrations, such as WhatsApp via Two-Factor Gateway where supported, are
+separate services and are not bundled delivery guarantees.</p>
 </section>
 <section id="what-counts-as-complete">
 <h2>What counts as complete?<a class="headerlink" href="#what-counts-as-complete" title="Link to this heading"></a></h2>
@@ -176,8 +183,10 @@ documents <code class="docutils literal notranslate"><span class="pre">GET</span
 </table>
 <p>Other statuses and signer rejection states may be version- or policy-specific:
 consult <a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a> and do not silently map an unknown state to
-<code class="docutils literal notranslate"><span class="pre">3</span></code>. An individual <code class="docutils literal notranslate"><span class="pre">SignedEvent</span></code> or signer action is not necessarily
-the completion of the entire file <strong>or envelope</strong>. For envelopes, check the
+<code class="docutils literal notranslate"><span class="pre">3</span></code>. A completed workflow is not proof that every invited signer signed:
+under some policies a rejection may coexist with final workflow completion.
+An individual signer action is not necessarily the completion of the entire
+file <strong>or envelope</strong>. For envelopes, check the
 parent and required child file results, not just the first child.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>Draft -&gt; Able to sign -&gt; Partially signed -&gt; Signed (file/envelope complete)
                            |
@@ -186,8 +195,8 @@ Deleted / rejected / invalid / unknown -&gt; explicit exception handling
 </pre></div>
 </div>
 </section>
-<section id="polling-is-the-currently-documented-fallback">
-<h2>Polling is the currently documented fallback<a class="headerlink" href="#polling-is-the-currently-documented-fallback" title="Link to this heading"></a></h2>
+<section id="polling-and-reconciliation">
+<h2>Polling and reconciliation<a class="headerlink" href="#polling-and-reconciliation" title="Link to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/file/list</span></code> with <code class="docutils literal notranslate"><span class="pre">details=1</span></code> and a specific <code class="docutils literal notranslate"><span class="pre">fileIds[]</span></code>
 filter is available on all documented release lines. Its response is
 authorization-filtered, so a missing record is <strong>not</strong> proof of deletion.</p>
@@ -208,21 +217,25 @@ inspect its <code class="docutils literal notranslate"><span class="pre">status<
 available to the caller. Use bounded retries, backoff and periodic full
 reconciliation. Treat timeouts and <code class="docutils literal notranslate"><span class="pre">404</span></code>/<code class="docutils literal notranslate"><span class="pre">403</span></code>/empty results distinctly.</p>
 </section>
-<section id="native-webhooks-a-conditional-option">
-<h2>Native webhooks: a conditional option<a class="headerlink" href="#native-webhooks-a-conditional-option" title="Link to this heading"></a></h2>
+<section id="native-webhooks-version-specific-completion-events">
+<h2>Native webhooks: version-specific completion events<a class="headerlink" href="#native-webhooks-version-specific-completion-events" title="Link to this heading"></a></h2>
 <p>Nextcloud’s <a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/webhook_listeners/index.html">Webhook Listeners</a>
-app can subscribe to compatible published events. <strong>A working,
-release-specific LibreSign completion event for Webhook Listeners has not yet
-been verified</strong>. The internal <code class="docutils literal notranslate"><span class="pre">SignedEvent</span></code> and current proprietary signed
-callback are not proof of an external, serializable, correctly scoped event.
-Do not configure an invented event class or use the callback as a
-future-proof integration contract.</p>
-<p>After the native event contract is implemented and homologated on <strong>your
-installed release</strong>, prefer it for low-latency signals while retaining
-authorized status reconciliation for missed, duplicate or out-of-order
-deliveries. Authenticate the receiver and verify the contract’s completion
-granularity; never consider webhook delivery by itself sufficient to authorize
-a PDF download.</p>
+app can subscribe to compatible application events. Feature availability and
+the event class are tied to the <strong>installed LibreSign release</strong>, not simply to
+the Nextcloud version or the OCS <code class="docutils literal notranslate"><span class="pre">/api/v1</span></code> path.</p>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p><strong>LibreSign 13–15:</strong> These release lines do not publish the native
+aggregate LibreSign signing-completion event for Webhook Listeners.
+Use authenticated polling with reconciliation instead. Nextcloud’s
+Webhook Listeners installation alone does not make an arbitrary internal
+LibreSign event available over HTTP.</p>
+</div>
+<p>Even when a release supports a completion event, the Nextcloud worker sends
+HTTP asynchronously. Do not assume exactly-once delivery, ordering or retries.
+Authenticate the receiver, deduplicate received events, then reconcile the
+current workflow with the requester’s authorized OCS identity. A webhook
+notification never authorizes a PDF download on its own.</p>
 </section>
 <section id="recover-the-final-pdf-and-evidence">
 <h2>Recover the final PDF and evidence<a class="headerlink" href="#recover-the-final-pdf-and-evidence" title="Link to this heading"></a></h2>
@@ -245,14 +258,18 @@ installed release before downloading it. Signed-node metadata and public
 validation URLs are not substitutes for requester authorization. Do not
 confuse a public verification result with the signed document or a complete
 evidence archive.</p>
-<p>Use the published <code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/file/validate/uuid/{uuid}</span></code> contract when the caller
-is authorized to request validation metadata. Availability of audit logs,
-certificate chain, timestamps, revocation proof or downloadable evidence
-packages depends on the installed version, selected signing method and
-configured providers. Do not promise a single evidence-download endpoint
+<p>Use authenticated <code class="docutils literal notranslate"><span class="pre">GET</span> <span class="pre">/file/validate/file_id/{fileId}</span></code> with file-read
+permissions for validation metadata. The UUID validation route has separate
+privacy restrictions and is <strong>not</strong> unrestricted access to evidence.
+Availability of audit logs, certificate chain, timestamps, revocation proof
+or downloadable evidence packages depends on the installed version, selected
+signing method and configured providers. Do not promise a single evidence-download endpoint
 that is absent from <a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a>.</p>
-<p>See <a class="reference external" href="https://docs.nextcloud.com/server/stable/developer_manual/client_apis/WebDAV/basic.html">Nextcloud WebDAV file operations</a>
-and <a class="reference internal" href="deployment.html"><span class="doc">Infrastructure, administration and policy preflight</span></a> for access and retention checks.</p>
+<p>See <a class="reference internal" href="../api/external-email-signers.html"><span class="doc">External email signers: integration</span></a> for the executable
+<code class="docutils literal notranslate"><span class="pre">SIGNED_DAV_URL</span></code> / <code class="docutils literal notranslate"><span class="pre">SIGNED_OUTPUT</span></code> retrieval flow, and
+<a class="reference external" href="https://docs.nextcloud.com/server/stable/developer_manual/client_apis/WebDAV/basic.html">Nextcloud WebDAV file operations</a>
+for path discovery. Neither a LibreSign UUID nor a signed-node ID is a WebDAV
+path. Review <a class="reference internal" href="deployment.html"><span class="doc">Infrastructure, administration and policy preflight</span></a> for access and retention checks.</p>
 </section>
 </section>
 

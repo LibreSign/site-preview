@@ -170,7 +170,9 @@ a valid OCS authentication token.</p>
 <h2>Security boundaries<a class="headerlink" href="#security-boundaries" title="Link to this heading"></a></h2>
 <dl class="simple">
 <dt><strong>Backend-to-backend operations</strong></dt><dd><p>Use a dedicated, least-privileged Nextcloud account with an App Password,
-or a configured OAuth2/OIDC bearer flow supported by that instance.
+or a configured OAuth2/OIDC bearer flow supported by that instance. OAuth2
+client tokens and an OIDC IdP’s tokens are <strong>not interchangeable</strong>; validate
+the exact token with the deployed Nextcloud API.
 Store credentials server-side. Test the effective permissions using the
 exact account; LibreSign request creation is restricted to authenticated
 users permitted to request signatures.</p>
@@ -219,6 +221,10 @@ this account. Do not use a normal user’s password as an integration secret.</p
 <li><p><a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/configuration_user/user_auth_oidc.html">OpenID Connect user authentication and bearer validation</a>.</p></li>
 <li><p><a class="reference external" href="https://docs.nextcloud.com/server/stable/developer_manual/client_apis/OCS/ocs-api-overview.html">OCS authentication</a>.</p></li>
 </ul>
+<p>See <a class="reference internal" href="../api/external-email-signers.html"><span class="doc">External email signers: integration</span></a> for the actual requester-to-external-
+signer workflow, including the permissions required for invitation, validation
+and PDF recovery. The example’s <code class="docutils literal notranslate"><span class="pre">LIBRESIGN_DOC_LINE</span></code> fixture selection
+prevents payloads from one release being silently used in another.</p>
 <p>Inspect <a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a> to confirm each LibreSign operation’s security
 requirements for this particular application release. Avoid database writes
 or direct database reads as a substitute for authentication contracts.</p>

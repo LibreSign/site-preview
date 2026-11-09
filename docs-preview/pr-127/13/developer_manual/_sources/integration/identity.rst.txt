@@ -61,7 +61,9 @@ Security boundaries
 
 **Backend-to-backend operations**
    Use a dedicated, least-privileged Nextcloud account with an App Password,
-   or a configured OAuth2/OIDC bearer flow supported by that instance.
+   or a configured OAuth2/OIDC bearer flow supported by that instance. OAuth2
+   client tokens and an OIDC IdP's tokens are **not interchangeable**; validate
+   the exact token with the deployed Nextcloud API.
    Store credentials server-side. Test the effective permissions using the
    exact account; LibreSign request creation is restricted to authenticated
    users permitted to request signatures.
@@ -113,6 +115,11 @@ Nextcloud references
   (notably: no scoped access in Nextcloud's OAuth2 implementation).
 - `OpenID Connect user authentication and bearer validation <https://docs.nextcloud.com/server/stable/admin_manual/configuration_user/user_auth_oidc.html>`_.
 - `OCS authentication <https://docs.nextcloud.com/server/stable/developer_manual/client_apis/OCS/ocs-api-overview.html>`_.
+
+See :doc:`../api/external-email-signers` for the actual requester-to-external-
+signer workflow, including the permissions required for invitation, validation
+and PDF recovery. The example's ``LIBRESIGN_DOC_LINE`` fixture selection
+prevents payloads from one release being silently used in another.
 
 Inspect :doc:`../api/openapi` to confirm each LibreSign operation's security
 requirements for this particular application release. Avoid database writes

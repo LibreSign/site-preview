@@ -51,8 +51,8 @@ LibreSign signer workflow can complete.
      - Configure only if selected for that identity design
      - Tokens accepted by IdP but rejected by Nextcloud
    * - Native Webhook Listeners
-     - Optional, not yet homologated for LibreSign completion
-     - Enable only after a tested event contract exists for that release
+     - Optional, version-gated
+     - Only when this release publishes a compatible event; verify the receiving endpoint and worker HTTP delivery
      - Missing, ambiguous or duplicate events
    * - TSA, CRL, additional trust anchors
      - Conditional
@@ -86,8 +86,8 @@ Production smoke checks
 3. Exercise the actual account or external signer identity challenge.
    Confirm that a different signer cannot reuse another signer's permission.
 4. Test pending, partial, signed, rejected/deleted and unknown results;
-   check envelope children independently. Never treat a notification or a
-   signer action as final document completion.
+   check envelope children independently. A completed request may include
+   a permitted rejection; inspect signer evidence and business requirements.
 5. Verify the final signed PDF can be fetched by an authorized account
    and **cannot** be fetched by an unauthorized one. Preserve audit metadata
    only to the extent exposed by the installed contract.
@@ -96,8 +96,11 @@ Production smoke checks
 
 Nextcloud's `background-job guidance <https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/background_jobs_configuration.html>`_
 recommends scheduled cron execution for reliable server work.
-For full setup details, consult the release's administration manual, server
-policy configuration, and :doc:`../api/openapi`.
+For runnable signed-document retrieval and email-signing prerequisites, see
+:doc:`../api/external-email-signers`. Confirm exact request structures in
+:doc:`../api/openapi` and the installed server policies. Optional commercial
+support and external notification gateways are distinct from LibreSign's
+free software and its core signing functionality.
 
 Direct database access, hidden Nextcloud permissions and unverified webhook
 event names are **not** supported integration shortcuts.

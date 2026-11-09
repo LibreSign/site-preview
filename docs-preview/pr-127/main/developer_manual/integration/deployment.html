@@ -167,8 +167,8 @@ LibreSign signer workflow can complete.</p>
 <td><p>Tokens accepted by IdP but rejected by Nextcloud</p></td>
 </tr>
 <tr class="row-even"><td><p>Native Webhook Listeners</p></td>
-<td><p>Optional, not yet homologated for LibreSign completion</p></td>
-<td><p>Enable only after a tested event contract exists for that release</p></td>
+<td><p>Optional, version-gated</p></td>
+<td><p>Only when this release publishes a compatible event; verify the receiving endpoint and worker HTTP delivery</p></td>
 <td><p>Missing, ambiguous or duplicate events</p></td>
 </tr>
 <tr class="row-odd"><td><p>TSA, CRL, additional trust anchors</p></td>
@@ -206,8 +206,8 @@ workflows, then create a test request with the correct policy and input.</p></li
 <li><p>Exercise the actual account or external signer identity challenge.
 Confirm that a different signer cannot reuse another signer’s permission.</p></li>
 <li><p>Test pending, partial, signed, rejected/deleted and unknown results;
-check envelope children independently. Never treat a notification or a
-signer action as final document completion.</p></li>
+check envelope children independently. A completed request may include
+a permitted rejection; inspect signer evidence and business requirements.</p></li>
 <li><p>Verify the final signed PDF can be fetched by an authorized account
 and <strong>cannot</strong> be fetched by an unauthorized one. Preserve audit metadata
 only to the extent exposed by the installed contract.</p></li>
@@ -216,8 +216,11 @@ expiry and notification-delivery failures without automatic double sends.</p></l
 </ol>
 <p>Nextcloud’s <a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/background_jobs_configuration.html">background-job guidance</a>
 recommends scheduled cron execution for reliable server work.
-For full setup details, consult the release’s administration manual, server
-policy configuration, and <a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a>.</p>
+For runnable signed-document retrieval and email-signing prerequisites, see
+<a class="reference internal" href="../api/external-email-signers.html"><span class="doc">External email signers: integration</span></a>. Confirm exact request structures in
+<a class="reference internal" href="../api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a> and the installed server policies. Optional commercial
+support and external notification gateways are distinct from LibreSign’s
+free software and its core signing functionality.</p>
 <p>Direct database access, hidden Nextcloud permissions and unverified webhook
 event names are <strong>not</strong> supported integration shortcuts.</p>
 </section>

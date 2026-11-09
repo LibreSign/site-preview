@@ -62,28 +62,37 @@ The common OCS prefix is::
    https://cloud.example.com/ocs/v2.php/apps/libresign/api/v1
 
 The requester uses ``POST /request-signature`` and tracks results with
-``GET /file/list``. Both operations are present in the published schemas
-for LibreSign 13, 14, 15 and the development line. The account and external
+``GET /file/list``. Both operations are present in the reviewed release
+schemas. The ``/api/v1`` segment is the protocol version, **not** the LibreSign
+major release number. The account and external
 identification methods require instance-level configuration.
 
 **The signer identification payload is not identical across releases.**
 An ``identifyMethods`` element in LibreSign 13/14 uses ``mandatory``;
 in LibreSign 15 and the development line it uses the ``requirement`` enum.
-For example, these are **field fragments**, not full request bodies:
+The following comparison is **not** a reusable request body:
 
-.. code-block:: json
+.. list-table:: Version-specific email signer identification
+   :header-rows: 1
+   :widths: 24 38 38
 
-   {"method": "email", "value": "signer@example.test", "mandatory": 1}
+   * - LibreSign release
+     - Required input field
+     - Example value
+   * - 13 and 14
+     - ``mandatory`` (integer)
+     - ``1``
+   * - 15 and development ``main``
+     - ``requirement`` (string enum)
+     - ``"required"``
 
-.. code-block:: json
-
-   {"method": "email", "value": "signer@example.test", "requirement": "required"}
-
-Use only the fragment described by your selected
-:doc:`../api/openapi`, inside its ``NewSigner.identifyMethods`` schema.
-Do not paste fragments from a newer release into an older integration. The
-complete creation, invitation, and sign-by-UUID examples are maintained in
-the separate practical API guide, not duplicated here.
+Verify ``NewSigner.identifyMethods`` in :doc:`../api/openapi` and
+select the complete, release-specific fixture from
+:doc:`../api/external-email-signers` using ``LIBRESIGN_DOC_LINE``.
+Do not copy fields from a newer release into an older request. The
+complete creation, invitation, polling and retrieval examples are maintained
+in :doc:`../api/external-email-signers`, where the fixture must match this
+release's pinned OpenAPI.
 
 Never construct a signing link from a file UUID. The file UUID identifies a
 workflow, while a sign-request UUID identifies an individual signing session.
@@ -99,5 +108,6 @@ enforce who may retrieve a completed PDF, and record local delivery attempts.
 LibreSign enforces its own signer validation, signing policy, PDF creation and
 authorization. Client-side checks in your product cannot replace these rules.
 
-Use :doc:`lifecycle` for states, notifications and retrieval, and
-:doc:`identity` to decide which credentials your application backend may use.
+Use :doc:`lifecycle` for state reconciliation and notifications,
+:doc:`identity` for authentication boundaries, and
+:doc:`../api/external-email-signers` for runnable, release-specific examples.
