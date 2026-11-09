@@ -6,7 +6,7 @@
   <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Receive signing-completion webhooks &mdash; LibreSign Documentation 16.0.0-dev.3 documentation</title>
+  <title>Signing workflow completed &mdash; LibreSign Documentation 16.0.0-dev.3 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=b86133f3" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
       <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
@@ -28,8 +28,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="OCS OpenAPI — versioned contract" href="openapi.html" />
-    <link rel="prev" title="API Usage" href="guide-api.html" /> 
+    <link rel="next" title="Translation" href="../translation.html" />
+    <link rel="prev" title="Configure webhook deliveries" href="configuration.html" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -58,15 +58,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../error-handling.html">Error handling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../getting-started/index.html">Getting started</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../development-workflow.html">Development workflow</a></li>
-<li class="toctree-l1 current"><a class="reference internal" href="index.html">API Documentation</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="guide-api.html">API Usage</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">Receive signing-completion webhooks</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#configure-the-webhook">Configure the webhook</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#what-is-sent">What is sent</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#reliability-and-migration">Reliability and migration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../api/index.html">API Documentation</a></li>
+<li class="toctree-l1 current"><a class="reference internal" href="index.html">Webhooks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">Signing workflow completed</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#when-it-is-emitted">When it is emitted</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#received-body">Received body</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="openapi.html">OCS OpenAPI — versioned contract</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../translation.html">Translation</a></li>
@@ -88,10 +87,10 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../index.html" class="icon icon-home" aria-label="Home"></a></li>
-          <li class="breadcrumb-item"><a href="index.html">API Documentation</a></li>
-      <li class="breadcrumb-item active">Receive signing-completion webhooks</li>
+          <li class="breadcrumb-item"><a href="index.html">Webhooks</a></li>
+      <li class="breadcrumb-item active">Signing workflow completed</li>
       <li class="wy-breadcrumbs-aside">
-              <a href="https://github.com/LibreSign/documentation/blob/main/developer_manual/api/signing_completion_webhooks.rst" class="fa fa-github"> Edit on GitHub</a>
+              <a href="https://github.com/LibreSign/documentation/blob/main/developer_manual/webhooks/signing_completion.rst" class="fa fa-github"> Edit on GitHub</a>
       </li>
   </ul>
   <hr/>
@@ -99,47 +98,31 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="receive-signing-completion-webhooks">
-<h1>Receive signing-completion webhooks<a class="headerlink" href="#receive-signing-completion-webhooks" title="Link to this heading"></a></h1>
-<p>LibreSign can notify an external system when a document signing request or an
-envelope has finished. The notification uses Nextcloud’s <strong>Webhook Listeners</strong>
-app, so the receiving application can keep its own interface and authentication.</p>
-<div class="admonition note">
-<p class="admonition-title">Note</p>
-<p>This event is available in LibreSign 16 for Nextcloud 36 (the <code class="docutils literal notranslate"><span class="pre">main</span></code>
-documentation line). It is not yet available in earlier LibreSign releases.</p>
-</div>
-<section id="configure-the-webhook">
-<h2>Configure the webhook<a class="headerlink" href="#configure-the-webhook" title="Link to this heading"></a></h2>
-<ol class="arabic">
-<li><p>Enable <strong>Webhook Listeners</strong> on the Nextcloud server. An administrator can
-also run <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">-u</span> <span class="pre">www-data</span> <span class="pre">php</span> <span class="pre">occ</span> <span class="pre">app:enable</span> <span class="pre">webhook_listeners</span></code> from the
-Nextcloud installation directory.</p></li>
-<li><p>Prepare a reachable HTTPS endpoint in the integrating system. Require
-receiver-side authentication and accept JSON <code class="docutils literal notranslate"><span class="pre">POST</span></code> requests.</p></li>
-<li><p>Register a Nextcloud webhook using an account authorized to administer
-Webhook Listeners. Set the following fields:</p>
-<ul class="simple">
-<li><p><strong>Event</strong>: <code class="docutils literal notranslate"><span class="pre">OCA\Libresign\Events\SigningRequestCompletedEvent</span></code></p></li>
-<li><p><strong>HTTP method</strong>: <code class="docutils literal notranslate"><span class="pre">POST</span></code></p></li>
-<li><p><strong>URI</strong>: the HTTPS address of your receiver</p></li>
-<li><p><strong>User filter</strong>: empty, to allow background and external signing flows</p></li>
-<li><p><strong>Event filter</strong>: empty to receive every completed request</p></li>
-<li><p><strong>Headers/authentication</strong>: configure an authentication header accepted
-by your receiver; do not put secrets in the URI</p></li>
-</ul>
-<p>The endpoint for registration is
-<code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/ocs/v2.php/apps/webhook_listeners/api/v1/webhooks</span></code>.
-Consult your Nextcloud version’s Webhook Listeners administration API
-for the supported registration fields.</p>
-</li>
-<li><p>Ensure Nextcloud background jobs run with the recommended <strong>Cron</strong> mode.
-The Nextcloud server must be able to reach the receiver.</p></li>
-</ol>
+  <section id="signing-workflow-completed">
+<h1>Signing workflow completed<a class="headerlink" href="#signing-workflow-completed" title="Link to this heading"></a></h1>
+<p><strong>Event:</strong> <code class="docutils literal notranslate"><span class="pre">OCA\Libresign\Events\SigningRequestCompletedEvent</span></code></p>
+<p><strong>Release scope:</strong> LibreSign 16.0.0-dev.3 on Nextcloud
+36, development line. This event is being introduced for the
+next LibreSign release; it is not available in stable LibreSign 13, 14 or 15.
+Use this subscription only after verifying that your installed LibreSign build
+supports the event.</p>
+<section id="when-it-is-emitted">
+<h2>When it is emitted<a class="headerlink" href="#when-it-is-emitted" title="Link to this heading"></a></h2>
+<p>This event indicates that the signing <strong>workflow</strong> for a document or envelope
+has reached LibreSign’s completed status. It is not emitted for an individual
+signer completing one step while the overall request is still partially
+signed. An envelope completes when its overall signing workflow reaches the
+completed state, rather than when an individual file is signed.</p>
+<p>Completion is not evidence that every invited participant signed: policy may
+allow a workflow to finish after a signer rejects. Inspect the final workflow
+and evidence using the authenticated LibreSign API when that distinction
+matters to your system.</p>
 </section>
-<section id="what-is-sent">
-<h2>What is sent<a class="headerlink" href="#what-is-sent" title="Link to this heading"></a></h2>
-<p>Nextcloud sends a JSON body similar to the following:</p>
+<section id="received-body">
+<h2>Received body<a class="headerlink" href="#received-body" title="Link to this heading"></a></h2>
+<p>After registering the event as described in <a class="reference internal" href="configuration.html"><span class="doc">Configure webhook deliveries</span></a>, the receiver
+gets Nextcloud’s event wrapper. This is a synthetic example; <code class="docutils literal notranslate"><span class="pre">user</span></code> can be
+<code class="docutils literal notranslate"><span class="pre">null</span></code> when no Nextcloud user session is active.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
 <span class="w">  </span><span class="nt">"event"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
 <span class="w">    </span><span class="nt">"class"</span><span class="p">:</span><span class="w"> </span><span class="s2">"OCA\\Libresign\\Events\\SigningRequestCompletedEvent"</span><span class="p">,</span>
@@ -154,34 +137,18 @@ The Nextcloud server must be able to reach the receiver.</p></li>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>The <code class="docutils literal notranslate"><span class="pre">requestType</span></code> is either <code class="docutils literal notranslate"><span class="pre">document</span></code> or <code class="docutils literal notranslate"><span class="pre">envelope</span></code>. The
-<code class="docutils literal notranslate"><span class="pre">requestUuid</span></code> identifies the complete signing request in LibreSign, <strong>not</strong>
-one signer’s individual invitation. The <code class="docutils literal notranslate"><span class="pre">eventId</span></code> remains the same for
-repeat notifications about that request; store it to prevent duplicate work.</p>
-<p>The notification means the <strong>workflow</strong> reached LibreSign’s signed status.
-An individual signature or a partially signed request does not trigger
-this event. Depending on the signing workflow, a completed request can include
-participants who rejected; do not interpret completion as proof that every
-invited person signed.</p>
-<p>Nextcloud may add its own metadata to the delivery envelope, including
-the triggering user when one is available. The LibreSign event does not carry
-a document, a file-download link, signer contact information or credentials.
-Use the authenticated LibreSign API and the integrator’s normal permissions
-to retrieve documents or evidence.</p>
-</section>
-<section id="reliability-and-migration">
-<h2>Reliability and migration<a class="headerlink" href="#reliability-and-migration" title="Link to this heading"></a></h2>
-<ul class="simple">
-<li><p>Deliveries are performed by Nextcloud background jobs, not in the response
-to a signing request. Configure the receiver to respond with a <code class="docutils literal notranslate"><span class="pre">2xx</span></code>
-status and process messages idempotently.</p></li>
-<li><p>Do not assume a guaranteed delivery time, ordering, or automatic retry of
-unsuccessful HTTP calls. Check Nextcloud logs and reconcile missed events
-through the authenticated LibreSign API.</p></li>
-<li><p>The existing LibreSign callback remains available. If both callbacks and
-native webhooks are configured, the external system may receive notifications
-through both mechanisms.</p></li>
-</ul>
+<p><code class="docutils literal notranslate"><span class="pre">requestUuid</span></code> identifies the whole signing request, not an individual
+signer’s invitation UUID. <code class="docutils literal notranslate"><span class="pre">requestType</span></code> is <code class="docutils literal notranslate"><span class="pre">document</span></code> or <code class="docutils literal notranslate"><span class="pre">envelope</span></code>.
+<code class="docutils literal notranslate"><span class="pre">contractVersion</span></code> is the version of this event’s data contract, not a
+LibreSign release number. <code class="docutils literal notranslate"><span class="pre">eventId</span></code> is a stable correlation/deduplication
+key for this request, not a unique identifier of each HTTP delivery attempt.</p>
+<p>Use the same <code class="docutils literal notranslate"><span class="pre">eventId</span></code> to avoid repeated processing of duplicate deliveries.
+If a completed workflow is later reopened, check its current status before
+acting on a new notification with the same identifier.</p>
+<p>The LibreSign event data does not contain signer email addresses, private file
+URLs, document contents or credentials. Nextcloud may include information about
+the current user in its outer <code class="docutils literal notranslate"><span class="pre">user</span></code> field. Retrieve any signed document or
+evidence separately, using an authenticated and authorized LibreSign API call.</p>
 </section>
 </section>
 
@@ -189,8 +156,8 @@ through both mechanisms.</p></li>
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="guide-api.html" class="btn btn-neutral float-left" title="API Usage" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="openapi.html" class="btn btn-neutral float-right" title="OCS OpenAPI — versioned contract" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="configuration.html" class="btn btn-neutral float-left" title="Configure webhook deliveries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../translation.html" class="btn btn-neutral float-right" title="Translation" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
