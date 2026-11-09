@@ -8,7 +8,9 @@ Configure webhook deliveries
 Native LibreSign webhooks use Nextcloud's **Webhook Listeners** application.
 A Nextcloud administrator registers a receiving HTTPS endpoint and selects
 which event class should trigger it. A separate receiver application can keep
-its own authentication and user interface.
+its own authentication and user interface. The complete procedure, from
+creating an external signing request to fetching its PDF, is in
+:doc:`external-signing-flow`.
 
 Prerequisites
 -------------

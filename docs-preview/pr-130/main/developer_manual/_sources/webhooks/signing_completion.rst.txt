@@ -57,7 +57,9 @@ Use the same ``eventId`` to avoid repeated processing of duplicate deliveries.
 If a completed workflow is later reopened, check its current status before
 acting on a new notification with the same identifier.
 
-The LibreSign event data does not contain signer email addresses, private file
+The event replaces the removed proprietary callback in the development API;
+it does **not** deliver the PDF as multipart data or provide a per-request
+webhook address. The LibreSign event data does not contain signer email addresses, private file
 URLs, document contents or credentials. Nextcloud may include information about
 the current user in its outer ``user`` field. Retrieve any signed document or
 evidence separately, using an authenticated and authorized LibreSign API call.
