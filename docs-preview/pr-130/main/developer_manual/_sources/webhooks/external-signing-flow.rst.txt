@@ -20,9 +20,10 @@ aggregate event; retain their version-specific documented integrations.
    The native webhook is not a drop-in replacement for the old
    per-request ``callback``: it sends a **JSON event**, not a multipart PDF,
    and its destination is registered administratively in Nextcloud.
-   In the development line, ``callback`` in a signing-request payload
-   is rejected with HTTP 422, and the global ``webhook_sign_url``
-   fallback has been removed. Stored callback URLs are not migrated
+   In the unmerged removal PR LibreSign/libresign#9426, ``callback``
+   in a signing-request payload is rejected with HTTP 422, and the
+   global ``webhook_sign_url`` fallback is removed. Existing installs
+   may retain that legacy behavior until upgrading. Stored callback URLs are not migrated
    into Webhook Listeners subscriptions. Migrate existing consumers
    *before* upgrading their integration.
 

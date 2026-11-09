@@ -101,16 +101,18 @@
 <h1>Webhooks<a class="headerlink" href="#webhooks" title="Link to this heading"></a></h1>
 <p>Webhooks allow an external system to react to LibreSign events without
 replacing its own interface or repeatedly querying LibreSign. Native event
-delivery is provided by Nextcloud’s <strong>Webhook Listeners</strong> app. Each supported
-event has its own reference page, including the point in the workflow that
-triggers delivery and the data sent to the receiver.</p>
+delivery is provided by Nextcloud’s <strong>Webhook Listeners</strong> app. The
+<a class="reference internal" href="event-catalog.html"><span class="doc">LibreSign event catalog</span></a> lists implemented classes, their actual triggers,
+payload fields, and whether they are available in the installed revision.</p>
 <p><strong>Availability:</strong> LibreSign development branch (currently 16.0.0-dev)
 on Nextcloud 36, <strong>not a stable LibreSign 16 release</strong>. The event is not
 available in LibreSign 13, 14, or 15. Verify the installed application
 revision and its Nextcloud compatibility before registration.</p>
-<p>The development API no longer provides LibreSign’s proprietary per-request
-<code class="docutils literal notranslate"><span class="pre">callback</span></code> or global <code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code> transport. Use Nextcloud’s native
-subscriptions and retrieve signed documents separately with authorization.</p>
+<p>The separate callback-removal proposal (LibreSign/libresign#9426)
+removes the proprietary per-request <code class="docutils literal notranslate"><span class="pre">callback</span></code> and global
+<code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code> transport. Until it is merged, an unmodified <code class="docutils literal notranslate"><span class="pre">main</span></code>
+installation may still provide that legacy transport. New integrations
+should use Nextcloud’s native subscriptions and retrieve PDFs with authorization.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="event-catalog.html">LibreSign event catalog</a></li>

@@ -124,9 +124,10 @@ aggregate event; retain their version-specific documented integrations.</p>
 <p>The native webhook is not a drop-in replacement for the old
 per-request <code class="docutils literal notranslate"><span class="pre">callback</span></code>: it sends a <strong>JSON event</strong>, not a multipart PDF,
 and its destination is registered administratively in Nextcloud.
-In the development line, <code class="docutils literal notranslate"><span class="pre">callback</span></code> in a signing-request payload
-is rejected with HTTP 422, and the global <code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code>
-fallback has been removed. Stored callback URLs are not migrated
+In the unmerged removal PR LibreSign/libresign#9426, <code class="docutils literal notranslate"><span class="pre">callback</span></code>
+in a signing-request payload is rejected with HTTP 422, and the
+global <code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code> fallback is removed. Existing installs
+may retain that legacy behavior until upgrading. Stored callback URLs are not migrated
 into Webhook Listeners subscriptions. Migrate existing consumers
 <em>before</em> upgrading their integration.</p>
 </div>
