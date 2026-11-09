@@ -93,6 +93,10 @@
              
   <section id="external-email-signers-integration">
 <h1>External email signers: integration<a class="headerlink" href="#external-email-signers-integration" title="Link to this heading"></a></h1>
+<p><strong>Applicable release:</strong> LibreSign 15.0.12 on Nextcloud 35.
+The exact source commit and contract hash are published as
+<a class="reference external" href="openapi.provenance.json">pinned OpenAPI provenance</a>.
+The path /api/v1 is the API protocol version, not the LibreSign major version.</p>
 <p>An existing system may retain its own interface and authentication while
 its backend creates LibreSign signature requests. An external signer may
 sign in LibreSign without a Nextcloud account.</p>
@@ -119,20 +123,55 @@ and any mandatory identity-document or visible signature policies.</p>
 <div class="highlight-text notranslate"><div class="highlight"><pre><span></span>https://cloud.example.com/ocs/v2.php/apps/libresign/api/v1
 </pre></div>
 </div>
-<p>The companion examples in examples/external-email-signers contain
-request.json, flow.sh (bash/curl/jq/base64) and flow.php (PHP 8.1+
-with ext-curl). They use this synthetic request:</p>
+<p>The request structure is selected for this documentation release. Use only
+the version-specific fixture below with the executable cURL or PHP clients
+in <code class="docutils literal notranslate"><span class="pre">examples/external-email-signers</span></code>. The version selector is mandatory.</p>
+<p><strong>Release:</strong> LibreSign 15.0.12, Nextcloud 35.
+<strong>Executable request template:</strong> <code class="docutils literal notranslate"><span class="pre">request-15.json</span></code>.
+This template is specific to the published application contract.</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Synthetic service agreement"</span><span class="p">,</span><span class="w"> </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
-<span class="w">  </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"synthetic.pdf"</span><span class="p">,</span><span class="w"> </span><span class="nt">"base64"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REPLACE_WITH_BASE64"</span><span class="p">},</span>
-<span class="w">  </span><span class="nt">"signers"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"External Test Signer"</span><span class="p">,</span><span class="w"> </span><span class="nt">"notify"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
-<span class="w">    </span><span class="nt">"identifyMethods"</span><span class="p">:</span><span class="w"> </span><span class="p">[{</span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span>
-<span class="w">      </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"signer@example.test"</span><span class="p">,</span><span class="w"> </span><span class="nt">"mandatory"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">}]}]</span>
+<span class="w">  </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"Synthetic service agreement"</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"status"</span><span class="p">:</span><span class="w"> </span><span class="mi">1</span><span class="p">,</span>
+<span class="w">  </span><span class="nt">"file"</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">    </span><span class="nt">"name"</span><span class="p">:</span><span class="w"> </span><span class="s2">"synthetic.pdf"</span><span class="p">,</span>
+<span class="w">    </span><span class="nt">"base64"</span><span class="p">:</span><span class="w"> </span><span class="s2">"REPLACE_WITH_BASE64"</span>
+<span class="w">  </span><span class="p">},</span>
+<span class="w">  </span><span class="nt">"signers"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">    </span><span class="p">{</span>
+<span class="w">      </span><span class="nt">"displayName"</span><span class="p">:</span><span class="w"> </span><span class="s2">"External Test Signer"</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"notify"</span><span class="p">:</span><span class="w"> </span><span class="mi">0</span><span class="p">,</span>
+<span class="w">      </span><span class="nt">"identifyMethods"</span><span class="p">:</span><span class="w"> </span><span class="p">[</span>
+<span class="w">        </span><span class="p">{</span>
+<span class="w">          </span><span class="nt">"method"</span><span class="p">:</span><span class="w"> </span><span class="s2">"email"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"value"</span><span class="p">:</span><span class="w"> </span><span class="s2">"signer@example.test"</span><span class="p">,</span>
+<span class="w">          </span><span class="nt">"requirement"</span><span class="p">:</span><span class="w"> </span><span class="s2">"required"</span>
+<span class="w">        </span><span class="p">}</span>
+<span class="w">      </span><span class="p">]</span>
+<span class="w">    </span><span class="p">}</span>
+<span class="w">  </span><span class="p">]</span>
 <span class="p">}</span>
 </pre></div>
 </div>
-<p>Replace the PDF with synthetic bytes and the reserved example.test
-mailbox with an inbox you control. The scripts POST /request-signature,
+<p>Select the documentation line before running either client:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">export</span><span class="w"> </span><span class="nv">LIBRESIGN_DOC_LINE</span><span class="o">=</span><span class="m">15</span>
+</pre></div>
+</div>
+<p>This release requires <code class="docutils literal notranslate"><span class="pre">requirement:</span> <span class="pre">&quot;required&quot;</span></code> on an email identify
+method, not the old integer <code class="docutils literal notranslate"><span class="pre">mandatory</span></code>. Its <code class="docutils literal notranslate"><span class="pre">POST</span> <span class="pre">/request-signature</span></code>
+does <strong>not</strong> declare <code class="docutils literal notranslate"><span class="pre">signatureFlow</span></code>: do not send that request field.
+Use verified effective server policies and inspect the returned flow.
+The signer schema also declares <code class="docutils literal notranslate"><span class="pre">geolocationRequired</span></code>; do not
+assume this option is available in earlier releases.</p>
+<p>The cited browser tests belong to application branch <code class="docutils literal notranslate"><span class="pre">stable35</span></code>;
+the exact source commit used in this build is in the linked provenance:</p>
+<ul class="simple">
+<li><p><a class="reference external" href="https://github.com/LibreSign/libresign/blob/stable35/playwright/e2e/sign-envelope-unauthenticated-visible-signature.spec.ts">Guest signing and visible signature</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LibreSign/libresign/blob/stable35/playwright/e2e/sign-email-token-unauthenticated.spec.ts">Unauthenticated email-token signing</a></p></li>
+<li><p><a class="reference external" href="https://github.com/LibreSign/libresign/blob/stable35/playwright/e2e/multi-signer-sequential.spec.ts">Sequential signing</a></p></li>
+</ul>
+<p><strong>Evidence limit:</strong> source tests are present; their existence does not
+prove that SMTP, browser behavior or PDF signing passed in this deployment.</p>
+<p>The scripts POST /request-signature,
 verify ocs.meta and retain ocs.data.id (LibreSign file ID) and
 ocs.data.uuid (document UUID). notify: 0 disables initial auto-invites;
 the scripts explicitly POST /notify/signers with the returned file ID:</p>
@@ -197,10 +236,8 @@ permissions or query LibreSign database tables directly.</p>
 <p>Use separate signers[] records and signingOrder when ordered signing
 is configured. Sequential recipients are activated in order; parallel
 signers can act independently. files[] can create envelopes when enabled.
-The 13 and 14 request OpenAPI contracts declare signatureFlow values
-parallel and ordered_numeric; 15 and main do not declare that request
-property. Use effective server policy instead of sending undocumented
-parameters. Do not claim main-only features exist in stable versions.</p>
+The specific supported request options for this LibreSign release are
+documented above. Do not copy parameters from other major versions.</p>
 <p>Typical errors: 401 authentication; 403 file permission; 404 missing
 or inaccessible resource; 412 missing OCS header where enforced; 422
 validation or policy violation (inspect ocs.data.message/errors).
@@ -210,12 +247,10 @@ check for existing workflows before retrying after a timeout.</p>
 <p>Protect invitation links, App Passwords, signer metadata and PDFs.
 Poll with backoff; native webhooks require a separately verified
 LibreSign event contract for the deployed Nextcloud version.</p>
-<p>Runtime evidence on main includes Playwright
-sign-envelope-unauthenticated-visible-signature.spec.ts,
-sign-email-token-unauthenticated.spec.ts, multi-signer-sequential.spec.ts,
-and multi-signer-parallel.spec.ts. These do not prove stable-branch
-behavior unless rerun there. Static contract checks do not prove
-SMTP, guest browser signing or certificate trust.</p>
+<p>The release-specific section links to browser-test sources from that
+application branch. Their presence is source evidence; running them
+against the installed release is still necessary to establish E2E behavior.
+Contract checks cannot prove SMTP, browser signing or certificate trust.</p>
 <p>Consult the OpenAPI reference beside this page for exact schemas.</p>
 </section>
 </section>
