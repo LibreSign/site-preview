@@ -1,0 +1,8 @@
+/
+/15/
+/main/developer_manual/
+/_review/index.html
+/_review/16/developer_manual/index.html
+/_review/16/developer_manual/webhooks/configuration.html
+/_review/16/developer_manual/webhooks/index.html
+/_review/16/developer_manual/webhooks/signing_completion.html
