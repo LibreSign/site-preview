@@ -3,7 +3,7 @@
   "branch": "main",
   "app_commit": "d989d5aa02797231cc9a96f81010934b5a5d4565",
   "app_version": "16.0.0-dev.3",
-  "documentation_commit": "d7954479ce25c8e92187a510bb48f2c6cad9cef0",
+  "documentation_commit": "ef248ab90d87e42b9b2fa078f66b9181871a9d74",
   "source_url": "https://github.com/LibreSign/libresign/blob/d989d5aa02797231cc9a96f81010934b5a5d4565/openapi.json",
   "openapi_sha256": "fe9c35aa1caf8f9bebe2c0b87d30838ca82c62878c9d5b125adfdb7e19838542",
   "manifest_sha256": "f1dd783d02fcd9311314bf0cff0b0cc81f59c8b77ac17b9f766934c5334c666f",
