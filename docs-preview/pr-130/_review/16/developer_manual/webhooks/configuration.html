@@ -29,7 +29,8 @@
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Signing workflow completed" href="signing_completion.html" />
-    <link rel="prev" title="Webhooks" href="index.html" /> 
+    <link rel="prev" title="LibreSign event catalog" href="event-catalog.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,14 +57,15 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration architecture: choose a pattern</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Webhooks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="event-catalog.html">LibreSign event catalog</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Configure webhook deliveries</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#register-a-listener">Register a listener</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#delivery-and-recovery">Delivery and recovery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#event-availability">Event availability</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="signing_completion.html">Signing workflow completed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
 </ul>
 </li>
 </ul>
@@ -98,20 +100,37 @@
 <p>Native LibreSign webhooks use Nextcloud’s <strong>Webhook Listeners</strong> application.
 A Nextcloud administrator registers a receiving HTTPS endpoint and selects
 which event class should trigger it. A separate receiver application can keep
-its own authentication and user interface.</p>
+its own authentication and user interface. The complete procedure, from
+creating an external signing request to fetching its PDF, is in
+<a class="reference internal" href="external-signing-flow.html"><span class="doc">External signing with native webhooks</span></a>.</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Nextcloud documents <code class="docutils literal notranslate"><span class="pre">occ</span></code> subcommands independently of the operating
+system and installation method. Execute them through the appropriate Nextcloud
+administration CLI for your installation, rather than assuming <code class="docutils literal notranslate"><span class="pre">sudo</span></code>, an
+HTTP-user name or a container name. See Nextcloud’s
+<a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/occ_command.html">Using the occ command</a>,
+<a class="reference external" href="https://github.com/nextcloud/docker#accessing-the-nextcloud-command-line-interface-occ">Docker instructions</a>
+and <a class="reference external" href="https://github.com/nextcloud-snap/nextcloud-snap/wiki/OCC-management-console">Snap instructions</a>.</p>
 <ul>
-<li><p>LibreSign must include the event you want to subscribe to. See the event
-reference pages for availability and payloads.</p></li>
-<li><p>Enable <strong>Webhook Listeners</strong> in Nextcloud. On an installation where the
-web-server account is <code class="docutils literal notranslate"><span class="pre">www-data</span></code>, an administrator can run:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo -u www-data php occ app:enable webhook_listeners</span>
+<li><p>Choose an event class from <a class="reference internal" href="event-catalog.html"><span class="doc">LibreSign event catalog</span></a>.</p></li>
+<li><p>Enable <strong>Webhook Listeners</strong> from the Nextcloud <strong>Apps</strong> administration page,
+or use the Nextcloud command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">occ app:enable webhook_listeners</span>
 </pre></div>
 </div>
 </li>
-<li><p>Configure Nextcloud background jobs in <strong>Cron</strong> mode and allow the server to
-reach the receiver over HTTPS.</p></li>
+<li><p>Select <strong>Cron</strong> mode under Nextcloud background-job settings, or use:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">occ background:cron</span>
+</pre></div>
+</div>
+<p>This only selects the execution mode; it <strong>does not install a scheduler</strong>.
+Configure an actual scheduler to run <code class="docutils literal notranslate"><span class="pre">cron.php</span></code> periodically (or use the
+equivalent provided by your installation) and verify jobs execute.
+Follow Nextcloud’s
+<a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/background_jobs_configuration.html">background-jobs configuration</a>.</p>
+</li>
+<li><p>Allow the Nextcloud server to reach the receiver over HTTPS.</p></li>
 <li><p>Provide a receiver that accepts JSON requests, authenticates the sender,
 and can process duplicate messages safely.</p></li>
 </ul>
@@ -154,19 +173,13 @@ notifications are missing. Reconcile the current workflow using authenticated
 LibreSign API operations and the permissions of the integrating account.
 Never use a webhook payload as authorization to download a signed file.</p>
 </section>
-<section id="event-availability">
-<h2>Event availability<a class="headerlink" href="#event-availability" title="Link to this heading"></a></h2>
-<p>Event pages describe the version and precise workflow condition for each
-subscription. Do not assume that an event documented for the development
-line exists on an older installed LibreSign version.</p>
-</section>
 </section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="index.html" class="btn btn-neutral float-left" title="Webhooks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="event-catalog.html" class="btn btn-neutral float-left" title="LibreSign event catalog" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="signing_completion.html" class="btn btn-neutral float-right" title="Signing workflow completed" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -29,6 +29,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API reference" href="api/index.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -51,7 +52,8 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <ul>
+              <p class="caption" role="heading"><span class="caption-text">Release-specific integration</span></p>
+<ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="integration/index.html">Integration architecture: choose a pattern</a></li>
 </ul>
@@ -83,13 +85,28 @@
   <section id="developer-manual-libresign-libresignrelease">
 <h1>Developer manual — LibreSign 14.2.9<a class="headerlink" href="#developer-manual-libresign-libresignrelease" title="Link to this heading"></a></h1>
 <p>This is the <strong>release-specific API contract</strong> for LibreSign
-14.2.9 and Nextcloud 34.</p>
-<p>The schema is pinned to an application commit on the corresponding stable
-branch. API calls and payloads available only in the development branch
-are not presented as features of this release.</p>
-<p>For supported integration strategies, see the architecture decision guides;
-for executable API requests, use the release-specific email signer guide.</p>
+14.2.9 and Nextcloud 34. The schema is pinned
+to an application commit on the corresponding stable branch. Development-only
+API calls and payloads are not presented as features of this release.</p>
+<section id="integrate-an-external-application">
+<h2>Integrate an external application<a class="headerlink" href="#integrate-an-external-application" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="integration/index.html"><span class="doc">Integration architecture: choose a pattern</span></a> — choose an integration architecture for an
+existing application.</p></li>
+<li><p><a class="reference internal" href="api/external-email-signers.html"><span class="doc">External email signers: integration</span></a> — follow a release-specific API example
+for inviting an external email signer.</p></li>
+<li><p><a class="reference internal" href="api/openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a> — inspect the OpenAPI schema pinned to this release.</p></li>
+</ul>
+</section>
+<section id="contribute-or-develop-libresign">
+<h2>Contribute or develop LibreSign<a class="headerlink" href="#contribute-or-develop-libresign" title="Link to this heading"></a></h2>
+<p>Source architecture, coding standards, development environment, tests, and
+release engineering follow the project’s current development branch. They
+are available in the <a class="reference external" href="../../main/developer_manual/index.html">development and contributor manual</a>. That manual may describe
+unreleased functionality. For integrating with LibreSign 14.2.9,
+continue to use the version-specific reference above.</p>
 <div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Release-specific integration</span></p>
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="api/external-email-signers.html">External email signers: integration</a></li>
@@ -104,6 +121,7 @@ for executable API requests, use the release-specific email signer guide.</p>
 </li>
 </ul>
 </div>
+</section>
 </section>
 
 

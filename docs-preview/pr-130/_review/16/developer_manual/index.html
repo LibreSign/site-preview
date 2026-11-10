@@ -29,6 +29,7 @@
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
     <link rel="next" title="API reference" href="api/index.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -83,11 +84,8 @@
              
   <section id="developer-manual-libresign-libresignrelease">
 <h1>Developer manual — LibreSign 16.0.0-dev.3<a class="headerlink" href="#developer-manual-libresign-libresignrelease" title="Link to this heading"></a></h1>
-<p>This is the <strong>release-specific API contract</strong> for LibreSign
-16.0.0-dev.3 and Nextcloud 36.</p>
-<p>The schema is pinned to an application commit on the corresponding stable
-branch. API calls and payloads available only in the development branch
-are not presented as features of this release.</p>
+<p>Consult the API reference for the operations and payloads supported
+by this installation. The API contract accompanies this manual.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="api/index.html">API reference</a><ul>
@@ -102,8 +100,10 @@ are not presented as features of this release.</p>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="webhooks/index.html">Webhooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="webhooks/event-catalog.html">LibreSign event catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhooks/configuration.html">Configure webhook deliveries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="webhooks/signing_completion.html">Signing workflow completed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="webhooks/external-signing-flow.html">External signing with native webhooks</a></li>
 </ul>
 </li>
 </ul>

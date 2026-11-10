@@ -27,7 +27,9 @@
       <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
     <script src="_static/js/theme.js"></script>
     <link rel="index" title="Index" href="genindex.html" />
-    <link rel="search" title="Search" href="search.html" /> 
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Install and initialize LibreSign" href="installation.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -50,11 +52,14 @@
   </form>
 </div>
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
-              <!-- Local TOC -->
-              <div class="local-toc"><ul>
-<li><a class="reference internal" href="#">Administrator manual — LibreSign 15.0.12</a></li>
+              <p class="caption" role="heading"><span class="caption-text">Operations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install and initialize LibreSign</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configure signing</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintain an installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security and trust</a></li>
 </ul>
-</div>
+
         </div>
       </div>
     </nav>
@@ -81,23 +86,57 @@
              
   <section id="administrator-manual-libresign-libresignrelease">
 <h1>Administrator manual — LibreSign 15.0.12<a class="headerlink" href="#administrator-manual-libresign-libresignrelease" title="Link to this heading"></a></h1>
-<p>The LibreSign 15.0.12 line requires a compatible Nextcloud
-35 instance, as declared by its application manifest.</p>
-<p>Install or upgrade the application version compatible with your Nextcloud
-release, and inspect the application configuration in the Nextcloud
-administration interface. Before upgrading, consult the release notes in
-<a class="reference external" href="https://github.com/LibreSign/libresign/releases">LibreSign/libresign</a>.</p>
-<p>This manual intentionally omits unverified configuration steps from
-the development branch. Version-specific operational guides can be
-added here without changing other published release lines.</p>
-<p>For support-lifecycle information see the
-<a class="reference external" href="../lifecycle.html">release lifecycle guide</a>.</p>
+<p>This manual covers LibreSign 15.0.12 for Nextcloud
+35. Check the matching app release before changing server
+settings or restoring data. Procedures are limited to the stable versions
+listed in the documentation version selector.</p>
+<section id="choose-an-operation">
+<h2>Choose an operation<a class="headerlink" href="#choose-an-operation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><a class="reference internal" href="installation.html"><span class="doc">Install and initialize LibreSign</span></a> — install LibreSign and complete initial setup.</p></li>
+<li><p><a class="reference internal" href="configuration.html"><span class="doc">Configure signing</span></a> — find the signing and certificate configuration.</p></li>
+<li><p><a class="reference internal" href="maintenance.html"><span class="doc">Maintain an installation</span></a> — back up, upgrade, and troubleshoot an installation.</p></li>
+<li><p><a class="reference internal" href="security.html"><span class="doc">Security and trust</span></a> — protect signing credentials and review security choices.</p></li>
+</ul>
+<p>For the signing experience, see the <a class="reference external" href="../user_manual/index.html">user manual</a>; for API authentication and integration,
+consult the <a class="reference external" href="../developer_manual/index.html">developer manual</a>.</p>
+<div class="toctree-wrapper compound">
+<p class="caption" role="heading"><span class="caption-text">Operations</span></p>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Install and initialize LibreSign</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#install-the-app">Install the app</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#check-the-installation">Check the installation</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configure signing</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#signing-and-identity">Signing and identity</a></li>
+<li class="toctree-l2"><a class="reference internal" href="configuration.html#certificates-and-dependencies">Certificates and dependencies</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintain an installation</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="maintenance.html#before-upgrading">Before upgrading</a></li>
+<li class="toctree-l2"><a class="reference internal" href="maintenance.html#troubleshooting">Troubleshooting</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security and trust</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="security.html#protect-signing-credentials">Protect signing credentials</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#certificate-lifecycle">Certificate lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#signers-and-access">Signers and access</a></li>
+<li class="toctree-l2"><a class="reference internal" href="security.html#validation-and-compliance">Validation and compliance</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
 </section>
 
 
            </div>
           </div>
-          <footer>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="installation.html" class="btn btn-neutral float-right" title="Install and initialize LibreSign" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
 
   <hr/>
 

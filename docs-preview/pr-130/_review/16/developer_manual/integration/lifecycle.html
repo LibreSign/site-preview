@@ -30,6 +30,7 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Infrastructure, administration and policy preflight" href="deployment.html" />
     <link rel="prev" title="Account integration and authentication choices" href="identity.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -226,19 +227,12 @@ the event class are tied to the <strong>installed LibreSign release</strong>, no
 the Nextcloud version or the OCS <code class="docutils literal notranslate"><span class="pre">/api/v1</span></code> path.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>LibreSign 16 development preview on Nextcloud 36:</strong> Subscribe to the public
-<code class="docutils literal notranslate"><span class="pre">OCA\Libresign\Events\SigningRequestCompletedEvent</span></code> when the installed
-application includes it. It implements <code class="docutils literal notranslate"><span class="pre">IWebhookCompatibleEvent</span></code>
-and exposes contract version 1 with <code class="docutils literal notranslate"><span class="pre">eventId</span></code>, <code class="docutils literal notranslate"><span class="pre">requestUuid</span></code>,
-<code class="docutils literal notranslate"><span class="pre">requestType</span></code> and <code class="docutils literal notranslate"><span class="pre">status</span></code>. It represents an aggregate transition
-to <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code>, not an individual signer action. See the
-<a class="reference internal" href="../webhooks/configuration.html"><span class="doc">Configure webhook deliveries</span></a> and
-<a class="reference internal" href="../webhooks/signing_completion.html"><span class="doc">Signing workflow completed</span></a> guides for registration,
-payloads and delivery constraints. Verify actual worker HTTP delivery
-before replacing polling or claiming end-to-end acceptance.</p>
-<p>The legacy <code class="docutils literal notranslate"><span class="pre">callback</span></code> parameter and <code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code> transport are
-removed in this development line. Existing callback URLs are not migrated
-into Webhook Listeners subscriptions automatically.</p>
+<p>For signing-workflow notifications, subscribe to native LibreSign
+events through Nextcloud Webhook Listeners. Events represent persisted
+business transitions and deliver JSON metadata without signed PDFs.
+See <a class="reference internal" href="../webhooks/event-catalog.html"><span class="doc">LibreSign event catalog</span></a> for the available classes,
+<a class="reference internal" href="../webhooks/configuration.html"><span class="doc">Configure webhook deliveries</span></a> for subscription setup, and
+<a class="reference internal" href="../webhooks/external-signing-flow.html"><span class="doc">External signing with native webhooks</span></a> for document recovery.</p>
 </div>
 <p>Even when a release supports a completion event, the Nextcloud worker sends
 HTTP asynchronously. Do not assume exactly-once delivery, ordering or retries.

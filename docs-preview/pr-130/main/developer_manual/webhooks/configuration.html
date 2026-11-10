@@ -30,6 +30,7 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Signing workflow completed" href="signing_completion.html" />
     <link rel="prev" title="LibreSign event catalog" href="event-catalog.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -66,13 +67,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#register-a-listener">Register a listener</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#delivery-and-recovery">Delivery and recovery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#event-availability">Event availability</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#development-smoke-test-and-envelopes">Development smoke test and envelopes</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="signing_completion.html">Signing workflow completed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="index.html#runtime-acceptance">Runtime acceptance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../translation.html">Translation</a></li>
@@ -115,17 +113,32 @@ creating an external signing request to fetching its PDF, is in
 <a class="reference internal" href="external-signing-flow.html"><span class="doc">External signing with native webhooks</span></a>.</p>
 <section id="prerequisites">
 <h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<p>Nextcloud documents <code class="docutils literal notranslate"><span class="pre">occ</span></code> subcommands independently of the operating
+system and installation method. Execute them through the appropriate Nextcloud
+administration CLI for your installation, rather than assuming <code class="docutils literal notranslate"><span class="pre">sudo</span></code>, an
+HTTP-user name or a container name. See Nextcloud’s
+<a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/occ_command.html">Using the occ command</a>,
+<a class="reference external" href="https://github.com/nextcloud/docker#accessing-the-nextcloud-command-line-interface-occ">Docker instructions</a>
+and <a class="reference external" href="https://github.com/nextcloud-snap/nextcloud-snap/wiki/OCC-management-console">Snap instructions</a>.</p>
 <ul>
-<li><p>LibreSign must include the event you want to subscribe to. See the event
-reference pages for availability and payloads.</p></li>
-<li><p>Enable <strong>Webhook Listeners</strong> in Nextcloud. On an installation where the
-web-server account is <code class="docutils literal notranslate"><span class="pre">www-data</span></code>, an administrator can run:</p>
-<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">sudo -u www-data php occ app:enable webhook_listeners</span>
+<li><p>Choose an event class from <a class="reference internal" href="event-catalog.html"><span class="doc">LibreSign event catalog</span></a>.</p></li>
+<li><p>Enable <strong>Webhook Listeners</strong> from the Nextcloud <strong>Apps</strong> administration page,
+or use the Nextcloud command:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">occ app:enable webhook_listeners</span>
 </pre></div>
 </div>
 </li>
-<li><p>Configure Nextcloud background jobs in <strong>Cron</strong> mode and allow the server to
-reach the receiver over HTTPS.</p></li>
+<li><p>Select <strong>Cron</strong> mode under Nextcloud background-job settings, or use:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">occ background:cron</span>
+</pre></div>
+</div>
+<p>This only selects the execution mode; it <strong>does not install a scheduler</strong>.
+Configure an actual scheduler to run <code class="docutils literal notranslate"><span class="pre">cron.php</span></code> periodically (or use the
+equivalent provided by your installation) and verify jobs execute.
+Follow Nextcloud’s
+<a class="reference external" href="https://docs.nextcloud.com/server/stable/admin_manual/configuration_server/background_jobs_configuration.html">background-jobs configuration</a>.</p>
+</li>
+<li><p>Allow the Nextcloud server to reach the receiver over HTTPS.</p></li>
 <li><p>Provide a receiver that accepts JSON requests, authenticates the sender,
 and can process duplicate messages safely.</p></li>
 </ul>
@@ -167,29 +180,6 @@ of failed HTTP requests. Inspect the Nextcloud log and the receiver log when
 notifications are missing. Reconcile the current workflow using authenticated
 LibreSign API operations and the permissions of the integrating account.
 Never use a webhook payload as authorization to download a signed file.</p>
-</section>
-<section id="event-availability">
-<h2>Event availability<a class="headerlink" href="#event-availability" title="Link to this heading"></a></h2>
-<p>Event pages describe the version and precise workflow condition for each
-subscription. Do not assume that an event documented for the development
-line exists on an older installed LibreSign version.</p>
-</section>
-<section id="development-smoke-test-and-envelopes">
-<h2>Development smoke test and envelopes<a class="headerlink" href="#development-smoke-test-and-envelopes" title="Link to this heading"></a></h2>
-<p>A disposable Nextcloud 36 / LibreSign main build successfully registered
-the completion-event class through the native administration OCS API. One
-anonymous browser signing generated a background WebhookCall job; the worker
-sent a real HTTP POST with valid configured header authentication.</p>
-<p>In the tested development flow a two-file envelope returned Draft even
-when its creation request specified status 1. An authorized subsequent
-PATCH /api/v1/request-signature with the envelope UUID and status 1
-changed it to Ready to sign. Verify the returned status before sending
-invitations; a successful notification response does not imply the
-workflow is ready for signatures.</p>
-<p>The QA receiver used an internal HTTP address only within an isolated,
-disposable container network. Production integrations should use HTTPS,
-protect credentials, enforce event authentication, deduplicate by eventId
-and reconcile the authoritative state.</p>
 </section>
 </section>
 

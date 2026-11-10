@@ -28,8 +28,9 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="Configure webhook deliveries" href="configuration.html" />
+    <link rel="next" title="LibreSign event catalog" href="event-catalog.html" />
     <link rel="prev" title="Infrastructure, administration and policy preflight" href="../integration/deployment.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -56,8 +57,10 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration architecture: choose a pattern</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Webhooks</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="event-catalog.html">LibreSign event catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="signing_completion.html">Signing workflow completed</a></li>
+<li class="toctree-l2"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
 </ul>
 </li>
 </ul>
@@ -90,24 +93,19 @@
 <h1>Webhooks<a class="headerlink" href="#webhooks" title="Link to this heading"></a></h1>
 <p>Webhooks allow an external system to react to LibreSign events without
 replacing its own interface or repeatedly querying LibreSign. Native event
-delivery is provided by Nextcloud’s <strong>Webhook Listeners</strong> app. Each supported
-event has its own reference page, including the point in the workflow that
-triggers delivery and the data sent to the receiver.</p>
-<p><strong>Availability:</strong> upcoming LibreSign 16 <strong>development</strong> builds on Nextcloud
-36, not a released stable LibreSign 16. Older LibreSign 13, 14, and 15 do
-not provide this event. Confirm the installed revision before subscribing.</p>
-<p>Native Nextcloud webhooks replace LibreSign’s proprietary <code class="docutils literal notranslate"><span class="pre">callback</span></code>
-parameter and <code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code> configuration in this development line.
-The receiver must fetch signed PDFs independently with authorized credentials.</p>
+delivery is provided by Nextcloud’s <strong>Webhook Listeners</strong> app. The
+<a class="reference internal" href="event-catalog.html"><span class="doc">LibreSign event catalog</span></a> describes supported classes, their triggers and
+payload fields.</p>
+<p>Webhook Listeners delivers JSON event metadata to a receiver configured in
+Nextcloud. Retrieve signed PDFs separately with authorized credentials.</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="event-catalog.html">LibreSign event catalog</a></li>
 <li class="toctree-l1"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
 <li class="toctree-l1"><a class="reference internal" href="signing_completion.html">Signing workflow completed</a></li>
+<li class="toctree-l1"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
 </ul>
 </div>
-<p>Legacy callback URLs are not automatically converted into native webhook
-subscriptions during upgrade. Set up Webhook Listeners and migrate external
-integrations before adopting this development version.</p>
 </section>
 
 
@@ -115,7 +113,7 @@ integrations before adopting this development version.</p>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../integration/deployment.html" class="btn btn-neutral float-left" title="Infrastructure, administration and policy preflight" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="configuration.html" class="btn btn-neutral float-right" title="Configure webhook deliveries" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="event-catalog.html" class="btn btn-neutral float-right" title="LibreSign event catalog" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

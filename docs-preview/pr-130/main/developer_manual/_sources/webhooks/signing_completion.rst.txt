@@ -7,10 +7,6 @@ Signing workflow completed
 
 **Event:** ``OCA\Libresign\Events\SigningRequestCompletedEvent``
 
-**Available in:** LibreSign main (development version 16.0.0-dev)
-on Nextcloud 36. **Not announced as a stable LibreSign 16 feature.**
-The event is not available in LibreSign 13, 14, or 15.
-
 When it is emitted
 ------------------
 
@@ -57,29 +53,9 @@ Use the same ``eventId`` to avoid repeated processing of duplicate deliveries.
 If a completed workflow is later reopened, check its current status before
 acting on a new notification with the same identifier.
 
-The event replaces the removed proprietary callback in the development API;
-it does **not** deliver the PDF as multipart data or provide a per-request
-webhook address. The LibreSign event data does not contain signer email addresses, private file
-URLs, document contents or credentials. Nextcloud may include information about
-the current user in its outer ``user`` field. Retrieve any signed document or
-evidence separately, using an authenticated and authorized LibreSign API call.
-
-Real runtime evidence and authorization
----------------------------------------
-
-An external email signer completed a signature without a Nextcloud account
-or session. Nextcloud's worker delivered the completion payload through
-an authenticated HTTP POST. Separately, the request owner downloaded a
-valid PDF with a detached PKCS#7 signature covering the entire file.
-The test certificate issuer was not trusted by the host system (expected
-in this disposable PKI), even though the signature was cryptographically
-valid. The same WebDAV path returned HTTP 401 anonymously and HTTP 404
-to an unrelated authenticated user.
-
-One partially signed two-signer document produced no completion event.
-The final signature produced one authenticated completion POST. A
-cancel-on-rejection request ended Canceled without a completion event.
-A parallel two-signer test completed with one delivered event. These
-finite tests do not establish exactly-once delivery, transaction
-serializability, or universal scheduling guarantees. Receivers must
-deduplicate stable eventId values and reconcile current status.
+The event delivers metadata only; it does not contain a signed PDF or grant
+file-download permissions. The LibreSign event data does not contain signer
+email addresses, private file URLs, document contents or credentials.
+Nextcloud may include information about the current user in its outer
+``user`` field. Retrieve signed documents and evidence separately using
+authenticated, authorized LibreSign and Nextcloud file operations.

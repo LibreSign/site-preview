@@ -30,6 +30,7 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="Infrastructure, administration and policy preflight" href="deployment.html" />
     <link rel="prev" title="Account integration and authentication choices" href="identity.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -234,16 +235,12 @@ the event class are tied to the <strong>installed LibreSign release</strong>, no
 the Nextcloud version or the OCS <code class="docutils literal notranslate"><span class="pre">/api/v1</span></code> path.</p>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p><strong>Development line (LibreSign 16 / Nextcloud 36):</strong> The application source
-now implements the aggregate <code class="docutils literal notranslate"><span class="pre">SigningRequestCompletedEvent</span></code> using
-Nextcloud’s <code class="docutils literal notranslate"><span class="pre">IWebhookCompatibleEvent</span></code>. It represents a document or
-envelope workflow changing to <code class="docutils literal notranslate"><span class="pre">SIGNED</span></code>, not each individual signature.
-This is a source-level contract; verify installed event availability,
-Nextcloud worker HTTP delivery and receiver authentication before use.
-For administrator configuration, event data and runtime checks,
-consult <a class="reference internal" href="../webhooks/index.html"><span class="doc">Webhooks</span></a> and the complete
-<a class="reference internal" href="../webhooks/external-signing-flow.html"><span class="doc">External signing with native webhooks</span></a>. This page belongs to
-development main, not to a published stable LibreSign 16 release.</p>
+<p>For signing-workflow notifications, subscribe to native LibreSign
+events through Nextcloud Webhook Listeners. Events represent persisted
+business transitions and deliver JSON metadata without signed PDFs.
+See <a class="reference internal" href="../webhooks/event-catalog.html"><span class="doc">LibreSign event catalog</span></a> for the available classes,
+<a class="reference internal" href="../webhooks/configuration.html"><span class="doc">Configure webhook deliveries</span></a> for subscription setup, and
+<a class="reference internal" href="../webhooks/external-signing-flow.html"><span class="doc">External signing with native webhooks</span></a> for document recovery.</p>
 </div>
 <p>Even when a release supports a completion event, the Nextcloud worker sends
 HTTP asynchronously. Do not assume exactly-once delivery, ordering or retries.

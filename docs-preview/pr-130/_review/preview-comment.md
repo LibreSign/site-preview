@@ -14,5 +14,7 @@ in CI; screenshots are not required.
 
 - [LibreSign 16 / developer_manual](https://libresign.github.io/site-preview/docs-preview/pr-130/_review/16/developer_manual/index.html)
 - [16 / developer_manual / webhooks/configuration.html](https://libresign.github.io/site-preview/docs-preview/pr-130/_review/16/developer_manual/webhooks/configuration.html)
+- [16 / developer_manual / webhooks/event-catalog.html](https://libresign.github.io/site-preview/docs-preview/pr-130/_review/16/developer_manual/webhooks/event-catalog.html)
+- [16 / developer_manual / webhooks/external-signing-flow.html](https://libresign.github.io/site-preview/docs-preview/pr-130/_review/16/developer_manual/webhooks/external-signing-flow.html)
 - [16 / developer_manual / webhooks/index.html](https://libresign.github.io/site-preview/docs-preview/pr-130/_review/16/developer_manual/webhooks/index.html)
 - [16 / developer_manual / webhooks/signing_completion.html](https://libresign.github.io/site-preview/docs-preview/pr-130/_review/16/developer_manual/webhooks/signing_completion.html)

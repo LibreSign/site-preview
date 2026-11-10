@@ -7,24 +7,17 @@ Webhooks
 
 Webhooks allow an external system to react to LibreSign events without
 replacing its own interface or repeatedly querying LibreSign. Native event
-delivery is provided by Nextcloud's **Webhook Listeners** app. Each supported
-event has its own reference page, including the point in the workflow that
-triggers delivery and the data sent to the receiver.
+delivery is provided by Nextcloud's **Webhook Listeners** app. The
+:doc:`event-catalog` describes supported classes, their triggers and
+payload fields.
 
-**Availability:** upcoming LibreSign 16 **development** builds on Nextcloud
-36, not a released stable LibreSign 16. Older LibreSign 13, 14, and 15 do
-not provide this event. Confirm the installed revision before subscribing.
-
-Native Nextcloud webhooks replace LibreSign's proprietary ``callback``
-parameter and ``webhook_sign_url`` configuration in this development line.
-The receiver must fetch signed PDFs independently with authorized credentials.
+Webhook Listeners delivers JSON event metadata to a receiver configured in
+Nextcloud. Retrieve signed PDFs separately with authorized credentials.
 
 .. toctree::
    :maxdepth: 1
 
+   event-catalog
    configuration
    signing_completion
-
-Legacy callback URLs are not automatically converted into native webhook
-subscriptions during upgrade. Set up Webhook Listeners and migrate external
-integrations before adopting this development version.
+   external-signing-flow

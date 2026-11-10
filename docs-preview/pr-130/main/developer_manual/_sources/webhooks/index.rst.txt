@@ -8,19 +8,11 @@ Webhooks
 Webhooks allow an external system to react to LibreSign events without
 replacing its own interface or repeatedly querying LibreSign. Native event
 delivery is provided by Nextcloud's **Webhook Listeners** app. The
-:doc:`event-catalog` lists implemented classes, their actual triggers,
-payload fields, and whether they are available in the installed revision.
+:doc:`event-catalog` describes supported classes, their triggers and
+payload fields.
 
-**Availability:** LibreSign development branch (currently 16.0.0-dev)
-on Nextcloud 36, **not a stable LibreSign 16 release**. The event is not
-available in LibreSign 13, 14, or 15. Verify the installed application
-revision and its Nextcloud compatibility before registration.
-
-The separate callback-removal proposal (LibreSign/libresign#9426)
-removes the proprietary per-request ``callback`` and global
-``webhook_sign_url`` transport. Until it is merged, an unmodified ``main``
-installation may still provide that legacy transport. New integrations
-should use Nextcloud's native subscriptions and retrieve PDFs with authorization.
+Webhook Listeners delivers JSON event metadata to a receiver configured in
+Nextcloud. Retrieve signed PDFs separately with authorized credentials.
 
 .. toctree::
    :maxdepth: 1
@@ -29,17 +21,3 @@ should use Nextcloud's native subscriptions and retrieve PDFs with authorization
    configuration
    signing_completion
    external-signing-flow
-
-Runtime acceptance
-------------------
-
-A disposable Nextcloud 36 environment verified: external signing in an
-anonymous browser; authenticated completion-event HTTP delivery from the
-Nextcloud worker; owner-authorized retrieval of a signed PDF; negative
-anonymous and unrelated-user download checks; two-signer partial-versus-final
-completion; and a two-document envelope. These are observations in one
-development revision, not a global exactly-once delivery guarantee.
-
-Removal and migration are tracked in LibreSign/libresign#9426. Stable LibreSign
-13–15 interfaces are unchanged; their existing callback contracts do not
-imply that a Nextcloud completion event is available on those releases.

@@ -30,6 +30,7 @@
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="LibreSign event catalog" href="event-catalog.html" />
     <link rel="prev" title="Infrastructure, administration and policy preflight" href="../integration/deployment.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -65,7 +66,6 @@
 <li class="toctree-l2"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
 <li class="toctree-l2"><a class="reference internal" href="signing_completion.html">Signing workflow completed</a></li>
 <li class="toctree-l2"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#runtime-acceptance">Runtime acceptance</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../translation.html">Translation</a></li>
@@ -102,17 +102,10 @@
 <p>Webhooks allow an external system to react to LibreSign events without
 replacing its own interface or repeatedly querying LibreSign. Native event
 delivery is provided by Nextcloud’s <strong>Webhook Listeners</strong> app. The
-<a class="reference internal" href="event-catalog.html"><span class="doc">LibreSign event catalog</span></a> lists implemented classes, their actual triggers,
-payload fields, and whether they are available in the installed revision.</p>
-<p><strong>Availability:</strong> LibreSign development branch (currently 16.0.0-dev)
-on Nextcloud 36, <strong>not a stable LibreSign 16 release</strong>. The event is not
-available in LibreSign 13, 14, or 15. Verify the installed application
-revision and its Nextcloud compatibility before registration.</p>
-<p>The separate callback-removal proposal (LibreSign/libresign#9426)
-removes the proprietary per-request <code class="docutils literal notranslate"><span class="pre">callback</span></code> and global
-<code class="docutils literal notranslate"><span class="pre">webhook_sign_url</span></code> transport. Until it is merged, an unmodified <code class="docutils literal notranslate"><span class="pre">main</span></code>
-installation may still provide that legacy transport. New integrations
-should use Nextcloud’s native subscriptions and retrieve PDFs with authorization.</p>
+<a class="reference internal" href="event-catalog.html"><span class="doc">LibreSign event catalog</span></a> describes supported classes, their triggers and
+payload fields.</p>
+<p>Webhook Listeners delivers JSON event metadata to a receiver configured in
+Nextcloud. Retrieve signed PDFs separately with authorized credentials.</p>
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="event-catalog.html">LibreSign event catalog</a></li>
@@ -121,18 +114,6 @@ should use Nextcloud’s native subscriptions and retrieve PDFs with authorizati
 <li class="toctree-l1"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
 </ul>
 </div>
-<section id="runtime-acceptance">
-<h2>Runtime acceptance<a class="headerlink" href="#runtime-acceptance" title="Link to this heading"></a></h2>
-<p>A disposable Nextcloud 36 environment verified: external signing in an
-anonymous browser; authenticated completion-event HTTP delivery from the
-Nextcloud worker; owner-authorized retrieval of a signed PDF; negative
-anonymous and unrelated-user download checks; two-signer partial-versus-final
-completion; and a two-document envelope. These are observations in one
-development revision, not a global exactly-once delivery guarantee.</p>
-<p>Removal and migration are tracked in LibreSign/libresign#9426. Stable LibreSign
-13–15 interfaces are unchanged; their existing callback contracts do not
-imply that a Nextcloud completion event is available on those releases.</p>
-</section>
 </section>
 
 

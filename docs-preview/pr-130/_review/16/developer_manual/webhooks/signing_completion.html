@@ -28,7 +28,9 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="External signing with native webhooks" href="external-signing-flow.html" />
     <link rel="prev" title="Configure webhook deliveries" href="configuration.html" /> 
+  <meta name="robots" content="noindex,follow" />
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -55,12 +57,14 @@
 <li class="toctree-l1"><a class="reference internal" href="../api/index.html">API reference</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../integration/index.html">Integration architecture: choose a pattern</a></li>
 <li class="toctree-l1 current"><a class="reference internal" href="index.html">Webhooks</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="event-catalog.html">LibreSign event catalog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="configuration.html">Configure webhook deliveries</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">Signing workflow completed</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#when-it-is-emitted">When it is emitted</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#received-body">Received body</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="external-signing-flow.html">External signing with native webhooks</a></li>
 </ul>
 </li>
 </ul>
@@ -93,9 +97,6 @@
   <section id="signing-workflow-completed">
 <h1>Signing workflow completed<a class="headerlink" href="#signing-workflow-completed" title="Link to this heading"></a></h1>
 <p><strong>Event:</strong> <code class="docutils literal notranslate"><span class="pre">OCA\Libresign\Events\SigningRequestCompletedEvent</span></code></p>
-<p><strong>Available in:</strong> upcoming LibreSign 16 development builds on Nextcloud 36;
-not yet a released stable LibreSign 16. Not available in LibreSign 13–15.
-Verify the installed revision before registering a listener.</p>
 <section id="when-it-is-emitted">
 <h2>When it is emitted<a class="headerlink" href="#when-it-is-emitted" title="Link to this heading"></a></h2>
 <p>This event indicates that the signing <strong>workflow</strong> for a document or envelope
@@ -135,10 +136,12 @@ key for this request, not a unique identifier of each HTTP delivery attempt.</p>
 <p>Use the same <code class="docutils literal notranslate"><span class="pre">eventId</span></code> to avoid repeated processing of duplicate deliveries.
 If a completed workflow is later reopened, check its current status before
 acting on a new notification with the same identifier.</p>
-<p>The LibreSign event data does not contain signer email addresses, private file
-URLs, document contents or credentials. Nextcloud may include information about
-the current user in its outer <code class="docutils literal notranslate"><span class="pre">user</span></code> field. Retrieve any signed document or
-evidence separately, using an authenticated and authorized LibreSign API call.</p>
+<p>The event delivers metadata only; it does not contain a signed PDF or grant
+file-download permissions. The LibreSign event data does not contain signer
+email addresses, private file URLs, document contents or credentials.
+Nextcloud may include information about the current user in its outer
+<code class="docutils literal notranslate"><span class="pre">user</span></code> field. Retrieve signed documents and evidence separately using
+authenticated, authorized LibreSign and Nextcloud file operations.</p>
 </section>
 </section>
 
@@ -147,6 +150,7 @@ evidence separately, using an authenticated and authorized LibreSign API call.</
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="configuration.html" class="btn btn-neutral float-left" title="Configure webhook deliveries" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="external-signing-flow.html" class="btn btn-neutral float-right" title="External signing with native webhooks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
