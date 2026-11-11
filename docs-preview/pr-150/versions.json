@@ -29,7 +29,7 @@
       "source_url": "https://github.com/LibreSign/libresign/blob/d4f63aa731df81a3e2cda5cab6d0afc138253967/openapi.json",
       "eol_date": null,
       "status": "current",
-      "documentation_commit": "47c263859691b9bd02800e2d164c39b1a47f43aa"
+      "documentation_commit": "ee159e6aaef690efd67a59b708093a9dd29b0f53"
     },
     {
       "slug": "14",
@@ -43,7 +43,7 @@
       "source_url": "https://github.com/LibreSign/libresign/blob/68164ac3993efd577e67fa582973fca85e6e4d91/openapi.json",
       "eol_date": null,
       "status": "previous",
-      "documentation_commit": "c1ad4ba57ab58a221233d7d37f19fb1fd0324f41"
+      "documentation_commit": "df64ce11f322556e152a6763a920a5808f623678"
     },
     {
       "slug": "13",
@@ -57,7 +57,7 @@
       "source_url": "https://github.com/LibreSign/libresign/blob/fe766f24443a6c5cf88fb807c3c09e294af61f69/openapi.json",
       "eol_date": null,
       "status": "previous",
-      "documentation_commit": "88462ff20cdc5e09615b2731594d092674ddba74"
+      "documentation_commit": "efdafdbe2448458b19c813f3c554cde42319be54"
     }
   ]
 }
