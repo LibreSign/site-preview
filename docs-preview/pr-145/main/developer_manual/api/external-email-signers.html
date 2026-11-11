@@ -321,7 +321,7 @@ bash<span class="w"> </span>flow.sh<span class="w"> </span>start
 </div>
 <p>For <strong>PHP instead</strong>, provide the App Password privately, not as a literal
 shell command argument or a checked-in file:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>-s<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Nextcloud App Password: "</span><span class="w"> </span>NC_APP_PASSWORD<span class="p">;</span><span class="w"> </span><span class="nb">printf</span><span class="w"> </span><span class="s1">'\\n'</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="nb">read</span><span class="w"> </span>-r<span class="w"> </span>-s<span class="w"> </span>-p<span class="w"> </span><span class="s2">"Nextcloud App Password: "</span><span class="w"> </span>NC_APP_PASSWORD<span class="p">;</span><span class="w"> </span><span class="nb">echo</span>
 <span class="nb">export</span><span class="w"> </span>NC_APP_PASSWORD
 php<span class="w"> </span>flow.php<span class="w"> </span>start
 </pre></div>
