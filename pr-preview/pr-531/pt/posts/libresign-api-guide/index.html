@@ -467,25 +467,17 @@
 
 <p>LibreSign is free and open-source software for electronic signatures on Nextcloud. Its REST API, based on Nextcloud's OCS protocol, lets an external system request signatures, track progress, and validate documents. An existing application can keep its own interface and workflows while its backend communicates with LibreSign. The API is included in the software; you do not need to purchase separate API access. Hosting, integration services, and support are optional.</p>
 
-<h2>Find the documentation for your LibreSign version</h2>
+<h2>Official integration documentation</h2>
 
-<p>Start at the <a href="https://docs.libresign.coop/">official LibreSign documentation</a> and select the version installed on your Nextcloud server. Each release has its own integration guides, practical examples, and OpenAPI contract:</p>
+<p>Start at the <a href="https://docs.libresign.coop/">official LibreSign documentation</a>. Choose the LibreSign release installed on your Nextcloud server, then open <strong>Developer manual and API</strong>. You will find integration guides, practical examples, the interactive OpenAPI reference, and its downloadable JSON contract. The guides cover signature requests, invitations, status checks, and authorized retrieval of signed documents.</p>
 
-<ul>
-<li><strong>LibreSign 15:</strong> <a href="https://docs.libresign.coop/15/developer_manual/integration/index.html">integration guide</a>, <a href="https://docs.libresign.coop/15/developer_manual/api/external-email-signers.html">external signer example</a>, and <a href="https://docs.libresign.coop/15/developer_manual/api/openapi.html">OpenAPI reference</a> (<a href="https://docs.libresign.coop/15/developer_manual/api/openapi.json">JSON</a>).</li>
-<li><strong>LibreSign 14:</strong> <a href="https://docs.libresign.coop/14/developer_manual/integration/index.html">integration guide</a>, <a href="https://docs.libresign.coop/14/developer_manual/api/external-email-signers.html">external signer example</a>, and <a href="https://docs.libresign.coop/14/developer_manual/api/openapi.html">OpenAPI reference</a> (<a href="https://docs.libresign.coop/14/developer_manual/api/openapi.json">JSON</a>).</li>
-<li><strong>LibreSign 13:</strong> <a href="https://docs.libresign.coop/13/developer_manual/integration/index.html">integration guide</a>, <a href="https://docs.libresign.coop/13/developer_manual/api/external-email-signers.html">external signer example</a>, and <a href="https://docs.libresign.coop/13/developer_manual/api/openapi.html">OpenAPI reference</a> (<a href="https://docs.libresign.coop/13/developer_manual/api/openapi.json">JSON</a>).</li>
-</ul>
-
-<p>The <code>/api/v1</code> segment in the OCS URL is the API protocol version, <strong>not</strong> the installed LibreSign release. Request fields can differ between LibreSign releases, so follow the matching contract instead of copying calls from development documentation.</p>
+<p>Use the documentation for your installed release: available features and request fields can change over time. The development documentation may describe functionality not yet included in a stable release.</p>
 
 <h2>Authentication and integration with external systems</h2>
 
 <p>For a server-to-server integration, use HTTPS and an authorized Nextcloud account with a <strong>revocable App Password</strong>. OCS requests normally use HTTP Basic authentication and the <code>OCS-APIRequest: true</code> header. Keep credentials on your backend, never in client-side code. Bearer tokens depend on the authentication configuration of your Nextcloud instance; signing in to another application does not automatically grant API access.</p>
 
 <p>Your backend can create signature requests and track their status through documented endpoints. Depending on the settings enabled in LibreSign, recipients can sign with their Nextcloud accounts or through individual invitations without creating a Nextcloud account. An integration account must not be used to impersonate signers.</p>
-
-<p>For an example of the full flow, see the <a href="https://docs.libresign.coop/15/developer_manual/integration/identity.html">authentication guide</a> and <a href="https://docs.libresign.coop/15/developer_manual/api/external-email-signers.html">external signer walkthrough</a> for LibreSign 15. If you use another release, follow its links above.</p>
 
 <h2>Browser inspection is a diagnostic tool</h2>
 
