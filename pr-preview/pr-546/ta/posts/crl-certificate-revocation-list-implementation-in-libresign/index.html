@@ -8,7 +8,7 @@
 
     <!-- Primary Meta Tags -->
     <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-546/ta/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta name="description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta name="description" content="Learn how LibreSign uses certificate revocation lists (CRLs) as one input to certificate validation alongside trust-chain and signing-time evidence.">
         <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
     <meta name="author" content="LibreSign / LibreCode">
 
@@ -26,7 +26,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/ta/posts/crl-certificate-revocation-list-implementation-in-libresign">
     <meta property="og:title" content="CRL (Certificate Revocation List) Implementation in LibreSign">
-    <meta property="og:description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta property="og:description" content="Learn how LibreSign uses certificate revocation lists (CRLs) as one input to certificate validation alongside trust-chain and signing-time evidence.">
     <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/assets/images/logo/logo-libresign-large.png">
     <meta property="og:site_name" content="LibreSign">
     <meta property="og:locale" content="ta">
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/ta/posts/crl-certificate-revocation-list-implementation-in-libresign">
     <meta name="twitter:title" content="CRL (Certificate Revocation List) Implementation in LibreSign">
-    <meta name="twitter:description" content="Learn how the Certificate Revocation List (CRL) implementation in LibreSign enhances digital signature security and ensures compliance with international best practices.">
+    <meta name="twitter:description" content="Learn how LibreSign uses certificate revocation lists (CRLs) as one input to certificate validation alongside trust-chain and signing-time evidence.">
     <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/assets/images/logo/logo-libresign-large.png">
     <meta name="twitter:site" content="@libresign">
 
@@ -513,9 +513,9 @@
 
 <ul>
 <li>Raises the level of <strong>cryptographic security</strong></li>
-<li>Ensures greater <strong>legal reliability</strong></li>
+<li>Supports stronger <strong>certificate validity checks</strong> when revocation information is available</li>
 <li>Aligns with <strong>international best practices</strong> for digital signature validation</li>
-<li>Prevents the misuse of compromised certificates</li>
+<li>Helps detect certificates that have been revoked after compromise</li>
 </ul>
 
 <p>This is another step in LibreSign's commitment to <strong>security, transparency, and technical compliance</strong>. Security is not an optional feature: it is a design principle in LibreSign.</p>

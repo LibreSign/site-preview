@@ -8,7 +8,7 @@
 
     <!-- Primary Meta Tags -->
     <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-546/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
-    <meta name="description" content="Saiba como a implementação da Lista de Certificados Revogados (CRL) no LibreSign reforça a segurança das assinaturas digitais e garante a conformidade com as melhores práticas internacionais.">
+    <meta name="description" content="Learn how LibreSign uses certificate revocation lists (CRLs) as one input to certificate validation alongside trust-chain and signing-time evidence.">
         <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
     <meta name="author" content="LibreSign / LibreCode">
 
@@ -26,7 +26,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
     <meta property="og:title" content="Implementação de CRL (Lista de Certificados Revogados) no LibreSign">
-    <meta property="og:description" content="Saiba como a implementação da Lista de Certificados Revogados (CRL) no LibreSign reforça a segurança das assinaturas digitais e garante a conformidade com as melhores práticas internacionais.">
+    <meta property="og:description" content="Learn how LibreSign uses certificate revocation lists (CRLs) as one input to certificate validation alongside trust-chain and signing-time evidence.">
     <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/assets/images/logo/logo-libresign-large.png">
     <meta property="og:site_name" content="LibreSign">
     <meta property="og:locale" content="pt_BR">
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/pt-BR/posts/crl-certificate-revocation-list-implementation-in-libresign">
     <meta name="twitter:title" content="Implementação de CRL (Lista de Certificados Revogados) no LibreSign">
-    <meta name="twitter:description" content="Saiba como a implementação da Lista de Certificados Revogados (CRL) no LibreSign reforça a segurança das assinaturas digitais e garante a conformidade com as melhores práticas internacionais.">
+    <meta name="twitter:description" content="Learn how LibreSign uses certificate revocation lists (CRLs) as one input to certificate validation alongside trust-chain and signing-time evidence.">
     <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-546/assets/images/logo/logo-libresign-large.png">
     <meta name="twitter:site" content="@libresign">
 
@@ -441,84 +441,84 @@
           <div class="col-lg-8">
             <div class="ud-blog-details-content text-justify">
               <div class="article" style="text-align:justify;">
-                <h3>Implementação da CRL (Lista de Certificados Revogados) no LibreSign</h3>
+                <h3>CRL (Certificate Revocation List) Implementation in LibreSign</h3>
 
-<p>A <strong>Lista de Certificados Revogados (CRL, do inglês Certificate Revocation List)</strong> é um mecanismo técnico importante para soluções que utilizam certificados digitais. Embora nem sempre esteja visível para o usuário, ela desempenha um papel essencial na <strong>avaliação da confiabilidade das assinaturas digitais</strong>.</p>
+<p>The <strong>Certificate Revocation List (CRL)</strong> is an essential technical feature for any solution that takes digital certification and security seriously. Although it is not always visible to end users, it plays a critical role in the <strong>trustworthiness of digital signatures</strong>.</p>
 
-<h4>O que é uma CRL?</h4>
+<h4>What is a CRL?</h4>
 
-<p>Os certificados digitais usados para assinar documentos são emitidos por uma <strong>autoridade certificadora (AC)</strong>. Essas autoridades publicam listas assinadas de certificados que revogaram, identificados por seus <strong>números de série</strong>. A revogação do certificado de uma AC intermediária, por sua vez, pode ser registrada pela autoridade que o emitiu.</p>
+<p>Digital certificates used to sign documents are issued by a <strong>Certificate Authority (CA)</strong>. A CA can publish a signed list of the <strong>serial numbers of certificates it has revoked</strong>. The revocation of an intermediate CA certificate is handled by its issuing authority.</p>
 
-<p>Quando há suporte a CRL, os certificados costumam conter um <strong>endereço público (URL)</strong> de distribuição da lista de revogação. Os sistemas de validação podem consultar esse endereço para verificar se determinado certificado consta como revogado.</p>
+<p>When a CA supports CRL, the issued certificate includes a <strong>public URL</strong> pointing to the revocation list. This URL allows systems and validators to check, at any time, whether a specific certificate has been revoked.</p>
 
-<h4>Quando um certificado pode ser revogado?</h4>
+<h4>When can a certificate be revoked?</h4>
 
-<p>A revogação pode ocorrer por motivos legítimos, como:</p>
+<p>Certificate revocation may occur for several legitimate reasons, such as:</p>
 
 <ul>
-<li>Desligamento de um funcionário da organização</li>
-<li>Falecimento do titular do certificado</li>
-<li>Comprometimento ou perda da senha ou da chave privada</li>
-<li>Incidentes de segurança</li>
+<li>An employee leaving the organization</li>
+<li>Death of the certificate holder</li>
+<li>Compromise or loss of the password or private key</li>
+<li>Security incidents</li>
 </ul>
 
-<p>Nessas situações, manter o certificado em uso pode representar um risco.</p>
+<p>In these situations, keeping the certificate active would represent a security risk.</p>
 
-<h4>Como funciona a validação baseada em CRL?</h4>
+<h4>How does CRL-based validation work?</h4>
 
-<p>Um certificado pode indicar a URL de sua lista de revogação. Essa referência não significa, por si só, que a CRL esteja incorporada ao PDF assinado.</p>
+<p>A certificate may reference the CRL distribution point, but that reference does <strong>not</strong> mean the revocation list is embedded in the signed PDF.</p>
 
-<p>Ao validar um documento em um sistema compatível com CRL, podem ocorrer as seguintes etapas:</p>
+<p>When validating the document with a CRL-compatible system, the following process takes place:</p>
 
 <ol>
-<li>Consultar a URL da CRL</li>
-<li>Verificar se o número de série do certificado consta na lista</li>
-<li>Comparar a data de revogação com as evidências disponíveis sobre o momento da assinatura</li>
+<li>The CRL URL is queried</li>
+<li>The certificate serial number is checked against the list</li>
+<li>The revocation date is compared with the signature date</li>
 </ol>
 
-<p>Se o certificado já estava revogado <strong>antes da assinatura</strong>, isso pode tornar a assinatura <strong>inválida</strong>. Quando a revogação ocorre depois, a conclusão depende de evidências confiáveis da data de assinatura, da cadeia de certificação e das regras de validação aplicáveis. Não basta comparar duas datas isoladamente.</p>
+<p>Revocation <strong>before signing</strong> may invalidate a signature. If the certificate is revoked after signing, the result still depends on trustworthy evidence of the signing time, chain validation, and the applicable validation policy; comparing two dates alone is not sufficient.</p>
 
-<h4>O que mudou no LibreSign?</h4>
+<h4>What has changed in LibreSign?</h4>
 
-<p>O LibreSign oferece <strong>suporte a CRL</strong> como parte dos recursos de segurança e validação de certificados.</p>
+<p>From now on, CRL support is a <strong>standard feature in LibreSign</strong>.</p>
 
-<p>Isso permite que:</p>
-
-<ul>
-<li><p><strong>Antes da assinatura</strong>, o LibreSign verifique se o certificado do usuário foi revogado</p>
+<p>This means that:</p>
 
 <ul>
-<li>Se estiver revogado, poderá ser necessário criar um novo certificado</li>
-<li>Quando a emissão interna de certificados estiver habilitada pelo administrador, isso pode envolver a definição de uma nova senha</li>
+<li><p><strong>Before signing</strong>, LibreSign checks whether the user's certificate has been revoked</p>
+
+<ul>
+<li>If it has, the system requests the creation of a new certificate</li>
+<li>In LibreSign, this simply requires defining a new password, provided that the administrator has enabled internal certificate issuance</li>
 </ul></li>
-<li><p><strong>Durante a validação do documento</strong>, o LibreSign:</p>
+<li><p><strong>During document validation</strong>, LibreSign:</p>
 
 <ul>
-<li>Consulta a CRL, quando publicada e acessível pela autoridade certificadora</li>
-<li>Verifica as informações de validade do certificado</li>
-<li>Exibe a URL da CRL</li>
-<li>Apresenta informações de validade sobre o certificado do signatário e o certificado do emissor</li>
+<li>Queries the CRL (when published and accessible by the certificate authority)</li>
+<li>Verifies the certificate's validity</li>
+<li>Displays the CRL URL</li>
+<li>Presents validity information for both the signer's certificate and the issuer's certificate</li>
 </ul></li>
-<li><p><strong>Na gestão de certificados</strong>, os administradores podem:</p>
+<li><p><strong>Certificate management</strong>, administrators can:</p>
 
 <ul>
-<li>Gerenciar as listas de revogação dos certificados emitidos internamente</li>
-<li>Revogar certificados sob a autoridade de emissão administrada pela organização</li>
+<li>Manage the certificate revocation list</li>
+<li>Revoke certificates issued by a certificate authority they manage, when necessary</li>
 </ul></li>
 </ul>
 
-<h4>Por que isso é importante?</h4>
+<h4>Why is this important?</h4>
 
-<p>O suporte a CRL ajuda o LibreSign a:</p>
+<p>With the implementation of CRL, LibreSign:</p>
 
 <ul>
-<li>Reforçar a <strong>segurança criptográfica</strong></li>
-<li>Fornecer mais evidências para a <strong>avaliação da validade das assinaturas</strong></li>
-<li>Seguir <strong>boas práticas internacionais</strong> de validação de assinaturas digitais</li>
-<li>Detectar tentativas de uso de certificados comprometidos ou revogados</li>
+<li>Raises the level of <strong>cryptographic security</strong></li>
+<li>Supports stronger <strong>certificate validity checks</strong> when revocation information is available</li>
+<li>Aligns with <strong>international best practices</strong> for digital signature validation</li>
+<li>Helps detect certificates that have been revoked after compromise</li>
 </ul>
 
-<p>Esse é mais um passo no compromisso do LibreSign com a <strong>segurança, a transparência e a conformidade técnica</strong>. Segurança não é um recurso opcional: é um princípio de projeto do LibreSign.</p>
+<p>This is another step in LibreSign's commitment to <strong>security, transparency, and technical compliance</strong>. Security is not an optional feature: it is a design principle in LibreSign.</p>
               </div>
             </div>
           </div>
