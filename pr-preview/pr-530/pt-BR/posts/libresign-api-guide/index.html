@@ -8,7 +8,7 @@
 
     <!-- Primary Meta Tags -->
     <link rel="canonical" href="https://LibreSign.github.io/site-preview/pr-preview/pr-530/pt-BR/posts/libresign-api-guide">
-    <meta name="description" content="Provides a practical guide on how to use the LibreSign API, including querying endpoints and understanding usage flows by observing requests in the application.">
+    <meta name="description" content="Use LibreSign&#039;s versioned OpenAPI contracts, official integration guides, and examples to connect external systems securely.">
         <meta name="keywords" content="LibreSign, electronic signature, digital signature, open source, self-hosted, Nextcloud, document signing, e-sign, privacy, data sovereignty">
     <meta name="author" content="LibreSign / LibreCode">
 
@@ -26,7 +26,7 @@
     <meta property="og:type" content="website">
     <meta property="og:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-530/pt-BR/posts/libresign-api-guide">
     <meta property="og:title" content="LibreSign API Guide">
-    <meta property="og:description" content="Provides a practical guide on how to use the LibreSign API, including querying endpoints and understanding usage flows by observing requests in the application.">
+    <meta property="og:description" content="Use LibreSign&#039;s versioned OpenAPI contracts, official integration guides, and examples to connect external systems securely.">
     <meta property="og:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-530/assets/images/logo/logo-libresign-large.png">
     <meta property="og:site_name" content="LibreSign">
     <meta property="og:locale" content="pt_BR">
@@ -35,7 +35,7 @@
     <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:url" content="https://LibreSign.github.io/site-preview/pr-preview/pr-530/pt-BR/posts/libresign-api-guide">
     <meta name="twitter:title" content="LibreSign API Guide">
-    <meta name="twitter:description" content="Provides a practical guide on how to use the LibreSign API, including querying endpoints and understanding usage flows by observing requests in the application.">
+    <meta name="twitter:description" content="Use LibreSign&#039;s versioned OpenAPI contracts, official integration guides, and examples to connect external systems securely.">
     <meta name="twitter:image" content="https://LibreSign.github.io/site-preview/pr-preview/pr-530/assets/images/logo/logo-libresign-large.png">
     <meta name="twitter:site" content="@libresign">
 
@@ -441,29 +441,27 @@
           <div class="col-lg-8">
             <div class="ud-blog-details-content text-justify">
               <div class="article" style="text-align:justify;">
-                <h1>API do LibreSign: endpoints e fluxos de uso</h1>
+                <h1>LibreSign API: Integrating with other systems</h1>
 
-<h2>Endpoints da API</h2>
+<p><em>Updated on November 10, 2026. Originally published on October 10, 2024.</em></p>
 
-<p>Para descobrir quais endpoints estão disponíveis na API do LibreSign, siga estes passos:</p>
+<p>LibreSign is free and open-source software for electronic signatures on Nextcloud. Its REST API, based on Nextcloud's OCS protocol, lets an external system request signatures, track progress, and validate documents. An existing application can keep its own interface and workflows while its backend communicates with LibreSign. The API is included in the software; you do not need to purchase separate API access. Hosting, integration services, and support are optional.</p>
 
-<ol>
-<li><strong>Instale o aplicativo OCS API Viewer</strong>: Comece instalando o <a href="https://apps.nextcloud.com/apps/ocs_api_viewer">OCS API Viewer</a> no seu ambiente Nextcloud.</li>
-<li><strong>Acesse a documentação da API</strong>: No menu do Nextcloud, localize o aplicativo OCS. Nele, você encontrará a documentação da API do LibreSign, bem como de outras APIs do Nextcloud.</li>
-</ol>
+<h2>Official integration documentation</h2>
 
-<h2>Entendendo os fluxos de uso da API do LibreSign</h2>
+<p>Start at the <a href="https://docs.libresign.coop/">official LibreSign documentation</a>. Choose the LibreSign release installed on your Nextcloud server, then open <strong>Developer manual and API</strong>. You will find integration guides, practical examples, the interactive OpenAPI reference, and its downloadable JSON contract. The guides cover signature requests, invitations, status checks, and authorized retrieval of signed documents.</p>
 
-<p>Para entender como realizar operações específicas, como solicitar uma assinatura, você pode usar o próprio aplicativo LibreSign como referência. Veja como fazer isso:</p>
+<p>Use the documentation for your installed release: available features and request fields can change over time. The development documentation may describe functionality not yet included in a stable release.</p>
 
-<ol>
-<li><strong>Abra as ferramentas de desenvolvedor</strong>: Pressione a tecla F12 no seu navegador para acessar as ferramentas de desenvolvedor.</li>
-<li><strong>Vá para a aba Rede</strong>: Navegue até a aba "Rede" para monitorar as requisições da API.</li>
-<li><strong>Filtre as requisições</strong>: Use o filtro para exibir apenas as requisições relacionadas ao LibreSign digitando "libresign."</li>
-<li><strong>Realize ações no LibreSign</strong>: Execute as ações desejadas no aplicativo LibreSign. Observe as requisições enviadas para a API em cada etapa e analise como elas são estruturadas.</li>
-</ol>
+<h2>Authentication and integration with external systems</h2>
 
-<p>Seguindo estes passos, você poderá consultar os endpoints disponíveis da API do LibreSign e entender os fluxos de uso monitorando as requisições feitas pelo aplicativo. Isso ajudará você a integrar e usar a API em seus projetos.</p>
+<p>For a server-to-server integration, use HTTPS and an authorized Nextcloud account with a <strong>revocable App Password</strong>. OCS requests normally use HTTP Basic authentication and the <code>OCS-APIRequest: true</code> header. Keep credentials on your backend, never in client-side code. Bearer tokens depend on the authentication configuration of your Nextcloud instance; signing in to another application does not automatically grant API access.</p>
+
+<p>Your backend can create signature requests and track their status through documented endpoints. Depending on the settings enabled in LibreSign, recipients can sign with their Nextcloud accounts or through individual invitations without creating a Nextcloud account. An integration account must not be used to impersonate signers.</p>
+
+<h2>Browser inspection is a diagnostic tool</h2>
+
+<p>The browser's Network tab (F12) and the <a href="https://apps.nextcloud.com/apps/ocs_api_viewer">OCS API Viewer</a> can help investigate requests and responses on a specific installation. They are complementary troubleshooting tools, <strong>not a replacement for the official OpenAPI contract</strong>: browser calls can depend on session cookies or interface-specific behavior. Use the versioned guides and examples first, and avoid exposing credentials, signing links, or document contents when debugging.</p>
               </div>
             </div>
           </div>
