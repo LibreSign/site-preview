@@ -1,0 +1,63 @@
+{
+  "schema": 1,
+  "application_repository": "LibreSign/libresign",
+  "current_stable": "15",
+  "versions": [
+    {
+      "slug": "main",
+      "branch": "main",
+      "app_commit": "c0669f43765f109456283cb8f467b2e3658421ca",
+      "app_version": "16.0.0-dev.3",
+      "nextcloud_min": 36,
+      "nextcloud_max": 36,
+      "manifest_sha256": "f1dd783d02fcd9311314bf0cff0b0cc81f59c8b77ac17b9f766934c5334c666f",
+      "openapi_sha256": "3fd037f49f8da7958b7e8b32f4e6814cae00ad22582851991c225009133fcf54",
+      "source_url": "https://github.com/LibreSign/libresign/blob/c0669f43765f109456283cb8f467b2e3658421ca/openapi.json",
+      "eol_date": null,
+      "status": "development",
+      "documentation_commit": "4bb6bebe1f5c44699d17604912bc640bea761a13"
+    },
+    {
+      "slug": "15",
+      "branch": "stable35",
+      "app_commit": "399184c5f33fa3db03ca4d33bd27c9add94b7d9f",
+      "app_version": "15.0.12",
+      "nextcloud_min": 35,
+      "nextcloud_max": 35,
+      "manifest_sha256": "1643f152ca81181cdf156f5973df2c727c2bcecb355639cc2842a474980e0ea0",
+      "openapi_sha256": "6a0d73e16f7964393537c7ce7c48154b6bdace33f46fd2e3f9397526c53fd995",
+      "source_url": "https://github.com/LibreSign/libresign/blob/399184c5f33fa3db03ca4d33bd27c9add94b7d9f/openapi.json",
+      "eol_date": null,
+      "status": "current",
+      "documentation_commit": "140b51e7e12fbea072859dff8f3387ce9cf49b08"
+    },
+    {
+      "slug": "14",
+      "branch": "stable34",
+      "app_commit": "913e5494bc8e01a9c1f5bee867897975228b8568",
+      "app_version": "14.2.9",
+      "nextcloud_min": 34,
+      "nextcloud_max": 34,
+      "manifest_sha256": "40cb6e558386861ca5f64101b94a0a67bf4d7bb8c1e36e0b264f1307038ca75d",
+      "openapi_sha256": "7e936f58653499f65acc76b3d7dadaba5c34849de91e75413aa27d3bab0e47ad",
+      "source_url": "https://github.com/LibreSign/libresign/blob/913e5494bc8e01a9c1f5bee867897975228b8568/openapi.json",
+      "eol_date": null,
+      "status": "previous",
+      "documentation_commit": "59b1ac7c0c7b6a80d56d7c2d2904faa6c1eeae2d"
+    },
+    {
+      "slug": "13",
+      "branch": "stable33",
+      "app_commit": "8031b8c606dac2bbd098c2bfeb01fa4ef7ee6e57",
+      "app_version": "13.4.9",
+      "nextcloud_min": 33,
+      "nextcloud_max": 33,
+      "manifest_sha256": "7b8694ee0b5683db0b5eb5187c3ede6fa8307e47a06fe866fb235210c6aa4cf5",
+      "openapi_sha256": "c7e3bf428010f1851a66a85774c957c890812cfaf24b6da1537a8a0b895be91b",
+      "source_url": "https://github.com/LibreSign/libresign/blob/8031b8c606dac2bbd098c2bfeb01fa4ef7ee6e57/openapi.json",
+      "eol_date": null,
+      "status": "previous",
+      "documentation_commit": "38dc1de8ed8bd5abf0e5b21a40e84d0f3efd5a10"
+    }
+  ]
+}
