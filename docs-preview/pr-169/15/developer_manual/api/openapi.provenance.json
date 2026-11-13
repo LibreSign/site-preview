@@ -1,10 +1,10 @@
 {
   "slug": "15",
   "branch": "stable35",
-  "app_commit": "83eb63d3fbc3d7c98a1aefa68a335883d49fa55e",
+  "app_commit": "fd2dd157fc60d0fb472325e0120d81439542d8f0",
   "app_version": "15.0.12",
   "documentation_commit": "87e16b6ea0d28d3082499e60a7cc67fdff0ba3ac",
-  "source_url": "https://github.com/LibreSign/libresign/blob/83eb63d3fbc3d7c98a1aefa68a335883d49fa55e/openapi.json",
+  "source_url": "https://github.com/LibreSign/libresign/blob/fd2dd157fc60d0fb472325e0120d81439542d8f0/openapi.json",
   "openapi_sha256": "6a0d73e16f7964393537c7ce7c48154b6bdace33f46fd2e3f9397526c53fd995",
   "manifest_sha256": "1643f152ca81181cdf156f5973df2c727c2bcecb355639cc2842a474980e0ea0",
   "nextcloud_min": 35,

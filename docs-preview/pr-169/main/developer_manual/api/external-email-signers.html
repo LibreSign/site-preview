@@ -228,15 +228,15 @@ directory (Git required):</p>
 <p>Keep the clients and their <code class="docutils literal notranslate"><span class="pre">request-*.json</span></code> fixtures together. Consult this
 release’s <a class="reference internal" href="openapi.html"><span class="doc">OCS OpenAPI — versioned contract</span></a> and its pinned <a class="reference external" href="openapi.json">OpenAPI JSON</a> when
 adapting the request to a real integration.</p>
-<p>For a ready-to-import n8n workflow, see the <a class="reference external" href="https://github.com/LibreSign/documentation/blob/4d6e2b8b5f9dbbd254b4cc00ec5875411fac06ed/examples/n8n/README.md">shared LibreSign + n8n guide</a>. It uses a single external signer, explicit invitation,
+<p>For a ready-to-import n8n workflow, see the <a class="reference external" href="https://github.com/LibreSign/documentation/blob/main/examples/n8n/README.md">shared LibreSign + n8n guide</a>. It uses a single external signer, explicit invitation,
 bounded OCS polling, automatic WebDAV discovery and authenticated download
 from the default LibreSign folder. Select this LibreSign release in the
 workflow configuration: versions 13/14 use <code class="docutils literal notranslate"><span class="pre">mandatory:</span> <span class="pre">1</span></code>; versions
 15/development use <code class="docutils literal notranslate"><span class="pre">requirement:</span> <span class="pre">&quot;required&quot;</span></code>. Native completion events
 belong to the development documentation and are not required by polling.
 Confirm that this release meets the OCS and WebDAV prerequisites before
-using the shared workflow. The pinned link keeps its README and relative
-JSON workflow at the same immutable revision.
+using the shared workflow. Its README and relative JSON workflow are
+maintained together on the documentation <code class="docutils literal notranslate"><span class="pre">main</span></code> branch.
 Do not replace release-specific cURL/PHP fixtures with development payloads.</p>
 <p><strong>Release:</strong> LibreSign 16.0.0-dev.3, Nextcloud 36.
 <strong>Executable request template:</strong> <code class="docutils literal notranslate"><span class="pre">request-main.json</span></code>.
