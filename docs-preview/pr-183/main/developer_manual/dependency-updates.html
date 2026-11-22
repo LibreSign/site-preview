@@ -259,10 +259,7 @@ with two parents), follow the manual update instructions below: create a
 <strong>separate, narrowly scoped</strong> LibreSign PR targeting the corresponding
 code branch and update only the <code class="docutils literal notranslate"><span class="pre">3rdparty</span></code> gitlink to the source merge
 SHA. Create a new verified signed/DCO commit, verify LibreSign CI, and do
-not reconstruct the source PR, amend reviewed commits or force-push.
-The prior
-<a class="reference external" href="https://github.com/LibreSign/libresign/pull/9590">LibreSign integration PR #9590</a>
-illustrates the manual fallback.</p>
+not reconstruct the source PR, amend reviewed commits or force-push.</p>
 </section>
 <section id="manual-update-when-automation-is-unavailable">
 <h2>Manual update when automation is unavailable<a class="headerlink" href="#manual-update-when-automation-is-unavailable" title="Link to this heading"></a></h2>
@@ -307,7 +304,8 @@ HEAD. Never disable signature or DCO checks to make an update pass.</p></li>
 subsequent command only after confirming the revised commit.</p></li>
 <li><p><strong>Destination branch or PR already exists:</strong> Inspect and continue that
 PR rather than creating a duplicate or overwriting its branch.</p></li>
-<li><p><strong>Source PR already merged:</strong> Use the direct gitlink PR procedure above.</p></li>
+<li><p><strong>Source PR already merged:</strong> Use <code class="docutils literal notranslate"><span class="pre">/libresign-pr</span></code> if the merged-source
+workflow is available; otherwise follow the manual gitlink procedure.</p></li>
 <li><p><strong>Destination checks fail:</strong> Diagnose the LibreSign integration independently
 of the successful 3rdparty Composer checks.</p></li>
 </ul>
