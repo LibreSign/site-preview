@@ -1,0 +1,12 @@
+{
+  "slug": "main",
+  "branch": "main",
+  "app_commit": "d45e5e56d7015d873cbf06c6ce7216f33768e5cc",
+  "app_version": "16.0.0-dev.3",
+  "documentation_commit": "9edc26a8a6337ba10797c0b6783869ce0b790285",
+  "source_url": "https://github.com/LibreSign/libresign/blob/d45e5e56d7015d873cbf06c6ce7216f33768e5cc/openapi.json",
+  "openapi_sha256": "b063fbf15753373299647bed49c8f794545449c8ad8d0d894056a227ff023b96",
+  "manifest_sha256": "e151e758eaca2a2c61dee66e5bbf30d0f56cae7742bbaf9c362cab1259d0b7fd",
+  "nextcloud_min": 36,
+  "nextcloud_max": 36
+}
