@@ -1,0 +1,498 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" data-content_root="./">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>CSC external signing (experimental) &mdash; LibreSign Documentation 16.0.0-dev.3 documentation</title>
+      <link rel="stylesheet" type="text/css" href="_static/pygments.css?v=b86133f3" />
+      <link rel="stylesheet" type="text/css" href="_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="_static/copybutton.css?v=76b2166b" />
+      <link rel="stylesheet" type="text/css" href="_static/version-switcher.css?v=2caec843" />
+      <link rel="stylesheet" type="text/css" href="_static/ecosystem-nav.css?v=2d662436" />
+      <link rel="stylesheet" type="text/css" href="_static/ecosystem-footer.css?v=a963003a" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/general.css?v=c0a7eb24" />
+      <link rel="stylesheet" type="text/css" href="_static/dark_mode_css/dark.css?v=70edf1c7" />
+
+  
+      <script src="_static/jquery.js?v=5d32c60e"></script>
+      <script src="_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="_static/documentation_options.js?v=fac63cce"></script>
+      <script src="_static/doctools.js?v=fd6eb6e6"></script>
+      <script src="_static/sphinx_highlight.js?v=6ffebe34"></script>
+      <script src="_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="_static/copybutton.js?v=f281be69"></script>
+      <script src="_static/version-switcher.js?v=9500aa06"></script>
+      <script src="_static/ecosystem-nav.js?v=d00f03b9"></script>
+      <script src="_static/scroll-navigation.js?v=96b42595"></script>
+      <script src="_static/dark_mode_js/default_dark.js?v=fd565c74"></script>
+      <script src="_static/dark_mode_js/theme_switcher.js?v=358d3910"></script>
+    <script src="_static/js/theme.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="prev" title="Security" href="security.html" /> 
+  <meta name="robots" content="noindex,follow" />
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search"  style="background: #184c4e" >
+
+          
+          
+          <a href="index.html">
+            
+              <img src="_static/logo.png" class="logo" alt="Logo"/>
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="configuration.html">Configuration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="maintenance.html">Maintenance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="security.html">Security</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">CSC external signing (experimental)</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#overview-and-security-model">Overview and security model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#prerequisites">Prerequisites</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#enable-and-configure-the-laboratory">Enable and configure the laboratory</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#secret-handling-and-administrative-lifecycle">Secret handling and administrative lifecycle</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#cryptographic-scope">Cryptographic scope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sessions-recovery-and-uncertain-results">Sessions, recovery and uncertain results</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#troubleshooting-and-validation">Troubleshooting and validation</a></li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu"  style="background: #184c4e" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">LibreSign Documentation</a>
+      </nav>
+
+      <div class="wy-nav-content">
+  
+    <div class="libresign-preview-banner" role="note">
+      <strong>Pull request preview</strong> ·
+      <a href="https://github.com/LibreSign/documentation/pull/185">PR #185</a>
+      <span> — Not published</span>
+    </div>
+  
+  <div class="libresign-manual-navigation libresign-scroll-header">
+    
+<div class="libresign-nav-shell">
+  <button class="libresign-nav-toggle" type="button" aria-controls="libresign-ecosystem-links"
+          aria-expanded="false" aria-label="Open LibreSign navigation">
+    <svg aria-hidden="true" viewBox="0 0 24 24" width="19" height="19" fill="none"
+         stroke="currentColor" stroke-width="1.9" stroke-linecap="round">
+      <path d="M4 6h16M4 12h16M4 18h16"/>
+    </svg>
+    <span>Menu</span>
+  </button>
+  <nav class="libresign-ecosystem-nav" id="libresign-ecosystem-links"
+       aria-label="LibreSign ecosystem">
+  <a class="libresign-nav-docs" href="/site-preview/docs-preview/pr-185/">Documentation</a>
+  <details class="libresign-nav-group">
+    <summary>Product</summary>
+    <div class="libresign-nav-menu">
+      <a href="https://libresign.coop/">LibreSign overview</a>
+      <a href="https://libresign.coop/features/">Features</a>
+      <a href="https://libresign.coop/pricing/">Plans and pricing</a>
+    </div>
+  </details>
+  <details class="libresign-nav-group">
+    <summary>Support</summary>
+    <div class="libresign-nav-menu">
+      <a href="/site-preview/docs-preview/pr-185/">Documentation</a>
+      <a href="https://libresign.coop/faq/">Frequently asked questions</a>
+      <a href="https://libresign.coop/contact-us/">Contact our team</a>
+      <a href="https://github.com/LibreSign/libresign/issues">Report a problem</a>
+    </div>
+  </details>
+  <details class="libresign-nav-group">
+    <summary>Community</summary>
+    <div class="libresign-nav-menu">
+      <a href="https://github.com/LibreSign/libresign">Source code</a>
+      <a href="https://github.com/LibreSign/libresign/blob/main/CONTRIBUTING.md">How to contribute</a>
+      <a href="https://t.me/libresign">Community chat</a>
+      <a href="https://apps.nextcloud.com/apps/libresign">Nextcloud App Store</a>
+    </div>
+  </details>
+  <details class="libresign-nav-group">
+    <summary>About</summary>
+    <div class="libresign-nav-menu">
+      <a href="https://libresign.coop/about/">About LibreSign</a>
+      <a href="https://libresign.coop/posts/">Blog</a>
+      <a href="https://librecode.coop/">LibreCode cooperative</a>
+    </div>
+  </details>
+    <a class="libresign-nav-quote" href="https://libresign.coop/pricing/">Request a quote</a>
+    <a class="libresign-nav-source" href="https://github.com/LibreSign/documentation"
+       aria-label="Documentation source on GitHub" title="Documentation source on GitHub">
+      <svg aria-hidden="true" viewBox="0 0 24 24" width="16" height="16"
+           fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round"
+           stroke-linejoin="round">
+        <path d="M8 3H5a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h14a2 2 0 0 0 2-2v-3"/>
+        <path d="M12 12 21 3M15 3h6v6"/>
+      </svg>
+      <span>Source</span>
+    </a>
+  </nav>
+</div>
+  </div>
+  
+        <div class="rst-content style-external-links">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="index.html" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">CSC external signing (experimental)</li>
+      <li class="wy-breadcrumbs-aside">
+              <a href="https://github.com/LibreSign/documentation/blob/main/admin_manual/csc.rst" class="fa fa-github"> Edit on GitHub</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="csc-external-signing-experimental">
+<h1>CSC external signing (experimental)<a class="headerlink" href="#csc-external-signing-experimental" title="Link to this heading"></a></h1>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>This guide covers the <strong>unreleased experimental CSC v1 synthetic
+laboratory</strong> on the LibreSign development branch. It does not describe a
+production-ready personal signing provider, a qualified certificate,
+CSC 2.2, or a feature available in LibreSign 13, 14, or 15.</p>
+</div>
+<section id="overview-and-security-model">
+<h2>Overview and security model<a class="headerlink" href="#overview-and-security-model" title="Link to this heading"></a></h2>
+<p>The administrator configures one or more external-signing <em>integration
+instances</em>. An instance identifies a CSC driver, a service endpoint, an
+enabled state, and optional write-only secrets. An enabled instance is not
+automatically an eligible signing method. A signer must still be authorized
+for a particular LibreSign signature request, and the provider must separately
+authorize use of its private key.</p>
+<p>For the initial laboratory, an operator must independently pin the <strong>exact</strong>
+synthetic HTTPS endpoint and the <strong>SHA-256 fingerprint</strong> of the synthetic
+signing certificate. The configured integration must match both pins, be
+enabled, and have <strong>no administrator access token or other secret</strong>. A
+shared administrative token is never evidence of the signer’s consent.</p>
+<p>Production CSC credentials remain blocked until the provider proves
+individual authentication and operation-bound signature authorization
+(for example, a signer-authorized SAD). Laboratory tests do not establish
+certificate-path trust or the legal identity of a person.</p>
+</section>
+<section id="prerequisites">
+<h2>Prerequisites<a class="headerlink" href="#prerequisites" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p>Use a LibreSign development build containing both the external signing
+backend and signer interface. The experimental feature is disabled by
+default.</p></li>
+<li><p>Install the SignerPHP CSC adapter shipped with the tested application
+dependency lock. The driver catalog reports whether its adapter is
+installed; this does not imply that a provider is configured.</p></li>
+<li><p>Use an administrator-approved synthetic CSC test provider with a public
+<strong>HTTPS DNS name</strong>. Private addresses, IP-literal endpoints, local DNS
+suffixes, redirects, credentials in URLs, and query strings are not
+supported by the configured remote transport.</p></li>
+<li><p>The Nextcloud system configuration must <strong>not</strong> enable
+<code class="docutils literal notranslate"><span class="pre">allow_local_remote_servers</span></code>, and must keep <code class="docutils literal notranslate"><span class="pre">dns_pinning</span></code> enabled.
+Review changes to these global security settings with the Nextcloud
+operator; do not weaken them for CSC.</p></li>
+<li><p>Obtain the synthetic certificate fingerprint from the controlled test
+laboratory by a separate trusted channel. It must be lowercase hexadecimal
+SHA-256 (64 characters), not a subject name or an identifier entered by
+the signer.</p></li>
+</ul>
+<p>The internal loopback HTTP CSC fixture is intended for automated tests
+only. It is not an operator-configurable replacement for the HTTPS endpoint
+requirement.</p>
+</section>
+<section id="enable-and-configure-the-laboratory">
+<h2>Enable and configure the laboratory<a class="headerlink" href="#enable-and-configure-the-laboratory" title="Link to this heading"></a></h2>
+<p>Enable the application-level feature gate as the Nextcloud web-server user:</p>
+<div class="highlight-console notranslate"><div class="highlight"><pre><span></span><span class="go">./occ config:app:set libresign experimental_features --type boolean --value true</span>
+</pre></div>
+</div>
+<p>This <strong>global LibreSign experimental gate</strong> is separate from the
+<strong>enabled/disabled state of each CSC integration instance</strong>. Both must permit
+the operation. Turning off the experimental gate hides the corresponding
+administrative and signer-facing experimental endpoints without affecting
+traditional LibreSign signature methods.</p>
+<p>Have the Nextcloud system operator set the exact laboratory endpoint and
+certificate pin in the Nextcloud system configuration:</p>
+<div class="highlight-php notranslate"><div class="highlight"><pre><span></span><span class="x">// Example entries in Nextcloud config/config.php; replace both values.</span>
+<span class="x">'libresign_csc_synthetic_lab_url' =&gt; 'https://csc-lab.example.org/csc',</span>
+<span class="x">'libresign_csc_synthetic_lab_certificate_sha256' =&gt; 'replace-with-64-lowercase-hex-digits',</span>
+</pre></div>
+</div>
+<p>The examples above are <strong>placeholders</strong>, not usable credentials or a
+trusted laboratory. They deliberately do not name a production signing
+provider. The configured CSC service URL must be byte-for-byte identical
+to the operator-pinned URL.</p>
+<p>In the LibreSign administration interface, open <strong>External signing
+providers</strong>, select the <strong>Cloud Signature Consortium (CSC)</strong> driver, and
+create an integration with a descriptive name and the pinned HTTPS URL.
+Do not supply an access token for the synthetic laboratory. Save and then
+enable the instance. Each instance has its own identifier and optimistic
+revision, so an administrator can manage multiple instances of one driver.</p>
+</section>
+<section id="secret-handling-and-administrative-lifecycle">
+<h2>Secret handling and administrative lifecycle<a class="headerlink" href="#secret-handling-and-administrative-lifecycle" title="Link to this heading"></a></h2>
+<p>A secret field is write-only: an existing value is reported as configured,
+but never returned to the browser. Leave a configured secret blank to
+preserve it, enter a replacement to rotate it, or explicitly clear an
+optional secret. An instance with any configured secret is <strong>not eligible
+for synthetic personal signing</strong>.</p>
+<p>Editing, enabling, disabling, and deleting instances use revision checks.
+An HTTP 409 conflict can mean that another administrator changed the
+instance, or that a signing session is still unresolved. In particular,
+an uncertain private-key submission must retain the pinned integration
+configuration for reconciliation. Do not delete or rotate an instance to
+“clear” an uncertain signing result. Re-read the current instance and
+investigate the unresolved session before another administrative operation.</p>
+<p>A deleted instance is tombstoned for audit; its endpoint configuration and
+encrypted secrets are erased. Deleting an integration is not a way to
+cancel an operation already submitted to a remote provider.</p>
+</section>
+<section id="cryptographic-scope">
+<h2>Cryptographic scope<a class="headerlink" href="#cryptographic-scope" title="Link to this heading"></a></h2>
+<p>The experimental subset uses CSC 1.0.4.0-style credential discovery and
+remote signing through SignerPHP. The certificate eligibility checks require
+a currently valid X.509 certificate with an <strong>RSA public key of at least
+2,048 bits</strong>, compatible key usage, <strong>SHA-256</strong>, and
+<strong>RSA PKCS#1 v1.5</strong> signing. The tested PDF output profiles are
+<strong>PDF Basic</strong> (<code class="docutils literal notranslate"><span class="pre">pdf-basic</span></code>) and <strong>PAdES Baseline B-B</strong>
+(<code class="docutils literal notranslate"><span class="pre">pades-baseline-b</span></code>), subject to source PDF/DocMDP restrictions.</p>
+<p>These constraints are the <em>implemented laboratory subset</em>, not a statement
+of full CSC conformance, trust-chain validation, long-term validation,
+PAdES B-T/B-LT/B-LTA support, or provider-specific authorization.</p>
+</section>
+<section id="sessions-recovery-and-uncertain-results">
+<h2>Sessions, recovery and uncertain results<a class="headerlink" href="#sessions-recovery-and-uncertain-results" title="Link to this heading"></a></h2>
+<p>LibreSign stores the authorized signing session on the server. Its
+identity, SignRequest, document revision, certificate, and integration
+cannot be substituted by the browser. The relevant states include
+preparation, authorization pending, ready, signing pending, signature
+received, completing, completed, rejected, expired, failed, and uncertain.</p>
+<p>A new HTTP request or PHP process may resume an existing permitted session
+after <strong>fresh signer verification</strong>. If a remote <code class="docutils literal notranslate"><span class="pre">signHash</span></code> call times out
+after it could have been submitted, LibreSign must treat the result as
+<strong>uncertain</strong>. An expired lease or a failed HTTP response does not prove
+that the provider did not sign. Do not automatically resubmit the
+private-key operation, delete the session, or tell the signer to start again.</p>
+<p>On a confirmed result, LibreSign must validate the final PDF cryptographically,
+check the exact source revision and earlier signatures/DocMDP restrictions,
+and publish the result to the original request at most once before showing
+success. An uncertain result requires operator/provider reconciliation,
+not a “retry” of the private-key operation.</p>
+</section>
+<section id="troubleshooting-and-validation">
+<h2>Troubleshooting and validation<a class="headerlink" href="#troubleshooting-and-validation" title="Link to this heading"></a></h2>
+<ul class="simple">
+<li><p><strong>No CSC option:</strong> check the global feature gate, driver availability,
+integration enabled state, exact operator pin and empty synthetic secret
+set. Traditional LibreSign methods should remain available.</p></li>
+<li><p><strong>No eligible certificate:</strong> check expiry, RSA key size, signing key
+usage, fingerprint pin and laboratory discovery response. Do not
+loosen the certificate checks simply to make the credential appear.</p></li>
+<li><p><strong>HTTP 409 on administration:</strong> refresh the instance revision and
+check for unresolved sessions; do not force deletion.</p></li>
+<li><p><strong>Pending or uncertain:</strong> inspect the server-side session state and
+the test provider’s operation ledger. Do not call <code class="docutils literal notranslate"><span class="pre">signHash</span></code> again
+merely because a browser or worker timed out.</p></li>
+<li><p><strong>PDF rejected:</strong> check document revision, earlier PDF signatures,
+DocMDP permissions and the cryptographic validator output before
+permitting a publication or success notification.</p></li>
+</ul>
+<p>The source tests for the experimental laboratory use synthetic certificates,
+CSC fixtures, real SignerPHP PDF preparation/completion and cryptographic
+validation. For release acceptance, additionally run a disposable
+Nextcloud end-to-end test with an authenticated signer, an invited guest,
+PDF Basic and PAdES B-B, concurrent requests, and restart/reconciliation.
+Test data, database, Nextcloud configuration and storage must be isolated
+from production. Automated laboratory interoperability <strong>does not</strong>
+homologate a real CSC provider.</p>
+<p>See the <a class="reference external" href="../user_manual/external_signing.html">external signing guide for signers</a>.</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="security.html" class="btn btn-neutral float-left" title="Security" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2026 LibreCode coop.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+
+      </div>
+    </section>
+  </div>
+  
+
+
+<div class="rst-versions libresign-rst-versions"
+     id="libresign-release-picker"
+     data-version="main"
+     data-site-root="/site-preview/docs-preview/pr-185"
+     data-manual="admin_manual"
+     role="navigation"
+     aria-label="Documentation versions">
+  <button type="button" id="libresign-version-toggle" class="rst-current-version"
+          aria-label="Development documentation for upcoming LibreSign release (not released), main branch; choose version"
+          aria-controls="libresign-version-menu" aria-expanded="false">
+    <span class="libresign-version-current">Upcoming · main</span>
+    <span class="libresign-version-chevron" aria-hidden="true">▴</span>
+  </button>
+  <div id="libresign-version-menu" class="rst-other-versions" hidden>
+    <p class="libresign-version-menu-heading">Documentation versions</p>
+    <ul id="libresign-version-list" class="libresign-version-list">
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-185/main/admin_manual/"
+             data-version-target="main"
+             aria-current="true">
+            <span class="libresign-version-name">
+              main
+            </span>
+            <span class="libresign-version-detail">
+              Not released
+            </span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-185/15/admin_manual/"
+             data-version-target="15"
+             >
+            <span class="libresign-version-name">
+              LibreSign 15
+            </span>
+            <span class="libresign-version-detail">
+              Latest stable
+            </span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-185/14/admin_manual/"
+             data-version-target="14"
+             >
+            <span class="libresign-version-name">
+              LibreSign 14
+            </span>
+            <span class="libresign-version-detail">
+              NC 34
+            </span>
+          </a>
+        </li>
+      
+        <li>
+          <a href="/site-preview/docs-preview/pr-185/13/admin_manual/"
+             data-version-target="13"
+             >
+            <span class="libresign-version-name">
+              LibreSign 13
+            </span>
+            <span class="libresign-version-detail">
+              Oldest documented
+            </span>
+          </a>
+        </li>
+      
+    </ul>
+    <a class="libresign-all-versions" href="/site-preview/docs-preview/pr-185/">All versions and manuals</a>
+    <p id="libresign-version-notice" class="libresign-sr-only" role="status" aria-live="polite"></p>
+  </div>
+</div><script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+  
+<footer class="libresign-site-footer" aria-label="LibreSign site footer">
+  <div class="libresign-footer-container">
+    <div class="libresign-footer-main">
+      <div class="libresign-footer-about">
+        <a class="libresign-footer-brand" href="https://libresign.coop/" aria-label="LibreSign official website">
+          <img src="/site-preview/docs-preview/pr-185/logo.png" width="136" height="55" alt="LibreSign">
+        </a>
+        <p>Open source electronic signatures for Nextcloud. Request, sign, and validate documents on infrastructure you control.</p>
+        <a class="libresign-footer-cta" href="https://libresign.coop/pricing/">Plans and professional support</a>
+      </div>
+      <nav class="libresign-footer-nav" aria-label="Footer resources">
+        <div class="libresign-footer-column">
+          <h2>Documentation</h2>
+          <ul>
+            <li><a href="/site-preview/docs-preview/pr-185/">All versions</a></li>
+            <li><a href="/site-preview/docs-preview/pr-185/15/user_manual/">User manual</a></li>
+            <li><a href="/site-preview/docs-preview/pr-185/15/admin_manual/">Administrator manual</a></li>
+            <li><a href="/site-preview/docs-preview/pr-185/15/developer_manual/">Developer manual and API</a></li>
+            <li><a href="/site-preview/docs-preview/pr-185/15/lifecycle.html">Release lifecycle</a></li>
+          </ul>
+        </div>
+        <div class="libresign-footer-column">
+          <h2>Product</h2>
+          <ul>
+            <li><a href="https://libresign.coop/features/">Features</a></li>
+            <li><a href="https://libresign.coop/pricing/">Plans and pricing</a></li>
+            <li><a href="https://apps.nextcloud.com/apps/libresign">Nextcloud App Store</a></li>
+            <li><a href="https://libresign.coop/about/">About LibreSign</a></li>
+            <li><a href="https://libresign.coop/posts/">Blog</a></li>
+          </ul>
+        </div>
+        <div class="libresign-footer-column">
+          <h2>Community</h2>
+          <ul>
+            <li><a href="https://github.com/LibreSign/libresign">Source code</a></li>
+            <li><a href="https://github.com/LibreSign/libresign/blob/main/CONTRIBUTING.md">How to contribute</a></li>
+            <li><a href="https://github.com/LibreSign/documentation">Improve the documentation</a></li>
+            <li><a href="https://t.me/libresign">Community chat</a></li>
+          </ul>
+        </div>
+        <div class="libresign-footer-column">
+          <h2>Support</h2>
+          <ul>
+            <li><a href="https://libresign.coop/faq/">Frequently asked questions</a></li>
+            <li><a href="https://libresign.coop/contact-us/">Contact our team</a></li>
+            <li><a href="https://github.com/LibreSign/libresign/issues">Report a problem</a></li>
+            <li><a href="https://libresign.coop/brand/">Brand and pronunciation</a></li>
+          </ul>
+        </div>
+      </nav>
+    </div>
+    <div class="libresign-footer-bottom">
+      <span>Developed by <a href="https://librecode.coop/">LibreCode cooperative</a>.</span>
+      <span>Documentation licensed under <a href="https://creativecommons.org/licenses/by/3.0/">CC BY 3.0</a>.</span>
+    </div>
+  </div>
+</footer>
+
+
+</body>
+</html>
